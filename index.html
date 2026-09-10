@@ -1726,13 +1726,12 @@
       max-width: 420px;
     }
 
-    .footer-logo {
-      width: 72px;
+    .footer-logo {  
+      width: 150px;
       height: 72px;
 
       object-fit: contain;
 
-      margin-bottom: 20px;
     }
 
     .footer-brand h3 {
@@ -2078,6 +2077,48 @@
         min-height: 650px;
       }
 
+      .hero .carousel-item {
+        transition:
+          opacity 1.15s ease-in-out;
+
+        transform: translateZ(0);
+        will-change: opacity;
+      }
+
+      .hero-image {
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        transform:
+          translateZ(0)
+          scale(1.01);
+
+        will-change: transform;
+      }
+
+      .carousel-item.active .hero-image {
+        animation:
+          heroZoomMobile 9s ease-out forwards;
+      }
+
+      @keyframes heroZoomMobile {
+
+        from {
+          transform:
+            translateZ(0)
+            scale(1.01);
+        }
+
+        to {
+          transform:
+            translateZ(0)
+            scale(1.07);
+        }
+
+      }
+
       .hero-content {
         transform:
           translateY(-42%);
@@ -2099,6 +2140,22 @@
 
       .hero-bottom-fade {
         height: 150px;
+      }
+
+      .reveal {
+        transition-duration: 0.65s;
+      }
+
+      .reveal:not(.revealed)[data-reveal="slide-left"],
+      .reveal:not(.revealed)[data-reveal="slide-right"] {
+        transform:
+          translateY(22px);
+      }
+
+      .reveal:not(.revealed)[data-reveal="zoom"] {
+        transform:
+          translateY(18px)
+          scale(0.98);
       }
 
       .intro-image {
@@ -3330,7 +3387,7 @@
       <div class="footer-brand">
 
         <img
-          src="images/logo.png"
+          src="images/vadtaldham-brisbane-white-logo.png"
           alt="Vadtaldham Brisbane"
           class="footer-logo"
         >
@@ -3874,46 +3931,6 @@
     () => {
 
       galleryModalImage.src = "";
-
-    }
-  );
-
-
-  /* =========================================================
-     HERO CAROUSEL ANIMATION
-  ========================================================= */
-
-  const heroCarousel =
-    document.getElementById(
-      "heroCarousel"
-    );
-
-
-  heroCarousel.addEventListener(
-    "slid.bs.carousel",
-    event => {
-
-      const image =
-        event.relatedTarget
-          .querySelector(
-            ".hero-image"
-          );
-
-
-      if (!image) {
-        return;
-      }
-
-
-      image.style.animation =
-        "none";
-
-
-      void image.offsetWidth;
-
-
-      image.style.animation =
-        "heroZoom 10s ease-out forwards";
 
     }
   );
