@@ -34,8 +34,9 @@
 
     :root {
       --ivory: #faf7f1;
-      --ivory-deep: #f5eee3;
-      --cream: #eee2cf;
+      --ivory-soft: #f8f3eb;
+      --cream: #f3e9da;
+      --cream-deep: #eee1cf;
       --sand: #dfc9aa;
 
       --gold: #cda86c;
@@ -118,8 +119,10 @@
       margin-bottom: 14px;
 
       color: var(--terracotta);
+
       font-size: 0.78rem;
       font-weight: 700;
+
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
@@ -127,27 +130,33 @@
     .section-kicker::before,
     .section-kicker::after {
       content: "";
+
       width: 28px;
       height: 1px;
+
       background: var(--gold);
     }
 
     .section-title {
       margin: 0;
+
       color: var(--brown-dark);
 
       font-family: "Playfair Display", serif;
       font-size: clamp(2.2rem, 4vw, 3.7rem);
       font-weight: 600;
       line-height: 1.08;
+
       letter-spacing: -0.025em;
     }
 
     .section-subtitle {
       max-width: 650px;
+
       margin: 18px auto 0;
 
       color: var(--muted);
+
       font-size: 1rem;
       line-height: 1.8;
     }
@@ -160,40 +169,67 @@
     .site-navbar {
       position: fixed;
       z-index: 1000;
+
       top: 0;
       left: 0;
+
       width: 100%;
       height: var(--nav-height);
 
-      background: rgba(250, 247, 241, 0.28);
-      border-bottom: 1px solid rgba(255,255,255,0.15);
+      /*
+        IMPORTANT:
+        Completely transparent at the top.
+        No rgba background.
+        No blur.
+      */
 
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: transparent;
+
+      border-bottom: 1px solid transparent;
+
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
 
       transition:
-        background 0.35s ease,
-        box-shadow 0.35s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
         height 0.35s ease;
     }
 
+    /*
+      Solid navbar only after scrolling.
+    */
+
     .site-navbar.scrolled {
       height: 70px;
-      background: rgba(250, 247, 241, 0.94);
-      border-bottom-color: rgba(101,69,47,0.08);
-      box-shadow: 0 8px 30px rgba(64,43,29,0.07);
+
+      background: #faf7f1;
+
+      border-bottom-color:
+        rgba(101, 69, 47, 0.09);
+
+      box-shadow:
+        0 8px 30px rgba(64, 43, 29, 0.08);
+
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .navbar-brand img {
-      width: 58px;
+      width: 175px;
       height: 58px;
+
       object-fit: contain;
-      transition: transform 0.35s ease;
+
+      transition:
+        width 0.35s ease,
+        height 0.35s ease;
     }
 
     .site-navbar.scrolled .navbar-brand img {
-      width: 52px;
-      height: 52px;
+      width: 175px;
+      height: 58px;
     }
 
     .navbar-nav {
@@ -205,29 +241,48 @@
 
       padding: 10px 15px !important;
 
-      color: var(--brown-dark) !important;
+      /*
+        White on transparent hero.
+      */
+
+      color: var(--white) !important;
+
       font-size: 0.91rem;
       font-weight: 600;
 
-      opacity: 0.86;
+      opacity: 0.92;
+
+      transition:
+        color 0.35s ease,
+        opacity 0.35s ease;
+    }
+
+    /*
+      Brown after navbar becomes solid.
+    */
+
+    .site-navbar.scrolled .navbar-nav .nav-link {
+      color: var(--brown-dark) !important;
     }
 
     .navbar-nav .nav-link::after {
       content: "";
 
       position: absolute;
+
       left: 15px;
       right: 15px;
       bottom: 3px;
 
       height: 2px;
 
-      background: var(--terracotta);
+      background: var(--gold);
 
       transform: scaleX(0);
       transform-origin: center;
 
-      transition: transform 0.3s ease;
+      transition:
+        transform 0.3s ease;
     }
 
     .navbar-nav .nav-link:hover,
@@ -243,7 +298,16 @@
     .navbar-toggler {
       border: 0;
       padding: 8px;
+
+      color: var(--white);
+
       box-shadow: none !important;
+
+      transition: color 0.35s ease;
+    }
+
+    .site-navbar.scrolled .navbar-toggler {
+      color: var(--brown-dark);
     }
 
 
@@ -253,9 +317,12 @@
 
     .hero {
       position: relative;
+
       height: 100vh;
       min-height: 680px;
+
       overflow: hidden;
+
       background: var(--brown-dark);
     }
 
@@ -267,12 +334,15 @@
 
     .hero-slide {
       position: relative;
+
       height: 100%;
+
       overflow: hidden;
     }
 
     .hero-image {
       position: absolute;
+
       inset: -3%;
 
       width: 106%;
@@ -280,23 +350,32 @@
 
       object-fit: cover;
 
-      transform: translateY(var(--parallax-y, 0px)) scale(1.02);
+      transform:
+        translateY(var(--parallax-y, 0px))
+        scale(1.02);
 
       filter: saturate(0.88);
     }
 
     .carousel-item.active .hero-image {
-      animation: heroZoom 10s ease-out forwards;
+      animation:
+        heroZoom 10s ease-out forwards;
     }
 
     @keyframes heroZoom {
+
       from {
-        transform: translateY(var(--parallax-y, 0px)) scale(1.04);
+        transform:
+          translateY(var(--parallax-y, 0px))
+          scale(1.04);
       }
 
       to {
-        transform: translateY(var(--parallax-y, 0px)) scale(1.10);
+        transform:
+          translateY(var(--parallax-y, 0px))
+          scale(1.10);
       }
+
     }
 
     .hero-overlay {
@@ -312,25 +391,41 @@
         );
     }
 
+    /*
+      IMPORTANT:
+      Hero doesn't end abruptly.
+      It dissolves into the ivory page.
+    */
+
     .hero-bottom-fade {
       position: absolute;
+
       z-index: 3;
+
       left: 0;
       right: 0;
       bottom: 0;
-      height: 180px;
+
+      height: 190px;
 
       background:
         linear-gradient(
           to bottom,
-          transparent,
-          var(--ivory)
+          rgba(250,247,241,0) 0%,
+          rgba(250,247,241,0.10) 20%,
+          rgba(250,247,241,0.50) 55%,
+          rgba(250,247,241,0.92) 82%,
+          var(--ivory) 100%
         );
+
+      pointer-events: none;
     }
 
     .hero-content {
       position: absolute;
+
       z-index: 4;
+
       top: 50%;
       left: 0;
 
@@ -345,22 +440,27 @@
 
     .hero-eyebrow {
       display: inline-flex;
+
       align-items: center;
       gap: 10px;
 
       margin-bottom: 20px;
 
       color: var(--gold-soft);
+
       font-size: 0.82rem;
       font-weight: 700;
+
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     .hero-eyebrow::before {
       content: "";
+
       width: 38px;
       height: 1px;
+
       background: var(--gold-soft);
     }
 
@@ -370,43 +470,53 @@
       color: var(--white);
 
       font-family: "Playfair Display", serif;
+
       font-size: clamp(3.4rem, 7vw, 6.7rem);
+
       font-weight: 600;
       line-height: 0.98;
+
       letter-spacing: -0.035em;
     }
 
     .hero-title span {
       display: block;
+
       color: var(--gold-soft);
     }
 
     .hero-description {
       max-width: 570px;
+
       margin: 28px 0 32px;
 
       color: rgba(255,255,255,0.86);
+
       font-size: 1.05rem;
       line-height: 1.8;
     }
 
     .hero-button {
       display: inline-flex;
+
       align-items: center;
       gap: 12px;
 
       padding: 14px 23px;
 
       color: var(--white);
+
       background: var(--terracotta);
 
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: 999px;
 
       text-decoration: none;
+
       font-weight: 700;
 
-      box-shadow: 0 12px 30px rgba(60,30,15,0.25);
+      box-shadow:
+        0 12px 30px rgba(60,30,15,0.25);
 
       transition:
         transform 0.3s ease,
@@ -416,19 +526,26 @@
 
     .hero-button:hover {
       color: var(--white);
-      background: var(--terracotta-dark);
-      transform: translateY(-3px);
+
+      background:
+        var(--terracotta-dark);
+
+      transform:
+        translateY(-3px);
+
       gap: 16px;
     }
 
     .hero-scroll {
       position: absolute;
+
       z-index: 5;
 
       right: 38px;
-      bottom: 100px;
+      bottom: 105px;
 
       display: flex;
+
       align-items: center;
       gap: 12px;
 
@@ -436,6 +553,7 @@
 
       font-size: 0.72rem;
       font-weight: 700;
+
       letter-spacing: 0.15em;
       text-transform: uppercase;
 
@@ -444,54 +562,88 @@
 
     .hero-scroll::after {
       content: "";
+
       width: 1px;
       height: 55px;
-      background: var(--gold-soft);
+
+      background:
+        var(--gold-soft);
     }
 
 
     /* =========================================================
-       INTRO
+       ABOUT
+       Ivory -> warm ivory
     ========================================================= */
 
     .intro-section {
       position: relative;
+
       overflow: hidden;
-      background: var(--ivory);
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--ivory) 0%,
+          #faf6ef 52%,
+          var(--ivory-soft) 100%
+        );
+    }
+
+    /*
+      Bottom fade into activities.
+    */
+
+    .intro-section::after {
+      content: "";
+
+      position: absolute;
+
+      z-index: 5;
+
+      left: 0;
+      right: 0;
+      bottom: -1px;
+
+      height: 150px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(248,243,235,0),
+          rgba(247,241,231,0.55) 55%,
+          rgba(247,241,231,0.94) 84%,
+          #f7f1e7 100%
+        );
+
+      pointer-events: none;
     }
 
     .intro-section::before {
       content: "";
 
       position: absolute;
+
       top: 40px;
       right: -130px;
 
       width: 360px;
       height: 360px;
 
-      border: 1px solid rgba(205,168,108,0.20);
-      border-radius: 50%;
-    }
+      border:
+        1px solid rgba(205,168,108,0.18);
 
-    .intro-section::after {
-      content: "";
-
-      position: absolute;
-      top: 100px;
-      right: -70px;
-
-      width: 240px;
-      height: 240px;
-
-      border: 1px solid rgba(205,168,108,0.14);
       border-radius: 50%;
     }
 
     .intro-layout {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+
+      grid-template-columns:
+        1.05fr 0.95fr;
+
       gap: 80px;
+
       align-items: center;
     }
 
@@ -502,15 +654,19 @@
     .intro-image {
       width: 100%;
       height: 530px;
+
       object-fit: cover;
 
-      border-radius: 0 110px 0 28px;
+      border-radius:
+        0 110px 0 28px;
 
-      box-shadow: var(--shadow-card);
+      box-shadow:
+        var(--shadow-card);
     }
 
     .intro-image-accent {
       position: absolute;
+
       z-index: -1;
 
       left: -20px;
@@ -519,13 +675,12 @@
       width: 180px;
       height: 180px;
 
-      border: 1px solid var(--gold);
-      border-radius: 28px;
-      opacity: 0.45;
-    }
+      border:
+        1px solid var(--gold);
 
-    .intro-copy .section-kicker {
-      margin-bottom: 10px;
+      border-radius: 28px;
+
+      opacity: 0.45;
     }
 
     .intro-copy .section-title {
@@ -534,19 +689,24 @@
 
     .intro-copy p {
       color: var(--muted);
+
       line-height: 1.9;
+
       margin-bottom: 18px;
     }
 
     .intro-link {
       display: inline-flex;
+
       align-items: center;
       gap: 10px;
 
       margin-top: 12px;
 
       color: var(--terracotta);
+
       text-decoration: none;
+
       font-weight: 700;
 
       transition:
@@ -562,49 +722,109 @@
 
     /* =========================================================
        ACTIVITIES
-       STRICTLY FIXED CARD DIMENSIONS
+       Warm ivory section with fade
     ========================================================= */
 
     .activities-section {
       position: relative;
+
       overflow: hidden;
 
       background:
         linear-gradient(
           180deg,
-          var(--ivory-deep) 0%,
-          #f8f1e6 100%
+          #f7f1e7 0%,
+          #f4ecdf 48%,
+          #f8f3eb 100%
         );
     }
+
+    /*
+      Fade coming from About.
+    */
 
     .activities-section::before {
       content: "";
 
       position: absolute;
-      left: -180px;
-      top: 100px;
 
-      width: 400px;
-      height: 400px;
+      z-index: 1;
 
-      border: 1px solid rgba(205,168,108,0.13);
-      transform: rotate(45deg);
+      top: -1px;
+      left: 0;
+      right: 0;
+
+      height: 125px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          #f7f1e7 0%,
+          rgba(247,241,231,0.72) 40%,
+          rgba(247,241,231,0) 100%
+        );
+
+      pointer-events: none;
+    }
+
+    /*
+      Fade going into Events.
+    */
+
+    .activities-section::after {
+      content: "";
+
+      position: absolute;
+
+      z-index: 5;
+
+      left: 0;
+      right: 0;
+      bottom: -1px;
+
+      height: 155px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(248,243,235,0),
+          rgba(250,247,241,0.58) 55%,
+          rgba(250,247,241,0.92) 84%,
+          var(--ivory) 100%
+        );
+
+      pointer-events: none;
     }
 
     .activities-heading {
+      position: relative;
+      z-index: 6;
+
       text-align: center;
+
       margin-bottom: 52px;
     }
 
     /*
-      IMPORTANT:
-      This is deliberately NOT Bootstrap .row/.col.
+      ========================================================
+      FIXED ACTIVITY GRID
+      ========================================================
 
-      The grid itself controls the cards.
-      Each card has an explicit fixed height.
+      No Bootstrap .row
+      No Bootstrap .col
+      No aspect-ratio
+      No image-dependent height
+
+      Desktop:
+        540px card
+        265px image
+        275px content
     */
 
     .activities-grid {
+      position: relative;
+      z-index: 6;
+
       display: grid;
 
       grid-template-columns:
@@ -621,10 +841,12 @@
     .activity-card {
       position: relative;
 
-      /*
-        HARD FIXED SIZE
-      */
       width: 100%;
+
+      /*
+        HARD FIXED HEIGHT
+      */
+
       height: 540px;
       min-height: 540px;
       max-height: 540px;
@@ -634,12 +856,17 @@
 
       overflow: hidden;
 
-      background: rgba(255,255,255,0.82);
+      background:
+        rgba(255,255,255,0.84);
 
-      border: 1px solid rgba(101,69,47,0.10);
-      border-radius: var(--radius-lg);
+      border:
+        1px solid rgba(101,69,47,0.10);
 
-      box-shadow: var(--shadow-card);
+      border-radius:
+        var(--radius-lg);
+
+      box-shadow:
+        var(--shadow-card);
 
       transition:
         transform 0.5s cubic-bezier(.22,1,.36,1),
@@ -651,6 +878,7 @@
       content: "";
 
       position: absolute;
+
       z-index: 5;
 
       top: 0;
@@ -668,13 +896,15 @@
         );
     }
 
+    /*
+      HARD FIXED IMAGE AREA
+    */
+
     .activity-media {
       position: relative;
 
-      /*
-        HARD FIXED IMAGE SIZE
-      */
       width: 100%;
+
       height: 265px;
       min-height: 265px;
       max-height: 265px;
@@ -683,7 +913,8 @@
 
       overflow: hidden;
 
-      background: var(--cream);
+      background:
+        var(--cream);
     }
 
     .activity-media img {
@@ -716,14 +947,17 @@
         );
     }
 
+    /*
+      HARD FIXED CONTENT AREA
+
+      540 - 265 = 275px
+    */
+
     .activity-content {
-      /*
-        Remaining fixed height:
-        540 - 265 = 275px
-      */
       position: relative;
 
       width: 100%;
+
       height: 275px;
       min-height: 275px;
       max-height: 275px;
@@ -731,12 +965,13 @@
       display: flex;
       flex-direction: column;
 
-      padding: 28px 30px 26px;
+      padding:
+        28px 30px 26px;
 
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.96),
+          rgba(255,255,255,0.97),
           rgba(247,239,228,0.94)
         );
     }
@@ -746,8 +981,12 @@
 
       color: var(--brown);
 
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
+
       font-size: 1.48rem;
+
       font-weight: 600;
     }
 
@@ -757,6 +996,7 @@
       margin: 0;
 
       color: var(--muted);
+
       font-size: 0.94rem;
       line-height: 1.75;
 
@@ -768,6 +1008,7 @@
 
     .activity-link {
       display: inline-flex;
+
       align-items: center;
       gap: 9px;
 
@@ -778,6 +1019,7 @@
       color: var(--terracotta);
 
       text-decoration: none;
+
       font-size: 0.9rem;
       font-weight: 700;
 
@@ -788,54 +1030,127 @@
 
     .activity-link i {
       font-size: 0.78rem;
-      transition: transform 0.3s ease;
+
+      transition:
+        transform 0.3s ease;
     }
 
     @media (hover:hover) and (pointer:fine) {
 
       .activity-card:hover {
-        transform: translateY(-9px);
+        transform:
+          translateY(-9px);
 
-        border-color: rgba(184,111,56,0.24);
+        border-color:
+          rgba(184,111,56,0.24);
 
         box-shadow:
-          0 28px 60px rgba(77,52,33,0.16);
+          0 28px 60px
+          rgba(77,52,33,0.16);
       }
 
-      .activity-card:hover .activity-media img {
-        transform: scale(1.07);
-        filter: saturate(1.04) contrast(1.02);
+      .activity-card:hover
+      .activity-media img {
+        transform:
+          scale(1.07);
+
+        filter:
+          saturate(1.04)
+          contrast(1.02);
       }
 
-      .activity-card:hover .activity-link {
+      .activity-card:hover
+      .activity-link {
         gap: 14px;
         color: var(--brown-dark);
       }
 
-      .activity-card:hover .activity-link i {
-        transform: translateX(3px);
+      .activity-card:hover
+      .activity-link i {
+        transform:
+          translateX(3px);
       }
     }
 
 
     /* =========================================================
        EVENTS
+       Ivory with soft transitions
     ========================================================= */
 
     .events-section {
       position: relative;
+
       overflow: hidden;
 
-      background: var(--ivory);
+      background:
+        linear-gradient(
+          180deg,
+          var(--ivory) 0%,
+          #fbf8f3 50%,
+          #f7f0e6 100%
+        );
+    }
+
+    .events-section::before {
+      content: "";
+
+      position: absolute;
+
+      top: -1px;
+      left: 0;
+      right: 0;
+
+      height: 125px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          var(--ivory) 0%,
+          rgba(250,247,241,0.72) 42%,
+          rgba(250,247,241,0) 100%
+        );
+
+      pointer-events: none;
+    }
+
+    .events-section::after {
+      content: "";
+
+      position: absolute;
+
+      z-index: 5;
+
+      left: 0;
+      right: 0;
+      bottom: -1px;
+
+      height: 165px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(247,240,230,0),
+          rgba(246,239,228,0.45) 45%,
+          rgba(239,226,207,0.76) 78%,
+          #efe2cf 100%
+        );
+
+      pointer-events: none;
     }
 
     .events-heading {
+      position: relative;
+      z-index: 6;
+
       text-align: center;
+
       margin-bottom: 65px;
     }
 
     .timeline {
       position: relative;
+      z-index: 6;
 
       width: 100%;
       max-width: 1080px;
@@ -864,29 +1179,49 @@
           transparent
         );
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
     }
 
     .event-item {
       position: relative;
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
 
       min-height: 170px;
 
       margin-bottom: 12px;
+
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.22,1,.36,1);
+    }
+
+    .event-item.revealed {
+      opacity: 1;
+      transform: none;
     }
 
     .event-side {
-      padding: 10px 55px;
+      padding:
+        10px 55px;
     }
 
-    .event-item:nth-child(odd) .event-side:first-child {
+    .event-item:nth-child(odd)
+    .event-side:first-child {
       text-align: right;
     }
 
-    .event-item:nth-child(even) .event-side:last-child {
+    .event-item:nth-child(even)
+    .event-side:last-child {
       text-align: left;
     }
 
@@ -894,7 +1229,8 @@
       max-width: 390px;
     }
 
-    .event-item:nth-child(odd) .event-content {
+    .event-item:nth-child(odd)
+    .event-content {
       margin-left: auto;
     }
 
@@ -915,7 +1251,10 @@
 
       color: var(--brown-dark);
 
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
+
       font-size: 1.55rem;
       font-weight: 600;
     }
@@ -924,12 +1263,14 @@
       margin: 0;
 
       color: var(--muted);
+
       font-size: 0.9rem;
       line-height: 1.7;
     }
 
     .event-dot {
       position: absolute;
+
       z-index: 3;
 
       top: 10px;
@@ -938,79 +1279,97 @@
       width: 13px;
       height: 13px;
 
-      background: var(--ivory);
+      background:
+        var(--ivory);
 
-      border: 3px solid var(--terracotta);
+      border:
+        3px solid var(--terracotta);
+
       border-radius: 50%;
 
-      transform: translateX(-50%);
-      box-shadow: 0 0 0 7px rgba(184,111,56,0.07);
+      transform:
+        translateX(-50%);
+
+      box-shadow:
+        0 0 0 7px
+        rgba(184,111,56,0.07);
 
       transition:
         transform 0.3s ease,
         background 0.3s ease;
     }
 
-    .event-item:hover .event-dot {
-      background: var(--terracotta);
-      transform: translateX(-50%) scale(1.25);
+    .event-item:hover
+    .event-dot {
+      background:
+        var(--terracotta);
+
+      transform:
+        translateX(-50%)
+        scale(1.25);
     }
 
 
     /* =========================================================
        GALLERY
-       SOFT FADED SECTION
+       SOFT FADED EDITORIAL SECTION
     ========================================================= */
 
     .gallery-section {
       position: relative;
+
       overflow: hidden;
 
+      padding-top: 110px;
+      padding-bottom: 125px;
+
       /*
-        NO HARD DARK BACKGROUND.
-        Soft fade between warm tones.
+        Soft beige rather than a hard section colour.
       */
 
       background:
         linear-gradient(
           180deg,
-          #f8f1e6 0%,
-          #efe2cf 45%,
-          #f6eee3 100%
+          #efe2cf 0%,
+          #f2e8da 26%,
+          #f7f0e6 65%,
+          #faf7f1 100%
         );
-
-      padding-top: 110px;
-      padding-bottom: 115px;
     }
 
     /*
-      Large soft fade above gallery
+      Strong soft fade from Events.
     */
+
     .gallery-section::before {
       content: "";
 
       position: absolute;
+
       z-index: 0;
 
-      top: -180px;
-      left: -10%;
+      top: -1px;
+      left: 0;
+      right: 0;
 
-      width: 120%;
-      height: 360px;
+      height: 190px;
 
       background:
-        radial-gradient(
-          ellipse,
-          rgba(255,255,255,0.72) 0%,
-          rgba(255,255,255,0) 72%
+        linear-gradient(
+          to bottom,
+          #efe2cf 0%,
+          rgba(239,226,207,0.78) 28%,
+          rgba(239,226,207,0.32) 62%,
+          rgba(239,226,207,0) 100%
         );
 
       pointer-events: none;
     }
 
     /*
-      Subtle geometric decoration.
+      Very subtle geometric decoration.
     */
+
     .gallery-section::after {
       content: "";
 
@@ -1022,18 +1381,27 @@
       width: 460px;
       height: 460px;
 
-      border: 1px solid rgba(184,111,56,0.10);
+      border:
+        1px solid rgba(184,111,56,0.08);
+
       border-radius: 50%;
 
       box-shadow:
-        inset 0 0 0 35px rgba(205,168,108,0.035),
-        inset 0 0 0 70px rgba(205,168,108,0.025);
+        inset 0 0 0 35px
+        rgba(205,168,108,0.03),
+
+        inset 0 0 0 70px
+        rgba(205,168,108,0.025);
 
       pointer-events: none;
     }
 
     .gallery-heading {
+      position: relative;
+      z-index: 6;
+
       text-align: center;
+
       margin-bottom: 52px;
     }
 
@@ -1042,17 +1410,17 @@
     }
 
     /*
-      New editorial gallery.
-      No heavy cards.
-      No dark overlays.
-      No artificial "bento" feeling.
+      Editorial photo wall.
     */
 
     .gallery-grid {
+      position: relative;
+      z-index: 6;
+
       display: grid;
 
       grid-template-columns:
-        repeat(12, minmax(0, 1fr));
+        repeat(12, minmax(0,1fr));
 
       grid-auto-rows: 105px;
 
@@ -1068,14 +1436,16 @@
 
       overflow: hidden;
 
-      background: var(--cream);
+      background:
+        var(--cream);
 
       border-radius: 18px;
 
       cursor: pointer;
 
       box-shadow:
-        0 10px 28px rgba(77,52,33,0.08);
+        0 10px 28px
+        rgba(77,52,33,0.08);
 
       transition:
         transform 0.45s cubic-bezier(.22,1,.36,1),
@@ -1099,6 +1469,7 @@
       content: "";
 
       position: absolute;
+
       inset: 0;
 
       background:
@@ -1110,7 +1481,8 @@
 
       opacity: 0;
 
-      transition: opacity 0.4s ease;
+      transition:
+        opacity 0.4s ease;
     }
 
     .gallery-item:nth-child(1) {
@@ -1176,15 +1548,20 @@
     @media (hover:hover) and (pointer:fine) {
 
       .gallery-item:hover {
-        transform: translateY(-5px);
+        transform:
+          translateY(-5px);
 
         box-shadow:
-          0 20px 42px rgba(77,52,33,0.14);
+          0 20px 42px
+          rgba(77,52,33,0.14);
       }
 
       .gallery-item:hover img {
-        transform: scale(1.065);
-        filter: saturate(1.03);
+        transform:
+          scale(1.065);
+
+        filter:
+          saturate(1.03);
       }
 
       .gallery-item:hover::after {
@@ -1198,8 +1575,11 @@
     ========================================================= */
 
     .gallery-modal {
-      background: rgba(35,24,17,0.92);
-      backdrop-filter: blur(8px);
+      background:
+        rgba(35,24,17,0.92);
+
+      backdrop-filter:
+        blur(8px);
     }
 
     .gallery-modal .modal-dialog {
@@ -1228,6 +1608,7 @@
 
     .gallery-close {
       position: absolute;
+
       z-index: 5;
 
       top: -5px;
@@ -1240,9 +1621,13 @@
       place-items: center;
 
       color: var(--white);
-      background: rgba(64,43,29,0.65);
 
-      border: 1px solid rgba(255,255,255,0.2);
+      background:
+        rgba(64,43,29,0.65);
+
+      border:
+        1px solid rgba(255,255,255,0.2);
+
       border-radius: 50%;
 
       cursor: pointer;
@@ -1251,26 +1636,64 @@
 
     /* =========================================================
        FOOTER
+       Gallery fades naturally into footer
     ========================================================= */
 
     .site-footer {
       position: relative;
 
-      padding: 78px 0 30px;
+      padding:
+        110px 0 30px;
 
-      color: rgba(255,255,255,0.76);
+      color:
+        rgba(255,255,255,0.76);
+
+      /*
+        Starts lighter than before so Gallery doesn't
+        hit a hard colour wall.
+      */
 
       background:
         linear-gradient(
-          145deg,
-          var(--brown-dark),
-          #5a3c27
+          180deg,
+          #6b4a30 0%,
+          var(--brown-dark) 24%,
+          #3d291c 100%
         );
 
       overflow: hidden;
     }
 
+    /*
+      Soft top fade.
+    */
+
     .site-footer::before {
+      content: "";
+
+      position: absolute;
+
+      z-index: 0;
+
+      top: -1px;
+      left: 0;
+      right: 0;
+
+      height: 135px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          #faf7f1 0%,
+          rgba(250,247,241,0.72) 22%,
+          rgba(107,74,48,0.35) 68%,
+          rgba(107,74,48,0) 100%
+        );
+
+      pointer-events: none;
+    }
+
+    .site-footer::after {
       content: "";
 
       position: absolute;
@@ -1281,11 +1704,16 @@
       width: 480px;
       height: 480px;
 
-      border: 1px solid rgba(221,194,143,0.10);
+      border:
+        1px solid rgba(221,194,143,0.10);
+
       border-radius: 50%;
     }
 
     .footer-grid {
+      position: relative;
+      z-index: 3;
+
       display: grid;
 
       grid-template-columns:
@@ -1312,7 +1740,10 @@
 
       color: var(--white);
 
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
+
       font-size: 1.65rem;
     }
 
@@ -1320,6 +1751,7 @@
       margin: 0;
 
       line-height: 1.8;
+
       font-size: 0.91rem;
     }
 
@@ -1330,6 +1762,7 @@
 
       font-size: 0.78rem;
       font-weight: 700;
+
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
@@ -1337,13 +1770,16 @@
     .footer-links {
       display: flex;
       flex-direction: column;
+
       gap: 10px;
     }
 
     .footer-links a {
-      color: rgba(255,255,255,0.75);
+      color:
+        rgba(255,255,255,0.75);
 
       text-decoration: none;
+
       font-size: 0.9rem;
 
       transition:
@@ -1353,17 +1789,21 @@
 
     .footer-links a:hover {
       color: var(--white);
-      transform: translateX(4px);
+
+      transform:
+        translateX(4px);
     }
 
     .footer-contact {
       display: flex;
       flex-direction: column;
+
       gap: 13px;
     }
 
     .footer-contact-item {
       display: flex;
+
       align-items: flex-start;
       gap: 12px;
 
@@ -1373,6 +1813,7 @@
 
     .footer-contact-item i {
       width: 18px;
+
       margin-top: 3px;
 
       color: var(--gold-soft);
@@ -1380,6 +1821,7 @@
 
     .footer-socials {
       display: flex;
+
       gap: 9px;
 
       margin-top: 20px;
@@ -1394,7 +1836,9 @@
 
       color: var(--white);
 
-      border: 1px solid rgba(255,255,255,0.14);
+      border:
+        1px solid rgba(255,255,255,0.14);
+
       border-radius: 50%;
 
       text-decoration: none;
@@ -1407,24 +1851,38 @@
 
     .footer-social:hover {
       color: var(--white);
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(221,194,143,0.45);
-      transform: translateY(-3px);
+
+      background:
+        rgba(255,255,255,0.09);
+
+      border-color:
+        rgba(221,194,143,0.45);
+
+      transform:
+        translateY(-3px);
     }
 
     .footer-bottom {
+      position: relative;
+      z-index: 3;
+
       display: flex;
+
       align-items: center;
       justify-content: space-between;
 
       gap: 20px;
 
       margin-top: 65px;
+
       padding-top: 22px;
 
-      border-top: 1px solid rgba(255,255,255,0.10);
+      border-top:
+        1px solid rgba(255,255,255,0.10);
 
-      color: rgba(255,255,255,0.48);
+      color:
+        rgba(255,255,255,0.48);
+
       font-size: 0.78rem;
     }
 
@@ -1442,41 +1900,26 @@
     }
 
     .reveal[data-reveal="fade"] {
-      transform: translateY(25px);
+      transform:
+        translateY(25px);
     }
 
     .reveal[data-reveal="slide-left"] {
-      transform: translateX(-45px);
+      transform:
+        translateX(-45px);
     }
 
     .reveal[data-reveal="slide-right"] {
-      transform: translateX(45px);
+      transform:
+        translateX(45px);
     }
 
     .reveal[data-reveal="zoom"] {
-      transform: scale(0.94);
+      transform:
+        scale(0.94);
     }
 
     .reveal.revealed {
-      opacity: 1;
-      transform: none;
-    }
-
-
-    /* =========================================================
-       EVENT REVEAL
-    ========================================================= */
-
-    .event-item {
-      opacity: 0;
-      transform: translateY(30px);
-
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.22,1,.36,1);
-    }
-
-    .event-item.revealed {
       opacity: 1;
       transform: none;
     }
@@ -1504,6 +1947,7 @@
       .gallery-grid {
         gap: 12px;
       }
+
     }
 
 
@@ -1514,18 +1958,32 @@
         padding-bottom: 80px;
       }
 
+      /*
+        Mobile navigation gets solid background
+        only while its dropdown is open.
+      */
+
       .navbar-collapse {
         margin-top: 8px;
         padding: 12px;
 
-        background: rgba(250,247,241,0.97);
+        background:
+          rgba(250,247,241,0.98);
 
         border-radius: 18px;
-        box-shadow: var(--shadow-soft);
+
+        box-shadow:
+          var(--shadow-soft);
+      }
+
+      .navbar-collapse .nav-link {
+        color:
+          var(--brown-dark) !important;
       }
 
       .navbar-nav .nav-link {
-        padding: 11px 14px !important;
+        padding:
+          11px 14px !important;
       }
 
       .intro-layout {
@@ -1538,18 +1996,22 @@
       }
 
       /*
-        Activities:
-        still FIXED cards.
+        Activities remain fixed.
       */
 
       .activities-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(2, minmax(0,1fr));
+
         max-width: 760px;
       }
 
       .gallery-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-auto-rows: 110px;
+        grid-template-columns:
+          repeat(6, minmax(0,1fr));
+
+        grid-auto-rows:
+          110px;
       }
 
       .gallery-item:nth-child(1) {
@@ -1593,12 +2055,15 @@
       }
 
       .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr 1fr;
       }
 
       .footer-brand {
-        grid-column: 1 / -1;
+        grid-column:
+          1 / -1;
       }
+
     }
 
 
@@ -1614,11 +2079,13 @@
       }
 
       .hero-content {
-        transform: translateY(-42%);
+        transform:
+          translateY(-42%);
       }
 
       .hero-title {
-        font-size: clamp(3rem, 15vw, 4.5rem);
+        font-size:
+          clamp(3rem,15vw,4.5rem);
       }
 
       .hero-description {
@@ -1630,19 +2097,26 @@
         display: none;
       }
 
+      .hero-bottom-fade {
+        height: 150px;
+      }
+
       .intro-image {
         height: 400px;
-        border-radius: 0 70px 0 22px;
+
+        border-radius:
+          0 70px 0 22px;
       }
 
       /*
-        One column on mobile.
-        Still fixed 510px cards.
+        Mobile activity cards remain genuinely fixed.
       */
 
       .activities-grid {
         grid-template-columns: 1fr;
+
         max-width: 470px;
+
         gap: 20px;
       }
 
@@ -1656,6 +2130,7 @@
         height: 235px;
         min-height: 235px;
         max-height: 235px;
+
         flex-basis: 235px;
       }
 
@@ -1664,7 +2139,8 @@
         min-height: 275px;
         max-height: 275px;
 
-        padding: 25px 23px 24px;
+        padding:
+          25px 23px 24px;
       }
 
       .activity-title {
@@ -1676,29 +2152,35 @@
       }
 
       /*
-        Mobile events.
+        Events mobile.
       */
 
       .timeline::before {
         left: 9px;
+
         transform: none;
       }
 
       .event-item {
         display: block;
+
         min-height: 0;
 
         padding-left: 38px;
+
         margin-bottom: 42px;
       }
 
       .event-side {
         padding: 0;
-        text-align: left !important;
+
+        text-align:
+          left !important;
       }
 
       .event-content {
         max-width: none;
+
         margin: 0 !important;
       }
 
@@ -1709,20 +2191,33 @@
         width: 12px;
         height: 12px;
 
-        transform: translateX(-50%);
+        transform:
+          translateX(-50%);
       }
 
-      .event-item:hover .event-dot {
-        transform: translateX(-50%) scale(1.2);
+      .event-item:hover
+      .event-dot {
+        transform:
+          translateX(-50%)
+          scale(1.2);
       }
 
       /*
-        Gallery becomes a calm 2-column photo wall.
+        Gallery becomes calm two-column wall.
       */
 
+      .gallery-section {
+        padding-top: 85px;
+        padding-bottom: 90px;
+      }
+
       .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 145px;
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+
+        grid-auto-rows:
+          145px;
+
         gap: 9px;
       }
 
@@ -1742,8 +2237,17 @@
         border-radius: 14px;
       }
 
+      /*
+        Footer.
+      */
+
+      .site-footer {
+        padding-top: 90px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
@@ -1753,15 +2257,18 @@
 
       .footer-bottom {
         flex-direction: column;
+
         align-items: flex-start;
       }
+
     }
 
 
     @media (max-width: 420px) {
 
       .hero-title {
-        font-size: 2.85rem;
+        font-size:
+          2.85rem;
       }
 
       .hero-content-inner {
@@ -1769,9 +2276,16 @@
       }
 
       .gallery-grid {
-        grid-auto-rows: 125px;
+        grid-auto-rows:
+          125px;
+
         gap: 7px;
       }
+
+      /*
+        Small mobile:
+        still fixed cards.
+      */
 
       .activity-card {
         height: 500px;
@@ -1783,6 +2297,7 @@
         height: 225px;
         min-height: 225px;
         max-height: 225px;
+
         flex-basis: 225px;
       }
 
@@ -1791,6 +2306,7 @@
         min-height: 275px;
         max-height: 275px;
       }
+
     }
 
 
@@ -1807,9 +2323,14 @@
       *,
       *::before,
       *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
       }
 
       .hero-image {
@@ -1821,6 +2342,7 @@
         opacity: 1;
         transform: none;
       }
+
     }
 
   </style>
@@ -1834,16 +2356,26 @@
      NAVBAR
 ========================================================= -->
 
-<nav class="navbar navbar-expand-lg site-navbar" id="siteNavbar">
+<nav
+  class="navbar navbar-expand-lg site-navbar"
+  id="siteNavbar"
+>
 
   <div class="container">
 
-    <a class="navbar-brand" href="#home" aria-label="Vadtaldham Brisbane">
+    <a
+      class="navbar-brand"
+      href="#home"
+      aria-label="Vadtaldham Brisbane"
+    >
+
       <img
         src="images/logo.png"
         alt="Vadtaldham Brisbane logo"
       >
+
     </a>
+
 
     <button
       class="navbar-toggler"
@@ -1854,40 +2386,75 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
+
       <i class="fa-solid fa-bars-staggered"></i>
+
     </button>
+
 
     <div
       class="collapse navbar-collapse justify-content-end"
       id="mainNavigation"
     >
+
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link active" href="#home">Home</a>
+          <a
+            class="nav-link active"
+            href="#home"
+          >
+            Home
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a
+            class="nav-link"
+            href="#about"
+          >
+            About
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#activities">Activities</a>
+          <a
+            class="nav-link"
+            href="#activities"
+          >
+            Activities
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#events">Events</a>
+          <a
+            class="nav-link"
+            href="#events"
+          >
+            Events
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#gallery">Gallery</a>
+          <a
+            class="nav-link"
+            href="#gallery"
+          >
+            Gallery
+          </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#footer">Contact</a>
+          <a
+            class="nav-link"
+            href="#footer"
+          >
+            Contact
+          </a>
         </li>
 
       </ul>
+
     </div>
 
   </div>
@@ -1899,7 +2466,10 @@
      HERO
 ========================================================= -->
 
-<section id="home" class="hero">
+<section
+  id="home"
+  class="hero"
+>
 
   <div
     id="heroCarousel"
@@ -1909,6 +2479,7 @@
   >
 
     <div class="carousel-inner">
+
 
       <div class="carousel-item active">
 
@@ -1960,6 +2531,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1976,9 +2548,15 @@
         </div>
 
         <h1 class="hero-title">
+
           Faith.
-          <span>Community.</span>
+
+          <span>
+            Community.
+          </span>
+
           Together.
+
         </h1>
 
         <p class="hero-description">
@@ -1987,9 +2565,15 @@
           generations to come.
         </p>
 
-        <a href="#about" class="hero-button">
+        <a
+          href="#about"
+          class="hero-button"
+        >
+
           Discover More
+
           <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
       </div>
@@ -2003,6 +2587,7 @@
     Scroll to explore
   </div>
 
+
   <div class="hero-bottom-fade"></div>
 
 </section>
@@ -2012,13 +2597,20 @@
      ABOUT
 ========================================================= -->
 
-<section id="about" class="intro-section section-space">
+<section
+  id="about"
+  class="intro-section section-space"
+>
 
   <div class="container">
 
     <div class="intro-layout">
 
-      <div class="intro-image-wrap reveal" data-reveal="slide-left">
+
+      <div
+        class="intro-image-wrap reveal"
+        data-reveal="slide-left"
+      >
 
         <img
           class="intro-image"
@@ -2033,16 +2625,21 @@
       </div>
 
 
-      <div class="intro-copy reveal" data-reveal="slide-right">
+      <div
+        class="intro-copy reveal"
+        data-reveal="slide-right"
+      >
 
         <div class="section-kicker">
           About Us
         </div>
 
         <h2 class="section-title">
+
           A space for faith,
           <br>
           values & community
+
         </h2>
 
         <p>
@@ -2057,12 +2654,19 @@
           together.
         </p>
 
-        <a href="#activities" class="intro-link">
+        <a
+          href="#activities"
+          class="intro-link"
+        >
+
           Explore our activities
+
           <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
       </div>
+
 
     </div>
 
@@ -2075,11 +2679,18 @@
      ACTIVITIES
 ========================================================= -->
 
-<section id="activities" class="activities-section section-space">
+<section
+  id="activities"
+  class="activities-section section-space"
+>
 
   <div class="container">
 
-    <div class="activities-heading reveal" data-reveal="fade">
+
+    <div
+      class="activities-heading reveal"
+      data-reveal="fade"
+    >
 
       <div class="section-kicker">
         What We Do
@@ -2099,8 +2710,10 @@
 
     <!--
       IMPORTANT:
-      Do NOT add Bootstrap .row or .col classes here.
-      The custom CSS controls the exact card dimensions.
+      This is intentionally NOT a Bootstrap .row.
+
+      The cards are controlled entirely by the custom
+      activities-grid CSS.
     -->
 
     <div class="activities-grid">
@@ -2136,9 +2749,15 @@
             throughout the year.
           </p>
 
-          <a href="#footer" class="activity-link">
+          <a
+            href="#footer"
+            class="activity-link"
+          >
+
             Learn More
+
             <i class="fa-solid fa-arrow-right"></i>
+
           </a>
 
         </div>
@@ -2176,9 +2795,15 @@
             on values, leadership and spiritual growth.
           </p>
 
-          <a href="#footer" class="activity-link">
+          <a
+            href="#footer"
+            class="activity-link"
+          >
+
             Learn More
+
             <i class="fa-solid fa-arrow-right"></i>
+
           </a>
 
         </div>
@@ -2216,9 +2841,15 @@
             community bonding open to everyone.
           </p>
 
-          <a href="#footer" class="activity-link">
+          <a
+            href="#footer"
+            class="activity-link"
+          >
+
             Learn More
+
             <i class="fa-solid fa-arrow-right"></i>
+
           </a>
 
         </div>
@@ -2237,11 +2868,18 @@
      EVENTS
 ========================================================= -->
 
-<section id="events" class="events-section section-space">
+<section
+  id="events"
+  class="events-section section-space"
+>
 
   <div class="container">
 
-    <div class="events-heading reveal" data-reveal="fade">
+
+    <div
+      class="events-heading reveal"
+      data-reveal="fade"
+    >
 
       <div class="section-kicker">
         Mark Your Calendar
@@ -2261,6 +2899,8 @@
 
     <div class="timeline">
 
+
+      <!-- Event 1 -->
 
       <article class="event-item">
 
@@ -2292,6 +2932,8 @@
       </article>
 
 
+      <!-- Event 2 -->
+
       <article class="event-item">
 
         <div class="event-side"></div>
@@ -2322,6 +2964,8 @@
       </article>
 
 
+      <!-- Event 3 -->
+
       <article class="event-item">
 
         <div class="event-side">
@@ -2351,6 +2995,8 @@
 
       </article>
 
+
+      <!-- Event 4 -->
 
       <article class="event-item">
 
@@ -2393,11 +3039,18 @@
      GALLERY
 ========================================================= -->
 
-<section id="gallery" class="gallery-section">
+<section
+  id="gallery"
+  class="gallery-section"
+>
 
   <div class="container">
 
-    <div class="gallery-heading reveal" data-reveal="fade">
+
+    <div
+      class="gallery-heading reveal"
+      data-reveal="fade"
+    >
 
       <div class="section-kicker">
         Moments Together
@@ -2423,12 +3076,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1015/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1015/900/600"
           alt="Community moment"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2437,12 +3092,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1016/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1016/900/600"
           alt="Temple gathering"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2451,12 +3108,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1018/1200/1800"
       >
+
         <img
           src="https://picsum.photos/id/1018/700/1050"
           alt="Community event"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2465,12 +3124,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1020/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1020/900/600"
           alt="Celebration"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2479,12 +3140,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1024/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1024/900/600"
           alt="Community gathering"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2493,12 +3156,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1025/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1025/900/600"
           alt="Temple atmosphere"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2507,12 +3172,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1035/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1035/900/600"
           alt="Community activity"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2521,12 +3188,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1039/1200/1800"
       >
+
         <img
           src="https://picsum.photos/id/1039/700/1050"
           alt="Devotional gathering"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2535,12 +3204,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1043/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1043/900/600"
           alt="Community celebration"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2549,12 +3220,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1050/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1050/900/600"
           alt="Temple event"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2563,12 +3236,14 @@
         data-reveal="fade"
         data-full="https://picsum.photos/id/1055/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1055/900/600"
           alt="Community gathering"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2577,12 +3252,14 @@
         data-reveal="zoom"
         data-full="https://picsum.photos/id/1060/1800/1200"
       >
+
         <img
           src="https://picsum.photos/id/1060/900/600"
           alt="Celebration"
           loading="lazy"
           decoding="async"
         >
+
       </div>
 
 
@@ -2616,7 +3293,9 @@
           data-bs-dismiss="modal"
           aria-label="Close"
         >
+
           <i class="fa-solid fa-xmark"></i>
+
         </button>
 
         <img
@@ -2638,7 +3317,10 @@
      FOOTER
 ========================================================= -->
 
-<footer id="footer" class="site-footer">
+<footer
+  id="footer"
+  class="site-footer"
+>
 
   <div class="container">
 
@@ -2662,7 +3344,9 @@
           spiritual growth, cultural values and togetherness.
         </p>
 
+
         <div class="footer-socials">
+
 
           <a
             href="https://www.facebook.com/ShreeSwaminarayanMandirVadtaldhamBrisbane"
@@ -2671,8 +3355,11 @@
             rel="noopener"
             aria-label="Facebook"
           >
+
             <i class="fa-brands fa-facebook-f"></i>
+
           </a>
+
 
           <a
             href="https://www.instagram.com/swaminarayantemple_qld/"
@@ -2681,16 +3368,22 @@
             rel="noopener"
             aria-label="Instagram"
           >
+
             <i class="fa-brands fa-instagram"></i>
+
           </a>
+
 
           <a
             href="#"
             class="footer-social"
             aria-label="YouTube"
           >
+
             <i class="fa-brands fa-youtube"></i>
+
           </a>
+
 
         </div>
 
@@ -2705,11 +3398,25 @@
 
         <div class="footer-links">
 
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#activities">Activities</a>
-          <a href="#events">Events</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#about">
+            About Us
+          </a>
+
+          <a href="#activities">
+            Activities
+          </a>
+
+          <a href="#events">
+            Events
+          </a>
+
+          <a href="#gallery">
+            Gallery
+          </a>
 
         </div>
 
@@ -2724,6 +3431,7 @@
 
         <div class="footer-contact">
 
+
           <div class="footer-contact-item">
 
             <i class="fa-solid fa-location-dot"></i>
@@ -2735,6 +3443,7 @@
 
           </div>
 
+
           <div class="footer-contact-item">
 
             <i class="fa-solid fa-phone"></i>
@@ -2745,6 +3454,7 @@
 
           </div>
 
+
           <div class="footer-contact-item">
 
             <i class="fa-solid fa-envelope"></i>
@@ -2754,6 +3464,7 @@
             </span>
 
           </div>
+
 
         </div>
 
@@ -2790,22 +3501,38 @@
 <script>
 
   /* =========================================================
-     NAVBAR SCROLL
+     NAVBAR
   ========================================================= */
 
-  const navbar = document.getElementById("siteNavbar");
+  const navbar =
+    document.getElementById("siteNavbar");
+
 
   function updateNavbar() {
 
-    if (window.scrollY > 40) {
+    /*
+      At exactly the top:
+      transparent.
+
+      As soon as the user scrolls:
+      solid.
+    */
+
+    if (window.scrollY > 20) {
+
       navbar.classList.add("scrolled");
+
     } else {
+
       navbar.classList.remove("scrolled");
+
     }
 
   }
 
+
   updateNavbar();
+
 
   window.addEventListener(
     "scroll",
@@ -2815,32 +3542,44 @@
 
 
   /* =========================================================
-     CLOSE MOBILE NAV AFTER CLICK
+     MOBILE NAV
   ========================================================= */
 
   document
-    .querySelectorAll("#mainNavigation .nav-link")
+    .querySelectorAll(
+      "#mainNavigation .nav-link"
+    )
     .forEach(link => {
 
-      link.addEventListener("click", () => {
+      link.addEventListener(
+        "click",
+        () => {
 
-        const navigation =
-          document.getElementById("mainNavigation");
+          const navigation =
+            document.getElementById(
+              "mainNavigation"
+            );
 
-        if (
-          navigation.classList.contains("show")
-        ) {
+          if (
+            navigation.classList.contains(
+              "show"
+            )
+          ) {
 
-          const collapse =
-            bootstrap.Collapse.getInstance(navigation);
+            const collapse =
+              bootstrap.Collapse
+                .getInstance(
+                  navigation
+                );
 
-          if (collapse) {
-            collapse.hide();
+            if (collapse) {
+              collapse.hide();
+            }
+
           }
 
         }
-
-      });
+      );
 
     });
 
@@ -2855,9 +3594,13 @@
 
         entries.forEach(entry => {
 
-          if (entry.isIntersecting) {
+          if (
+            entry.isIntersecting
+          ) {
 
-            entry.target.classList.add("revealed");
+            entry.target.classList.add(
+              "revealed"
+            );
 
             revealObserver.unobserve(
               entry.target
@@ -2870,7 +3613,9 @@
       },
       {
         threshold: 0.12,
-        rootMargin: "0px 0px -50px 0px"
+
+        rootMargin:
+          "0px 0px -50px 0px"
       }
     );
 
@@ -2879,7 +3624,9 @@
     .querySelectorAll(".reveal")
     .forEach(element => {
 
-      revealObserver.observe(element);
+      revealObserver.observe(
+        element
+      );
 
     });
 
@@ -2894,9 +3641,13 @@
 
         entries.forEach(entry => {
 
-          if (entry.isIntersecting) {
+          if (
+            entry.isIntersecting
+          ) {
 
-            entry.target.classList.add("revealed");
+            entry.target.classList.add(
+              "revealed"
+            );
 
             eventObserver.unobserve(
               entry.target
@@ -2909,7 +3660,9 @@
       },
       {
         threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+
+        rootMargin:
+          "0px 0px -50px 0px"
       }
     );
 
@@ -2918,7 +3671,9 @@
     .querySelectorAll(".event-item")
     .forEach(event => {
 
-      eventObserver.observe(event);
+      eventObserver.observe(
+        event
+      );
 
     });
 
@@ -2944,20 +3699,28 @@
 
         entries.forEach(entry => {
 
-          if (!entry.isIntersecting) {
+          if (
+            !entry.isIntersecting
+          ) {
             return;
           }
 
           navLinks.forEach(link => {
 
-            link.classList.remove("active");
+            link.classList.remove(
+              "active"
+            );
 
             if (
-              link.getAttribute("href") ===
+              link.getAttribute(
+                "href"
+              ) ===
               "#" + entry.target.id
             ) {
 
-              link.classList.add("active");
+              link.classList.add(
+                "active"
+              );
 
             }
 
@@ -2967,7 +3730,9 @@
 
       },
       {
-        rootMargin: "-35% 0px -55% 0px",
+        rootMargin:
+          "-35% 0px -55% 0px",
+
         threshold: 0
       }
     );
@@ -2975,7 +3740,9 @@
 
   sections.forEach(section => {
 
-    navObserver.observe(section);
+    navObserver.observe(
+      section
+    );
 
   });
 
@@ -2985,10 +3752,14 @@
   ========================================================= */
 
   const hero =
-    document.querySelector(".hero");
+    document.querySelector(
+      ".hero"
+    );
 
   const heroImages =
-    document.querySelectorAll(".hero-image");
+    document.querySelectorAll(
+      ".hero-image"
+    );
 
 
   function updateHeroParallax() {
@@ -3013,6 +3784,7 @@
         )
       );
 
+
     heroImages.forEach(image => {
 
       image.style.setProperty(
@@ -3030,6 +3802,7 @@
     updateHeroParallax,
     { passive: true }
   );
+
 
   updateHeroParallax();
 
@@ -3056,26 +3829,33 @@
 
 
   document
-    .querySelectorAll(".gallery-item")
+    .querySelectorAll(
+      ".gallery-item"
+    )
     .forEach(item => {
 
       item.addEventListener(
         "click",
         () => {
 
-          const image =
+          const fullImage =
             item.getAttribute(
               "data-full"
             );
 
           const thumbnail =
-            item.querySelector("img");
+            item.querySelector(
+              "img"
+            );
+
 
           galleryModalImage.src =
-            image || thumbnail.src;
+            fullImage ||
+            thumbnail.src;
 
           galleryModalImage.alt =
             thumbnail.alt;
+
 
           galleryModal.show();
 
@@ -3086,7 +3866,7 @@
 
 
   /* =========================================================
-     RESET LIGHTBOX IMAGE
+     RESET LIGHTBOX
   ========================================================= */
 
   galleryModalElement.addEventListener(
@@ -3100,7 +3880,7 @@
 
 
   /* =========================================================
-     BOOTSTRAP CAROUSEL - RESTART HERO ANIMATION
+     HERO CAROUSEL ANIMATION
   ========================================================= */
 
   const heroCarousel =
@@ -3114,17 +3894,23 @@
     event => {
 
       const image =
-        event.relatedTarget.querySelector(
-          ".hero-image"
-        );
+        event.relatedTarget
+          .querySelector(
+            ".hero-image"
+          );
+
 
       if (!image) {
         return;
       }
 
-      image.style.animation = "none";
+
+      image.style.animation =
+        "none";
+
 
       void image.offsetWidth;
+
 
       image.style.animation =
         "heroZoom 10s ease-out forwards";
