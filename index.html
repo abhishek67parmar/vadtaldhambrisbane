@@ -1311,6 +1311,545 @@
 
 
     /* =========================================================
+       CALENDAR (FESTIVAL - NIRNAY)
+       Classy radial-accented panel, bridges Events -> Gallery
+    ========================================================= */
+
+    .calendar-section {
+      position: relative;
+      overflow: hidden;
+
+      padding-top: 105px;
+      padding-bottom: 115px;
+
+      background:
+        radial-gradient(circle at 8% 12%, rgba(205,168,108,0.16), transparent 32rem),
+        radial-gradient(circle at 93% 22%, rgba(184,111,56,0.10), transparent 30rem),
+        linear-gradient(180deg, #efe2cf 0%, #f4ecdd 28%, #f8f3eb 62%, #efe2cf 100%);
+    }
+
+    .calendar-section::before {
+      content: "";
+      position: absolute;
+      top: -120px;
+      left: -140px;
+      width: 380px;
+      height: 380px;
+      border: 1px solid rgba(205,168,108,0.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .calendar-section::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -160px;
+      width: 340px;
+      height: 340px;
+      border: 1px solid rgba(184,111,56,0.10);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .calendar-heading {
+      position: relative;
+      z-index: 6;
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .cal-title-sub {
+      display: block;
+      margin-top: 10px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.3em;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+
+    .calendar-panel {
+      position: relative;
+      z-index: 6;
+
+      max-width: 940px;
+      margin: 0 auto;
+
+      border: 1px solid rgba(101,69,47,0.10);
+      border-radius: var(--radius-lg);
+
+      background: rgba(255,255,255,0.72);
+      box-shadow: var(--shadow-card);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .calendar-tabs-row {
+      display: flex;
+      justify-content: center;
+      padding: 26px 26px 0;
+    }
+
+    .calendar-tab-group {
+      display: inline-flex;
+      gap: 5px;
+      padding: 5px;
+
+      border: 1px solid rgba(101,69,47,0.12);
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.75);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .calendar-tab-btn {
+      min-height: 42px;
+      padding: 0 24px;
+
+      border: 0;
+      border-radius: 999px;
+
+      color: var(--muted);
+      background: transparent;
+
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.87rem;
+      font-weight: 700;
+
+      transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .calendar-tab-btn:hover {
+      color: var(--terracotta);
+    }
+
+    .calendar-tab-btn.active {
+      color: var(--white);
+      background: var(--terracotta);
+      box-shadow: 0 9px 22px rgba(150,85,40,0.2);
+    }
+
+    .calendar-tab-panel {
+      padding: 24px 28px 30px;
+    }
+
+    .calendar-tab-panel[hidden] {
+      display: none;
+    }
+
+    /* Festival list (scrollable, keeps the section height in check) */
+
+    .festival-list-scroll {
+      max-height: 430px;
+      overflow-y: auto;
+
+      display: grid;
+      gap: 14px;
+
+      padding-right: 6px;
+    }
+
+    .festival-list-scroll::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    .festival-list-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .festival-list-scroll::-webkit-scrollbar-thumb {
+      background: rgba(184,111,56,0.32);
+      border-radius: 999px;
+    }
+
+    .festival-list-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(184,111,56,0.5);
+    }
+
+    .festival-item {
+      display: grid;
+      grid-template-columns: 74px minmax(0,1fr);
+      gap: 18px;
+      align-items: center;
+
+      padding: 15px 18px;
+
+      border: 1px solid rgba(101,69,47,0.09);
+      border-radius: 16px;
+
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.95), rgba(247,239,228,0.9));
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    @media (hover:hover) and (pointer:fine) {
+
+      .festival-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(77,52,33,0.12);
+        border-color: rgba(184,111,56,0.22);
+      }
+
+    }
+
+    .festival-date-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 4px;
+      border-radius: 12px;
+
+      background: linear-gradient(160deg, var(--gold-soft), var(--terracotta));
+      color: var(--white);
+      text-align: center;
+    }
+
+    .festival-date-badge .fd-day {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .festival-date-badge .fd-month {
+      margin-top: 3px;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.92;
+    }
+
+    .festival-info h4 {
+      margin: 0 0 4px;
+      color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+    }
+
+    .festival-info p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.65;
+    }
+
+    /* Mini month calendar */
+
+    .mini-cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .mini-cal-title {
+      color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.28rem;
+      font-weight: 600;
+    }
+
+    .mini-cal-nav-btn {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(101,69,47,0.15);
+      border-radius: 50%;
+
+      color: var(--brown-dark);
+      background: rgba(255,255,255,0.8);
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .mini-cal-nav-btn:hover {
+      background: var(--terracotta);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .mini-cal-weekdays,
+    .mini-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0,1fr));
+      gap: 6px;
+    }
+
+    .mini-cal-weekdays span {
+      padding-bottom: 6px;
+      text-align: center;
+      color: var(--terracotta);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mini-cal-day {
+      position: relative;
+      min-height: 78px;
+      padding: 7px 6px 6px;
+
+      border: 1px solid rgba(101,69,47,0.06);
+      border-radius: 12px;
+
+      background: rgba(255,255,255,0.55);
+      color: var(--text);
+      font-size: 0.84rem;
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+    }
+
+    .mini-cal-day.outside {
+      opacity: 0.35;
+    }
+
+    .mini-cal-day.today {
+      border-color: var(--terracotta);
+      box-shadow: inset 0 0 0 1px var(--terracotta);
+    }
+
+    .mini-cal-day.today .day-num {
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--terracotta);
+      font-size: 0.76rem;
+    }
+
+    .mini-cal-day.has-events {
+      cursor: pointer;
+    }
+
+    .mini-cal-day.has-events:hover {
+      background: rgba(205,168,108,0.22);
+    }
+
+    .mini-cal-day .day-num {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .mini-cal-day-events {
+      display: grid;
+      gap: 3px;
+      margin-top: 5px;
+    }
+
+    .mini-cal-chip {
+      display: block;
+      overflow: hidden;
+      padding: 3px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(184,111,56,0.18);
+      background: rgba(243,233,218,0.9);
+      color: var(--brown);
+      font-size: 0.64rem;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: left;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .mini-cal-more {
+      padding: 2px 6px;
+      color: var(--terracotta);
+      font-size: 0.64rem;
+      font-weight: 700;
+    }
+
+    /* Loading / error status */
+
+    .calendar-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 100px;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .calendar-status.error {
+      color: var(--terracotta-dark);
+    }
+
+    .calendar-spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--cream-deep);
+      border-top-color: var(--terracotta);
+      border-radius: 50%;
+      animation: calSpin 700ms linear infinite;
+    }
+
+    @keyframes calSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Event popup (dialog) */
+
+    .cal-event-dialog {
+      width: min(560px, calc(100% - 30px));
+      max-height: min(720px, calc(100vh - 32px));
+      padding: 0;
+      overflow: auto;
+
+      border: 1px solid rgba(184,111,56,0.28);
+      border-radius: var(--radius-lg);
+
+      color: var(--text);
+      background: var(--ivory);
+
+      box-shadow: 0 35px 100px rgba(64,43,29,0.35);
+    }
+
+    .cal-event-dialog::backdrop {
+      background: rgba(64,43,29,0.55);
+      backdrop-filter: blur(5px);
+    }
+
+    .cal-dialog-content {
+      padding: 28px;
+    }
+
+    .cal-dialog-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cal-dialog-title {
+      margin: 0;
+      color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .cal-dialog-close {
+      display: grid;
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+
+      border: 1px solid rgba(101,69,47,0.14);
+      border-radius: 50%;
+
+      color: var(--brown);
+      background: var(--cream);
+      font-size: 1.2rem;
+
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .cal-dialog-close:hover {
+      color: var(--white);
+      background: var(--terracotta);
+    }
+
+    .cal-dialog-event + .cal-dialog-event {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(101,69,47,0.12);
+    }
+
+    .cal-dialog-event h3 {
+      margin: 0 0 8px;
+      color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+    }
+
+    .cal-dialog-meta {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+      color: var(--brown-soft);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .cal-dialog-description {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 575.98px) {
+
+      .calendar-tab-panel {
+        padding: 20px 16px 24px;
+      }
+
+      .festival-item {
+        grid-template-columns: 60px minmax(0,1fr);
+        gap: 12px;
+        padding: 12px 14px;
+      }
+
+      .festival-date-badge .fd-day {
+        font-size: 1.15rem;
+      }
+
+      .mini-cal-day {
+        min-height: 58px;
+        padding: 5px 3px 5px;
+        font-size: 0.72rem;
+      }
+
+      .mini-cal-chip {
+        font-size: 0.55rem;
+        padding: 2px 4px;
+      }
+
+      .mini-cal-weekdays span {
+        font-size: 0.58rem;
+      }
+
+      .calendar-tab-btn {
+        padding: 0 15px;
+        font-size: 0.8rem;
+      }
+
+    }
+
+
+    /* =========================================================
        GALLERY
        SOFT FADED EDITORIAL SECTION
     ========================================================= */
@@ -2495,6 +3034,15 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            href="#calendar"
+          >
+            Calendar
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
             href="#gallery"
           >
             Gallery
@@ -3093,6 +3641,161 @@
 
 
 <!-- =========================================================
+     CALENDAR (FESTIVAL - NIRNAY)
+========================================================= -->
+
+<section
+  id="calendar"
+  class="calendar-section"
+>
+
+  <div class="container">
+
+    <div
+      class="calendar-heading reveal"
+      data-reveal="fade"
+    >
+
+      <div class="section-kicker">
+        Panchang &amp; Observances
+      </div>
+
+      <h2 class="section-title">
+        Calendar
+        <span class="cal-title-sub">
+          Festival &ndash; Nirnay
+        </span>
+      </h2>
+
+      <p class="section-subtitle">
+        Festivals and auspicious dates observed at Vadtaldham
+        Brisbane, loaded from our events calendar.
+      </p>
+
+    </div>
+
+    <div
+      class="calendar-panel reveal"
+      data-reveal="zoom"
+    >
+
+      <div
+        class="calendar-status"
+        id="calendarStatus"
+        role="status"
+        aria-live="polite"
+      >
+        <span class="calendar-spinner" aria-hidden="true"></span>
+        <span>Loading calendar&hellip;</span>
+      </div>
+
+      <div class="calendar-tabs-row" id="calendarTabsRow" hidden>
+
+        <div class="calendar-tab-group" role="tablist">
+
+          <button
+            type="button"
+            class="calendar-tab-btn active"
+            data-cal-tab="list"
+            role="tab"
+            aria-selected="true"
+          >
+            List
+          </button>
+
+          <button
+            type="button"
+            class="calendar-tab-btn"
+            data-cal-tab="grid"
+            role="tab"
+            aria-selected="false"
+          >
+            Calendar
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="calendar-tab-panel" data-cal-panel="list" hidden>
+
+        <div
+          class="festival-list-scroll"
+          id="festivalListScroll"
+        ></div>
+
+      </div>
+
+      <div class="calendar-tab-panel" data-cal-panel="grid" hidden>
+
+        <div class="mini-cal-header">
+
+          <button
+            type="button"
+            class="mini-cal-nav-btn"
+            id="festivalPrevMonth"
+            aria-label="Previous month"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="mini-cal-title" id="festivalCalTitle"></div>
+
+          <button
+            type="button"
+            class="mini-cal-nav-btn"
+            id="festivalNextMonth"
+            aria-label="Next month"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+        </div>
+
+        <div class="mini-cal-weekdays">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+
+        <div class="mini-cal-grid" id="festivalCalGrid"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<dialog id="calEventDialog" class="cal-event-dialog">
+  <div class="cal-dialog-content">
+
+    <header class="cal-dialog-header">
+      <h2 id="calDialogTitle" class="cal-dialog-title"></h2>
+
+      <button
+        type="button"
+        id="calDialogClose"
+        class="cal-dialog-close"
+        aria-label="Close event details"
+      >
+        &times;
+      </button>
+    </header>
+
+    <div id="calDialogBody"></div>
+
+  </div>
+</dialog>
+
+
+<!-- =========================================================
      GALLERY
 ========================================================= -->
 
@@ -3469,6 +4172,10 @@
 
           <a href="#events">
             Events
+          </a>
+
+          <a href="#calendar">
+            Calendar
           </a>
 
           <a href="#gallery">
@@ -3935,6 +4642,434 @@
     }
   );
 
+
+</script>
+
+
+<!-- =========================================================
+     CALENDAR (FESTIVAL - NIRNAY) SCRIPT
+========================================================= -->
+
+<script>
+
+  (function () {
+
+    const EVENTS_FILE = "./events.json";
+
+    const MONTH_NAMES = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    const els = {
+      status: document.getElementById("calendarStatus"),
+      tabsRow: document.getElementById("calendarTabsRow"),
+      tabButtons: document.querySelectorAll(".calendar-tab-btn"),
+      tabPanels: document.querySelectorAll(".calendar-tab-panel"),
+      listScroll: document.getElementById("festivalListScroll"),
+      calTitle: document.getElementById("festivalCalTitle"),
+      calGrid: document.getElementById("festivalCalGrid"),
+      prevBtn: document.getElementById("festivalPrevMonth"),
+      nextBtn: document.getElementById("festivalNextMonth"),
+      dialog: document.getElementById("calEventDialog"),
+      dialogTitle: document.getElementById("calDialogTitle"),
+      dialogBody: document.getElementById("calDialogBody"),
+      dialogClose: document.getElementById("calDialogClose")
+    };
+
+    if (!els.listScroll || !els.calGrid) {
+      return;
+    }
+
+    const MAX_CHIPS_PER_DAY = 2;
+
+    const state = {
+      allEvents: [],
+      calMonth: new Date()
+    };
+
+    const today = startOfDay(new Date());
+
+    /* ---------- date helpers (same shape as events.json) ---------- */
+
+    function startOfDay(value) {
+      const d = new Date(value);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    }
+
+    function addDays(value, days) {
+      const d = new Date(value);
+      d.setDate(d.getDate() + days);
+      return d;
+    }
+
+    function toISODate(date) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, "0");
+      const d = String(date.getDate()).padStart(2, "0");
+      return y + "-" + m + "-" + d;
+    }
+
+    function parseLocalDate(dateStr) {
+      const parts = dateStr.split("-").map(Number);
+      return new Date(parts[0], parts[1] - 1, parts[2]);
+    }
+
+    function getEventStart(event) {
+      if (event.start && event.start.date_time) {
+        return new Date(event.start.date_time);
+      }
+      if (event.start && event.start.date) {
+        return parseLocalDate(event.start.date);
+      }
+      return null;
+    }
+
+    function getEventEnd(event) {
+      if (event.end && event.end.date_time) {
+        return new Date(event.end.date_time);
+      }
+      if (event.end && event.end.date) {
+        return parseLocalDate(event.end.date);
+      }
+
+      const start = getEventStart(event);
+      if (!start) return null;
+
+      if (isAllDay(event)) {
+        return addDays(start, 1);
+      }
+
+      return new Date(start.getTime() + 60 * 60 * 1000);
+    }
+
+    function isAllDay(event) {
+      return Boolean(
+        (event.start && event.start.all_day) ||
+        (event.start && event.start.date)
+      );
+    }
+
+    function isValidEvent(event) {
+      const start = getEventStart(event);
+      return Boolean(start && !Number.isNaN(start.getTime()));
+    }
+
+    function isSameDate(a, b) {
+      return toISODate(a) === toISODate(b);
+    }
+
+    function eventOccursOnDate(event, date) {
+      const dayStart = startOfDay(date);
+      const dayEnd = addDays(dayStart, 1);
+      const start = getEventStart(event);
+      const end = getEventEnd(event) || addDays(start, 1);
+      return start < dayEnd && end > dayStart;
+    }
+
+    function sortEvents(events) {
+      return events.slice().sort((a, b) => getEventStart(a) - getEventStart(b));
+    }
+
+    function formatEventTime(event) {
+      if (isAllDay(event)) {
+        return "All day";
+      }
+
+      const formatter = new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "2-digit"
+      });
+
+      const start = getEventStart(event);
+      const end = getEventEnd(event);
+
+      if (!end) {
+        return formatter.format(start);
+      }
+
+      return formatter.format(start) + " \u2013 " + formatter.format(end);
+    }
+
+    function formatLongDate(event) {
+      const start = getEventStart(event);
+      return start.toLocaleDateString(undefined, {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+    }
+
+    /* ---------- list: next 15 days ---------- */
+
+    function renderFestivalList() {
+      const windowStart = today;
+      const windowEnd = addDays(today, 15);
+
+      const upcoming = sortEvents(
+        state.allEvents.filter(event => {
+          const start = getEventStart(event);
+          const end = getEventEnd(event) || addDays(start, 1);
+          return start < windowEnd && end > windowStart;
+        })
+      );
+
+      if (upcoming.length === 0) {
+        els.listScroll.innerHTML =
+          '<div class="calendar-status">No events in the next 15 days.</div>';
+        return;
+      }
+
+      const frag = document.createDocumentFragment();
+
+      upcoming.forEach(event => {
+        const startDate = getEventStart(event);
+
+        const card = document.createElement("div");
+        card.className = "festival-item";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+
+        card.innerHTML =
+          '<div class="festival-date-badge">' +
+            '<span class="fd-day">' + startDate.getDate() + '</span>' +
+            '<span class="fd-month">' + MONTH_NAMES[startDate.getMonth()].slice(0, 3) + '</span>' +
+          '</div>' +
+          '<div class="festival-info">' +
+            '<h4>' + (event.summary || "Untitled event") + '</h4>' +
+            '<p>' + formatEventTime(event) +
+              (event.location ? ' &middot; ' + event.location : '') +
+            '</p>' +
+          '</div>';
+
+        const openThis = () => openEventDialog([event]);
+        card.addEventListener("click", openThis);
+        card.addEventListener("keydown", e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openThis();
+          }
+        });
+
+        frag.appendChild(card);
+      });
+
+      els.listScroll.replaceChildren(frag);
+    }
+
+    /* ---------- calendar: full month, all events ---------- */
+
+    function renderFestivalCalendar() {
+      const year = state.calMonth.getFullYear();
+      const month = state.calMonth.getMonth();
+
+      els.calTitle.textContent = MONTH_NAMES[month] + " " + year;
+
+      const firstOfMonth = new Date(year, month, 1);
+      const startOffset = firstOfMonth.getDay();
+      const gridStart = new Date(year, month, 1 - startOffset);
+
+      const frag = document.createDocumentFragment();
+
+      for (let i = 0; i < 42; i += 1) {
+        const cellDate = new Date(
+          gridStart.getFullYear(),
+          gridStart.getMonth(),
+          gridStart.getDate() + i
+        );
+
+        const dayEvents = sortEvents(
+          state.allEvents.filter(event => eventOccursOnDate(event, cellDate))
+        );
+
+        const cell = document.createElement("div");
+        cell.className = "mini-cal-day";
+
+        if (cellDate.getMonth() !== month) {
+          cell.classList.add("outside");
+        }
+
+        if (isSameDate(cellDate, today)) {
+          cell.classList.add("today");
+        }
+
+        const num = document.createElement("div");
+        num.className = "day-num";
+        num.textContent = cellDate.getDate();
+        cell.appendChild(num);
+
+        if (dayEvents.length > 0) {
+          cell.classList.add("has-events");
+
+          cell.setAttribute(
+            "aria-label",
+            cellDate.toDateString() + ": " +
+            dayEvents.map(e => e.summary || "Untitled event").join(", ")
+          );
+
+          const chipsWrap = document.createElement("div");
+          chipsWrap.className = "mini-cal-day-events";
+
+          dayEvents.slice(0, MAX_CHIPS_PER_DAY).forEach(event => {
+            const chip = document.createElement("span");
+            chip.className = "mini-cal-chip";
+            chip.textContent = event.summary || "Untitled event";
+            chipsWrap.appendChild(chip);
+          });
+
+          if (dayEvents.length > MAX_CHIPS_PER_DAY) {
+            const more = document.createElement("span");
+            more.className = "mini-cal-more";
+            more.textContent = "+" + (dayEvents.length - MAX_CHIPS_PER_DAY) + " more";
+            chipsWrap.appendChild(more);
+          }
+
+          cell.appendChild(chipsWrap);
+
+          cell.addEventListener("click", () => openEventDialog(dayEvents));
+        }
+
+        frag.appendChild(cell);
+      }
+
+      els.calGrid.replaceChildren(frag);
+    }
+
+    /* ---------- popup ---------- */
+
+    function openEventDialog(events) {
+      if (!els.dialog) return;
+
+      if (events.length === 1) {
+        els.dialogTitle.textContent = events[0].summary || "Untitled event";
+      } else {
+        els.dialogTitle.textContent = events.length + " events";
+      }
+
+      els.dialogBody.innerHTML = events.map(event => {
+        let meta =
+          '<div>' + formatLongDate(event) + '</div>' +
+          '<div>' + formatEventTime(event) + '</div>';
+
+        if (event.location) {
+          meta += '<div>\u2316 ' + event.location + '</div>';
+        }
+
+        const description = event.description
+          ? '<div class="cal-dialog-description">' + event.description + '</div>'
+          : '';
+
+        const heading = events.length > 1
+          ? '<h3>' + (event.summary || "Untitled event") + '</h3>'
+          : '';
+
+        return (
+          '<div class="cal-dialog-event">' +
+            heading +
+            '<div class="cal-dialog-meta">' + meta + '</div>' +
+            description +
+          '</div>'
+        );
+      }).join("");
+
+      if (typeof els.dialog.showModal === "function") {
+        els.dialog.showModal();
+      } else {
+        els.dialog.setAttribute("open", "");
+      }
+    }
+
+    if (els.dialogClose) {
+      els.dialogClose.addEventListener("click", () => els.dialog.close());
+    }
+
+    if (els.dialog) {
+      els.dialog.addEventListener("click", event => {
+        if (event.target === els.dialog) {
+          els.dialog.close();
+        }
+      });
+    }
+
+    /* ---------- tabs + navigation ---------- */
+
+    els.tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-cal-tab");
+
+        els.tabButtons.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle("active", isActive);
+          b.setAttribute("aria-selected", String(isActive));
+        });
+
+        els.tabPanels.forEach(panel => {
+          panel.hidden = panel.getAttribute("data-cal-panel") !== target;
+        });
+      });
+    });
+
+    if (els.prevBtn) {
+      els.prevBtn.addEventListener("click", () => {
+        state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() - 1, 1);
+        renderFestivalCalendar();
+      });
+    }
+
+    if (els.nextBtn) {
+      els.nextBtn.addEventListener("click", () => {
+        state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() + 1, 1);
+        renderFestivalCalendar();
+      });
+    }
+
+    /* ---------- load events.json ---------- */
+
+    function showError(message) {
+      els.status.classList.add("error");
+      els.status.innerHTML = "<span>" + message + "</span>";
+      els.status.hidden = false;
+      els.tabsRow.hidden = true;
+      els.tabPanels.forEach(panel => { panel.hidden = true; });
+    }
+
+    fetch(EVENTS_FILE, { cache: "no-store" })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("events.json returned HTTP " + response.status);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (!Array.isArray(data.events)) {
+          throw new Error("events.json does not contain an events array");
+        }
+
+        state.allEvents = data.events.filter(isValidEvent);
+        state.calMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+        els.status.hidden = true;
+        els.tabsRow.hidden = false;
+
+        els.tabPanels.forEach(panel => {
+          panel.hidden = panel.getAttribute("data-cal-panel") !== "list";
+        });
+
+        renderFestivalList();
+        renderFestivalCalendar();
+      })
+      .catch(error => {
+        console.error(error);
+        showError(
+          "Calendar could not be loaded. Make sure events.json is in the " +
+          "same folder as index.html and the site is served over http(s) " +
+          "rather than opened directly as a file."
+        );
+      });
+
+  })();
 
 </script>
 
