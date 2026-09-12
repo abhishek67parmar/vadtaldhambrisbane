@@ -39,6 +39,17 @@
       --cream-deep: #eee1cf;
       --sand: #dfc9aa;
 
+      /*
+        Section-background ladder.
+        Four clearly-stepped tones (same warm family)
+        used in rotation so no two adjacent sections
+        ever look the same.
+      */
+      --wave-1: #faf7f1;
+      --wave-2: #f0e2c9;
+      --wave-3: #e6cea3;
+      --wave-4: #d9b87e;
+
       --gold: #cda86c;
       --gold-soft: #ddc28f;
 
@@ -581,42 +592,7 @@
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          180deg,
-          var(--ivory) 0%,
-          #faf6ef 52%,
-          var(--ivory-soft) 100%
-        );
-    }
-
-    /*
-      Bottom fade into activities.
-    */
-
-    .intro-section::after {
-      content: "";
-
-      position: absolute;
-
-      z-index: 5;
-
-      left: 0;
-      right: 0;
-      bottom: -1px;
-
-      height: 150px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(248,243,235,0),
-          rgba(247,241,231,0.55) 55%,
-          rgba(247,241,231,0.94) 84%,
-          #f7f1e7 100%
-        );
-
-      pointer-events: none;
+      background: var(--wave-1);
     }
 
     .intro-section::before {
@@ -730,17 +706,11 @@
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          180deg,
-          #f7f1e7 0%,
-          #f4ecdf 48%,
-          #f8f3eb 100%
-        );
+      background: var(--wave-2);
     }
 
     /*
-      Fade coming from About.
+      Top fade blending in from Discover (wave-3).
     */
 
     .activities-section::before {
@@ -748,49 +718,19 @@
 
       position: absolute;
 
-      z-index: 1;
+      z-index: 3;
 
       top: -1px;
       left: 0;
       right: 0;
 
-      height: 125px;
+      height: 150px;
 
       background:
         linear-gradient(
           to bottom,
-          #f7f1e7 0%,
-          rgba(247,241,231,0.72) 40%,
-          rgba(247,241,231,0) 100%
-        );
-
-      pointer-events: none;
-    }
-
-    /*
-      Fade going into Events.
-    */
-
-    .activities-section::after {
-      content: "";
-
-      position: absolute;
-
-      z-index: 5;
-
-      left: 0;
-      right: 0;
-      bottom: -1px;
-
-      height: 155px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(248,243,235,0),
-          rgba(250,247,241,0.58) 55%,
-          rgba(250,247,241,0.92) 84%,
-          var(--ivory) 100%
+          var(--wave-3) 0%,
+          transparent 100%
         );
 
       pointer-events: none;
@@ -1083,36 +1023,41 @@
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          180deg,
-          var(--ivory) 0%,
-          #fbf8f3 50%,
-          #f7f0e6 100%
-        );
+      background: var(--wave-1);
     }
+
+    /*
+      Top fade blending in from Activities (wave-2).
+    */
 
     .events-section::before {
       content: "";
 
       position: absolute;
 
+      z-index: 3;
+
       top: -1px;
       left: 0;
       right: 0;
 
-      height: 125px;
+      height: 150px;
 
       background:
         linear-gradient(
           to bottom,
-          var(--ivory) 0%,
-          rgba(250,247,241,0.72) 42%,
-          rgba(250,247,241,0) 100%
+          var(--wave-2) 0%,
+          transparent 100%
         );
 
       pointer-events: none;
     }
+
+    /*
+      Bottom fade into Calendar (wave-3). Calendar's own
+      ::before/::after are used for its decorative rings,
+      so this section owns the handoff instead.
+    */
 
     .events-section::after {
       content: "";
@@ -1125,15 +1070,13 @@
       right: 0;
       bottom: -1px;
 
-      height: 165px;
+      height: 150px;
 
       background:
         linear-gradient(
           to bottom,
-          rgba(247,240,230,0),
-          rgba(246,239,228,0.45) 45%,
-          rgba(239,226,207,0.76) 78%,
-          #efe2cf 100%
+          transparent 0%,
+          var(--wave-3) 100%
         );
 
       pointer-events: none;
@@ -1325,7 +1268,7 @@
       background:
         radial-gradient(circle at 8% 12%, rgba(205,168,108,0.16), transparent 32rem),
         radial-gradient(circle at 93% 22%, rgba(184,111,56,0.10), transparent 30rem),
-        linear-gradient(180deg, #efe2cf 0%, #f4ecdd 28%, #f8f3eb 62%, #efe2cf 100%);
+        var(--wave-3);
     }
 
     .calendar-section::before {
@@ -1862,22 +1805,11 @@
       padding-top: 110px;
       padding-bottom: 125px;
 
-      /*
-        Soft beige rather than a hard section colour.
-      */
-
-      background:
-        linear-gradient(
-          180deg,
-          #efe2cf 0%,
-          #f2e8da 26%,
-          #f7f0e6 65%,
-          #faf7f1 100%
-        );
+      background: var(--wave-4);
     }
 
     /*
-      Strong soft fade from Events.
+      Top fade blending in from Calendar (wave-3).
     */
 
     .gallery-section::before {
@@ -1885,21 +1817,19 @@
 
       position: absolute;
 
-      z-index: 0;
+      z-index: 3;
 
       top: -1px;
       left: 0;
       right: 0;
 
-      height: 190px;
+      height: 150px;
 
       background:
         linear-gradient(
           to bottom,
-          #efe2cf 0%,
-          rgba(239,226,207,0.78) 28%,
-          rgba(239,226,207,0.32) 62%,
-          rgba(239,226,207,0) 100%
+          var(--wave-3) 0%,
+          transparent 100%
         );
 
       pointer-events: none;
@@ -2212,20 +2142,20 @@
 
       position: absolute;
 
-      z-index: 0;
+      z-index: 3;
 
       top: -1px;
       left: 0;
       right: 0;
 
-      height: 135px;
+      height: 150px;
 
       background:
         linear-gradient(
           to bottom,
-          #faf7f1 0%,
-          rgba(250,247,241,0.72) 22%,
-          rgba(107,74,48,0.35) 68%,
+          var(--wave-4) 0%,
+          rgba(217,184,126,0.65) 30%,
+          rgba(107,74,48,0.30) 68%,
           rgba(107,74,48,0) 100%
         );
 
@@ -2466,63 +2396,6 @@
 
 
     /* =========================================================
-       SECTION ATMOSPHERE OVERRIDES
-       Keeps the existing layout/content intact while giving
-       each chapter its own distinct devotional mood.
-    ========================================================= */
-
-    /* .intro-section {
-      background:
-        linear-gradient(180deg, #fbf7f0 0%, #f7efe4 52%, #f3e8d9 100%);
-    }
-
-    .activities-section {
-      background:
-        linear-gradient(180deg, #f1e3d3 0%, #ead8c4 48%, #e6d1b9 100%);
-    }
-
-    .events-section {
-      background:
-        linear-gradient(180deg, #f0eee5 0%, #e8e8db 50%, #dfe3d4 100%);
-    } */
-
-    /* The calendar now dissolves in from the Events colour instead
-       of beginning with a hard horizontal boundary. */
-    .calendar-section {
-      background:
-        radial-gradient(circle at 8% 12%, rgba(205,168,108,0.16), transparent 32rem),
-        radial-gradient(circle at 93% 22%, rgba(184,111,56,0.10), transparent 30rem),
-        linear-gradient(180deg, #f5ecdf 0%, #f7f0e5 30%, #f3e6d5 68%, #ead9c3 100%);
-    }
-
-    .calendar-section::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: -1px;
-      left: 0;
-      right: 0;
-      height: 155px;
-      width: auto;
-      border: 0;
-      border-radius: 0;
-      /* background:
-        linear-gradient(
-          to bottom,
-          #dfe3d4 0%,
-          rgba(223,227,212,0.82) 18%,
-          rgba(235,224,207,0.46) 55%,
-          rgba(245,236,223,0) 100%
-        ); */
-      pointer-events: none;
-    }
-
-    .gallery-section {
-      background:
-        linear-gradient(180deg, #ead9c3 0%, #eee0d0 26%, #f0e2d8 65%, #f6eee8 100%);
-    }
-
-    /* =========================================================
        OUR SPIRITUAL HERITAGE
     ========================================================= */
 
@@ -2531,10 +2404,26 @@
       overflow: hidden;
       background:
         radial-gradient(circle at 50% 0%, rgba(221,194,143,0.22), transparent 34rem),
-        linear-gradient(180deg, #eee8df 0%, #e8e1d8 48%, #e2d9ce 100%);
+        var(--wave-2);
     }
 
+    /*
+      Top fade blending in from the About section (wave-1).
+    */
+
     .heritage-section::before {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 150px;
+      background: linear-gradient(to bottom, var(--wave-1) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .heritage-section::after {
       content: "";
       position: absolute;
       top: -90px;
@@ -2544,17 +2433,6 @@
       transform: translateX(-50%);
       border-radius: 50%;
       background: radial-gradient(ellipse, rgba(205,168,108,0.16), transparent 68%);
-      pointer-events: none;
-    }
-
-    .heritage-section::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 125px;
-      background: linear-gradient(to bottom, rgba(226,217,206,0), rgba(241,231,222,0.72), #ead9c3 100%);
       pointer-events: none;
     }
 
@@ -2694,17 +2572,22 @@
       background:
         radial-gradient(circle at 18% 20%, rgba(205,168,108,0.16), transparent 25rem),
         radial-gradient(circle at 86% 80%, rgba(184,111,56,0.12), transparent 28rem),
-        linear-gradient(180deg, #ead9c3 0%, #e6d3c0 48%, #e2cbbb 100%);
+        var(--wave-3);
     }
+
+    /*
+      Top fade blending in from the Heritage section (wave-2).
+    */
 
     .discover-section::before {
       content: "";
       position: absolute;
-      top: 0;
+      z-index: 3;
+      top: -1px;
       left: 0;
       right: 0;
-      height: 130px;
-      background: linear-gradient(to bottom, #ead9c3 0%, rgba(234,217,195,0.58) 38%, rgba(234,217,195,0) 100%);
+      height: 150px;
+      background: linear-gradient(to bottom, var(--wave-2) 0%, transparent 100%);
       pointer-events: none;
     }
 
@@ -3292,68 +3175,6 @@
 
     }
 
-
-    /* =========================================================
-       FINAL VISUAL POLISH — PALETTE + TRUE SECTION FADES
-       Uses only the original ivory / cream / sand / gold /
-       terracotta / brown family. No green or cool-grey tones.
-    ========================================================= */
-
-    .intro-section,
-    .activities-section,
-    .events-section,
-    .calendar-section,
-    .gallery-section,
-    .heritage-section,
-    .discover-section {
-      background-color: transparent !important;
-      background-repeat: no-repeat;
-    }
-
-    /* Each section fades into the next instead of ending at a hard edge. */
-    .intro-section {
-      background:
-        radial-gradient(circle at 78% 18%, rgba(221,194,143,0.12), transparent 26rem),
-        linear-gradient(to bottom, transparent 0, var(--ivory) 105px, var(--ivory-soft) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .heritage-section {
-      background:
-        radial-gradient(circle at 50% 14%, rgba(221,194,143,0.22), transparent 28rem),
-        linear-gradient(to bottom, transparent 0, var(--cream) 105px, var(--cream-deep) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .discover-section {
-      background:
-        radial-gradient(circle at 16% 20%, rgba(205,168,108,0.16), transparent 25rem),
-        radial-gradient(circle at 84% 78%, rgba(184,111,56,0.10), transparent 25rem),
-        linear-gradient(to bottom, transparent 0, var(--sand) 105px, var(--cream-deep) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .activities-section {
-      background:
-        radial-gradient(circle at 88% 15%, rgba(184,111,56,0.08), transparent 24rem),
-        linear-gradient(to bottom, transparent 0, var(--cream-deep) 105px, var(--ivory-soft) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .events-section {
-      background:
-        radial-gradient(circle at 18% 20%, rgba(221,194,143,0.10), transparent 25rem),
-        linear-gradient(to bottom, transparent 0, var(--ivory-soft) 105px, var(--cream) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .calendar-section {
-      background:
-        radial-gradient(circle at 8% 12%, rgba(205,168,108,0.16), transparent 32rem),
-        radial-gradient(circle at 93% 22%, rgba(184,111,56,0.09), transparent 30rem),
-        linear-gradient(to bottom, transparent 0, var(--cream-deep) 105px, var(--sand) calc(100% - 115px), transparent 100%) !important;
-    }
-
-    .gallery-section {
-      background:
-        radial-gradient(circle at 78% 18%, rgba(221,194,143,0.12), transparent 27rem),
-        linear-gradient(to bottom, transparent 0, var(--sand) 105px, var(--ivory) calc(100% - 120px), transparent 100%) !important;
-    }
 
     /* Remove the previous cool/green heritage image treatment. */
     .heritage-card:nth-child(3) .heritage-image-wrap {
