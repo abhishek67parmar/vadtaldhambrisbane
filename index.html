@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,19 @@
   <title>Vadtaldham Brisbane</title>
 
   <!-- Bootstrap -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    rel="stylesheet"
-  >
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <style>
-
     /* =========================================================
        ROOT
     ========================================================= */
@@ -362,8 +355,7 @@
       object-fit: cover;
 
       transform:
-        translateY(var(--parallax-y, 0px))
-        scale(1.02);
+        translateY(var(--parallax-y, 0px)) scale(1.02);
 
       filter: saturate(0.88);
     }
@@ -377,14 +369,12 @@
 
       from {
         transform:
-          translateY(var(--parallax-y, 0px))
-          scale(1.04);
+          translateY(var(--parallax-y, 0px)) scale(1.04);
       }
 
       to {
         transform:
-          translateY(var(--parallax-y, 0px))
-          scale(1.10);
+          translateY(var(--parallax-y, 0px)) scale(1.10);
       }
 
     }
@@ -394,12 +384,10 @@
       inset: 0;
 
       background:
-        linear-gradient(
-          90deg,
+        linear-gradient(90deg,
           rgba(38, 24, 15, 0.78) 0%,
           rgba(38, 24, 15, 0.42) 45%,
-          rgba(38, 24, 15, 0.16) 100%
-        );
+          rgba(38, 24, 15, 0.16) 100%);
     }
 
     /*
@@ -420,14 +408,12 @@
       height: 190px;
 
       background:
-        linear-gradient(
-          to bottom,
-          rgba(250,247,241,0) 0%,
-          rgba(250,247,241,0.10) 20%,
-          rgba(250,247,241,0.50) 55%,
-          rgba(250,247,241,0.92) 82%,
-          var(--ivory) 100%
-        );
+        linear-gradient(to bottom,
+          rgba(250, 247, 241, 0) 0%,
+          rgba(250, 247, 241, 0.10) 20%,
+          rgba(250, 247, 241, 0.50) 55%,
+          rgba(250, 247, 241, 0.92) 82%,
+          var(--ivory) 100%);
 
       pointer-events: none;
     }
@@ -501,7 +487,7 @@
 
       margin: 28px 0 32px;
 
-      color: rgba(255,255,255,0.86);
+      color: rgba(255, 255, 255, 0.86);
 
       font-size: 1.05rem;
       line-height: 1.8;
@@ -519,7 +505,7 @@
 
       background: var(--terracotta);
 
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 999px;
 
       text-decoration: none;
@@ -527,7 +513,7 @@
       font-weight: 700;
 
       box-shadow:
-        0 12px 30px rgba(60,30,15,0.25);
+        0 12px 30px rgba(60, 30, 15, 0.25);
 
       transition:
         transform 0.3s ease,
@@ -560,7 +546,7 @@
       align-items: center;
       gap: 12px;
 
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
 
       font-size: 0.72rem;
       font-weight: 700;
@@ -607,7 +593,7 @@
       height: 360px;
 
       border:
-        1px solid rgba(205,168,108,0.18);
+        1px solid rgba(205, 168, 108, 0.18);
 
       border-radius: 50%;
     }
@@ -727,11 +713,9 @@
       height: 150px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           var(--wave-3) 0%,
-          transparent 100%
-        );
+          transparent 100%);
 
       pointer-events: none;
     }
@@ -799,10 +783,10 @@
       overflow: hidden;
 
       background:
-        rgba(255,255,255,0.84);
+        rgba(255, 255, 255, 0.84);
 
       border:
-        1px solid rgba(101,69,47,0.10);
+        1px solid rgba(101, 69, 47, 0.10);
 
       border-radius:
         var(--radius-lg);
@@ -811,7 +795,7 @@
         var(--shadow-card);
 
       transition:
-        transform 0.5s cubic-bezier(.22,1,.36,1),
+        transform 0.5s cubic-bezier(.22, 1, .36, 1),
         box-shadow 0.5s ease,
         border-color 0.4s ease;
     }
@@ -830,12 +814,10 @@
       height: 3px;
 
       background:
-        linear-gradient(
-          90deg,
+        linear-gradient(90deg,
           transparent,
           var(--gold),
-          transparent
-        );
+          transparent);
     }
 
     /*
@@ -871,7 +853,7 @@
       object-position: center;
 
       transition:
-        transform 0.8s cubic-bezier(.22,1,.36,1),
+        transform 0.8s cubic-bezier(.22, 1, .36, 1),
         filter 0.5s ease;
     }
 
@@ -882,11 +864,9 @@
       inset: 0;
 
       background:
-        linear-gradient(
-          180deg,
-          rgba(64,43,29,0.02) 35%,
-          rgba(64,43,29,0.30) 100%
-        );
+        linear-gradient(180deg,
+          rgba(64, 43, 29, 0.02) 35%,
+          rgba(64, 43, 29, 0.30) 100%);
     }
 
     /*
@@ -911,11 +891,9 @@
         28px 30px 26px;
 
       background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.97),
-          rgba(247,239,228,0.94)
-        );
+        linear-gradient(145deg,
+          rgba(255, 255, 255, 0.97),
+          rgba(247, 239, 228, 0.94));
     }
 
     .activity-title {
@@ -984,31 +962,26 @@
           translateY(-9px);
 
         border-color:
-          rgba(184,111,56,0.24);
+          rgba(184, 111, 56, 0.24);
 
         box-shadow:
-          0 28px 60px
-          rgba(77,52,33,0.16);
+          0 28px 60px rgba(77, 52, 33, 0.16);
       }
 
-      .activity-card:hover
-      .activity-media img {
+      .activity-card:hover .activity-media img {
         transform:
           scale(1.07);
 
         filter:
-          saturate(1.04)
-          contrast(1.02);
+          saturate(1.04) contrast(1.02);
       }
 
-      .activity-card:hover
-      .activity-link {
+      .activity-card:hover .activity-link {
         gap: 14px;
         color: var(--brown-dark);
       }
 
-      .activity-card:hover
-      .activity-link i {
+      .activity-card:hover .activity-link i {
         transform:
           translateX(3px);
       }
@@ -1046,11 +1019,9 @@
       height: 150px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           var(--wave-2) 0%,
-          transparent 100%
-        );
+          transparent 100%);
 
       pointer-events: none;
     }
@@ -1075,11 +1046,9 @@
       height: 150px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           transparent 0%,
-          var(--wave-3) 100%
-        );
+          var(--wave-3) 100%);
 
       pointer-events: none;
     }
@@ -1116,13 +1085,11 @@
       width: 1px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           transparent,
-          rgba(184,111,56,0.38) 10%,
-          rgba(184,111,56,0.38) 90%,
-          transparent
-        );
+          rgba(184, 111, 56, 0.38) 10%,
+          rgba(184, 111, 56, 0.38) 90%,
+          transparent);
 
       transform:
         translateX(-50%);
@@ -1147,7 +1114,7 @@
 
       transition:
         opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.22,1,.36,1);
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
     }
 
     .event-item.revealed {
@@ -1160,13 +1127,11 @@
         10px 55px;
     }
 
-    .event-item:nth-child(odd)
-    .event-side:first-child {
+    .event-item:nth-child(odd) .event-side:first-child {
       text-align: right;
     }
 
-    .event-item:nth-child(even)
-    .event-side:last-child {
+    .event-item:nth-child(even) .event-side:last-child {
       text-align: left;
     }
 
@@ -1174,8 +1139,7 @@
       max-width: 390px;
     }
 
-    .event-item:nth-child(odd)
-    .event-content {
+    .event-item:nth-child(odd) .event-content {
       margin-left: auto;
     }
 
@@ -1236,22 +1200,19 @@
         translateX(-50%);
 
       box-shadow:
-        0 0 0 7px
-        rgba(184,111,56,0.07);
+        0 0 0 7px rgba(184, 111, 56, 0.07);
 
       transition:
         transform 0.3s ease,
         background 0.3s ease;
     }
 
-    .event-item:hover
-    .event-dot {
+    .event-item:hover .event-dot {
       background:
         var(--terracotta);
 
       transform:
-        translateX(-50%)
-        scale(1.25);
+        translateX(-50%) scale(1.25);
     }
 
 
@@ -1268,8 +1229,8 @@
       padding-bottom: 115px;
 
       background:
-        radial-gradient(circle at 8% 12%, rgba(205,168,108,0.16), transparent 32rem),
-        radial-gradient(circle at 93% 22%, rgba(184,111,56,0.10), transparent 30rem),
+        radial-gradient(circle at 8% 12%, rgba(205, 168, 108, 0.16), transparent 32rem),
+        radial-gradient(circle at 93% 22%, rgba(184, 111, 56, 0.10), transparent 30rem),
         var(--wave-3);
     }
 
@@ -1280,7 +1241,7 @@
       left: -140px;
       width: 380px;
       height: 380px;
-      border: 1px solid rgba(205,168,108,0.16);
+      border: 1px solid rgba(205, 168, 108, 0.16);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -1292,7 +1253,7 @@
       bottom: -160px;
       width: 340px;
       height: 340px;
-      border: 1px solid rgba(184,111,56,0.10);
+      border: 1px solid rgba(184, 111, 56, 0.10);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -1322,10 +1283,10 @@
       max-width: 940px;
       margin: 0 auto;
 
-      border: 1px solid rgba(101,69,47,0.10);
+      border: 1px solid rgba(101, 69, 47, 0.10);
       border-radius: var(--radius-lg);
 
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.72);
       box-shadow: var(--shadow-card);
 
       backdrop-filter: blur(10px);
@@ -1343,10 +1304,10 @@
       gap: 5px;
       padding: 5px;
 
-      border: 1px solid rgba(101,69,47,0.12);
+      border: 1px solid rgba(101, 69, 47, 0.12);
       border-radius: 999px;
 
-      background: rgba(255,255,255,0.75);
+      background: rgba(255, 255, 255, 0.75);
       box-shadow: var(--shadow-soft);
     }
 
@@ -1377,7 +1338,7 @@
     .calendar-tab-btn.active {
       color: var(--white);
       background: var(--terracotta);
-      box-shadow: 0 9px 22px rgba(150,85,40,0.2);
+      box-shadow: 0 9px 22px rgba(150, 85, 40, 0.2);
     }
 
     .calendar-tab-panel {
@@ -1409,27 +1370,27 @@
     }
 
     .festival-list-scroll::-webkit-scrollbar-thumb {
-      background: rgba(184,111,56,0.32);
+      background: rgba(184, 111, 56, 0.32);
       border-radius: 999px;
     }
 
     .festival-list-scroll::-webkit-scrollbar-thumb:hover {
-      background: rgba(184,111,56,0.5);
+      background: rgba(184, 111, 56, 0.5);
     }
 
     .festival-item {
       display: grid;
-      grid-template-columns: 74px minmax(0,1fr);
+      grid-template-columns: 74px minmax(0, 1fr);
       gap: 18px;
       align-items: center;
 
       padding: 15px 18px;
 
-      border: 1px solid rgba(101,69,47,0.09);
+      border: 1px solid rgba(101, 69, 47, 0.09);
       border-radius: 16px;
 
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.95), rgba(247,239,228,0.9));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(247, 239, 228, 0.9));
 
       transition:
         transform 0.3s ease,
@@ -1441,8 +1402,8 @@
 
       .festival-item:hover {
         transform: translateY(-3px);
-        box-shadow: 0 14px 30px rgba(77,52,33,0.12);
-        border-color: rgba(184,111,56,0.22);
+        box-shadow: 0 14px 30px rgba(77, 52, 33, 0.12);
+        border-color: rgba(184, 111, 56, 0.22);
       }
 
     }
@@ -1515,11 +1476,11 @@
       display: grid;
       place-items: center;
 
-      border: 1px solid rgba(101,69,47,0.15);
+      border: 1px solid rgba(101, 69, 47, 0.15);
       border-radius: 50%;
 
       color: var(--brown-dark);
-      background: rgba(255,255,255,0.8);
+      background: rgba(255, 255, 255, 0.8);
 
       transition:
         background 0.25s ease,
@@ -1536,7 +1497,7 @@
     .mini-cal-weekdays,
     .mini-cal-grid {
       display: grid;
-      grid-template-columns: repeat(7, minmax(0,1fr));
+      grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 6px;
     }
 
@@ -1555,10 +1516,10 @@
       min-height: 78px;
       padding: 7px 6px 6px;
 
-      border: 1px solid rgba(101,69,47,0.06);
+      border: 1px solid rgba(101, 69, 47, 0.06);
       border-radius: 12px;
 
-      background: rgba(255,255,255,0.55);
+      background: rgba(255, 255, 255, 0.55);
       color: var(--text);
       font-size: 0.84rem;
 
@@ -1593,7 +1554,7 @@
     }
 
     .mini-cal-day.has-events:hover {
-      background: rgba(205,168,108,0.22);
+      background: rgba(205, 168, 108, 0.22);
     }
 
     .mini-cal-day .day-num {
@@ -1612,8 +1573,8 @@
       overflow: hidden;
       padding: 3px 6px;
       border-radius: 6px;
-      border: 1px solid rgba(184,111,56,0.18);
-      background: rgba(243,233,218,0.9);
+      border: 1px solid rgba(184, 111, 56, 0.18);
+      background: rgba(243, 233, 218, 0.9);
       color: var(--brown);
       font-size: 0.64rem;
       font-weight: 700;
@@ -1658,7 +1619,9 @@
     }
 
     @keyframes calSpin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     /* Event popup (dialog) */
@@ -1669,17 +1632,17 @@
       padding: 0;
       overflow: auto;
 
-      border: 1px solid rgba(184,111,56,0.28);
+      border: 1px solid rgba(184, 111, 56, 0.28);
       border-radius: var(--radius-lg);
 
       color: var(--text);
       background: var(--ivory);
 
-      box-shadow: 0 35px 100px rgba(64,43,29,0.35);
+      box-shadow: 0 35px 100px rgba(64, 43, 29, 0.35);
     }
 
     .cal-event-dialog::backdrop {
-      background: rgba(64,43,29,0.55);
+      background: rgba(64, 43, 29, 0.55);
       backdrop-filter: blur(5px);
     }
 
@@ -1710,7 +1673,7 @@
       height: 38px;
       place-items: center;
 
-      border: 1px solid rgba(101,69,47,0.14);
+      border: 1px solid rgba(101, 69, 47, 0.14);
       border-radius: 50%;
 
       color: var(--brown);
@@ -1725,10 +1688,10 @@
       background: var(--terracotta);
     }
 
-    .cal-dialog-event + .cal-dialog-event {
+    .cal-dialog-event+.cal-dialog-event {
       margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid rgba(101,69,47,0.12);
+      border-top: 1px solid rgba(101, 69, 47, 0.12);
     }
 
     .cal-dialog-event h3 {
@@ -1762,7 +1725,7 @@
       }
 
       .festival-item {
-        grid-template-columns: 60px minmax(0,1fr);
+        grid-template-columns: 60px minmax(0, 1fr);
         gap: 12px;
         padding: 12px 14px;
       }
@@ -1828,11 +1791,9 @@
       height: 150px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           var(--wave-3) 0%,
-          transparent 100%
-        );
+          transparent 100%);
 
       pointer-events: none;
     }
@@ -1853,16 +1814,14 @@
       height: 460px;
 
       border:
-        1px solid rgba(184,111,56,0.08);
+        1px solid rgba(184, 111, 56, 0.08);
 
       border-radius: 50%;
 
       box-shadow:
-        inset 0 0 0 35px
-        rgba(205,168,108,0.03),
+        inset 0 0 0 35px rgba(205, 168, 108, 0.03),
 
-        inset 0 0 0 70px
-        rgba(205,168,108,0.025);
+        inset 0 0 0 70px rgba(205, 168, 108, 0.025);
 
       pointer-events: none;
     }
@@ -1891,7 +1850,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(12, minmax(0,1fr));
+        repeat(12, minmax(0, 1fr));
 
       grid-auto-rows: 105px;
 
@@ -1915,11 +1874,10 @@
       cursor: pointer;
 
       box-shadow:
-        0 10px 28px
-        rgba(77,52,33,0.08);
+        0 10px 28px rgba(77, 52, 33, 0.08);
 
       transition:
-        transform 0.45s cubic-bezier(.22,1,.36,1),
+        transform 0.45s cubic-bezier(.22, 1, .36, 1),
         box-shadow 0.45s ease;
     }
 
@@ -1932,7 +1890,7 @@
       object-fit: cover;
 
       transition:
-        transform 0.75s cubic-bezier(.22,1,.36,1),
+        transform 0.75s cubic-bezier(.22, 1, .36, 1),
         filter 0.5s ease;
     }
 
@@ -1944,11 +1902,9 @@
       inset: 0;
 
       background:
-        linear-gradient(
-          180deg,
-          rgba(64,43,29,0) 50%,
-          rgba(64,43,29,0.13) 100%
-        );
+        linear-gradient(180deg,
+          rgba(64, 43, 29, 0) 50%,
+          rgba(64, 43, 29, 0.13) 100%);
 
       opacity: 0;
 
@@ -2023,8 +1979,7 @@
           translateY(-5px);
 
         box-shadow:
-          0 20px 42px
-          rgba(77,52,33,0.14);
+          0 20px 42px rgba(77, 52, 33, 0.14);
       }
 
       .gallery-item:hover img {
@@ -2047,7 +2002,7 @@
 
     .gallery-modal {
       background:
-        rgba(35,24,17,0.92);
+        rgba(35, 24, 17, 0.92);
 
       backdrop-filter:
         blur(8px);
@@ -2094,10 +2049,10 @@
       color: var(--white);
 
       background:
-        rgba(64,43,29,0.65);
+        rgba(64, 43, 29, 0.65);
 
       border:
-        1px solid rgba(255,255,255,0.2);
+        1px solid rgba(255, 255, 255, 0.2);
 
       border-radius: 50%;
 
@@ -2117,7 +2072,7 @@
         110px 0 30px;
 
       color:
-        rgba(255,255,255,0.76);
+        rgba(255, 255, 255, 0.76);
 
       /*
         Starts lighter than before so Gallery doesn't
@@ -2125,12 +2080,10 @@
       */
 
       background:
-        linear-gradient(
-          180deg,
+        linear-gradient(180deg,
           #6b4a30 0%,
           var(--brown-dark) 24%,
-          #3d291c 100%
-        );
+          #3d291c 100%);
 
       overflow: hidden;
     }
@@ -2153,13 +2106,11 @@
       height: 150px;
 
       background:
-        linear-gradient(
-          to bottom,
+        linear-gradient(to bottom,
           var(--wave-4) 0%,
-          rgba(217,184,126,0.65) 30%,
-          rgba(107,74,48,0.30) 68%,
-          rgba(107,74,48,0) 100%
-        );
+          rgba(217, 184, 126, 0.65) 30%,
+          rgba(107, 74, 48, 0.30) 68%,
+          rgba(107, 74, 48, 0) 100%);
 
       pointer-events: none;
     }
@@ -2176,7 +2127,7 @@
       height: 480px;
 
       border:
-        1px solid rgba(221,194,143,0.10);
+        1px solid rgba(221, 194, 143, 0.10);
 
       border-radius: 50%;
     }
@@ -2197,7 +2148,7 @@
       max-width: 420px;
     }
 
-    .footer-logo {  
+    .footer-logo {
       width: 150px;
       height: 72px;
 
@@ -2246,7 +2197,7 @@
 
     .footer-links a {
       color:
-        rgba(255,255,255,0.75);
+        rgba(255, 255, 255, 0.75);
 
       text-decoration: none;
 
@@ -2307,7 +2258,7 @@
       color: var(--white);
 
       border:
-        1px solid rgba(255,255,255,0.14);
+        1px solid rgba(255, 255, 255, 0.14);
 
       border-radius: 50%;
 
@@ -2323,10 +2274,10 @@
       color: var(--white);
 
       background:
-        rgba(255,255,255,0.09);
+        rgba(255, 255, 255, 0.09);
 
       border-color:
-        rgba(221,194,143,0.45);
+        rgba(221, 194, 143, 0.45);
 
       transform:
         translateY(-3px);
@@ -2348,10 +2299,10 @@
       padding-top: 22px;
 
       border-top:
-        1px solid rgba(255,255,255,0.10);
+        1px solid rgba(255, 255, 255, 0.10);
 
       color:
-        rgba(255,255,255,0.48);
+        rgba(255, 255, 255, 0.48);
 
       font-size: 0.78rem;
     }
@@ -2366,7 +2317,7 @@
 
       transition:
         opacity 0.8s ease,
-        transform 0.8s cubic-bezier(.22,1,.36,1);
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
     }
 
     .reveal[data-reveal="fade"] {
@@ -2405,7 +2356,7 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 50% 0%, rgba(221,194,143,0.22), transparent 34rem),
+        radial-gradient(circle at 50% 0%, rgba(221, 194, 143, 0.22), transparent 34rem),
         var(--wave-2);
     }
 
@@ -2434,7 +2385,7 @@
       height: 220px;
       transform: translateX(-50%);
       border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(205,168,108,0.16), transparent 68%);
+      background: radial-gradient(ellipse, rgba(205, 168, 108, 0.16), transparent 68%);
       pointer-events: none;
     }
 
@@ -2463,14 +2414,14 @@
       position: relative;
       min-width: 0;
       padding: 12px 12px 24px;
-      border: 1px solid rgba(101,69,47,0.10);
+      border: 1px solid rgba(101, 69, 47, 0.10);
       border-radius: 30px;
-      background: rgba(250,247,241,0.72);
-      box-shadow: 0 20px 55px rgba(77,52,33,0.10);
+      background: rgba(250, 247, 241, 0.72);
+      box-shadow: 0 20px 55px rgba(77, 52, 33, 0.10);
       overflow: hidden;
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
-      transition: transform 0.55s cubic-bezier(.22,1,.36,1), box-shadow 0.55s ease;
+      transition: transform 0.55s cubic-bezier(.22, 1, .36, 1), box-shadow 0.55s ease;
     }
 
     .heritage-card:nth-child(2) {
@@ -2479,7 +2430,7 @@
 
     .heritage-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 30px 70px rgba(77,52,33,0.16);
+      box-shadow: 0 30px 70px rgba(77, 52, 33, 0.16);
     }
 
     .heritage-card:nth-child(2):hover {
@@ -2495,24 +2446,24 @@
       overflow: hidden;
       border-radius: 22px;
       background:
-        radial-gradient(circle at 50% 35%, rgba(255,255,255,0.95), rgba(231,218,199,0.75));
+        radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.95), rgba(231, 218, 199, 0.75));
     }
 
     .heritage-card:nth-child(2) .heritage-image-wrap {
       background:
-        radial-gradient(circle at 50% 30%, rgba(255,248,228,0.98), rgba(216,205,188,0.78));
+        radial-gradient(circle at 50% 30%, rgba(255, 248, 228, 0.98), rgba(216, 205, 188, 0.78));
     }
 
     .heritage-card:nth-child(3) .heritage-image-wrap {
       background:
-        radial-gradient(circle at 50% 35%, rgba(249,243,233,0.98), rgba(207,211,199,0.72));
+        radial-gradient(circle at 50% 35%, rgba(249, 243, 233, 0.98), rgba(207, 211, 199, 0.72));
     }
 
     .heritage-image-wrap::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.04), rgba(64,43,29,0.08));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(64, 43, 29, 0.08));
       pointer-events: none;
     }
 
@@ -2522,7 +2473,7 @@
       object-fit: contain;
       padding: 10px;
       filter: saturate(0.94) contrast(1.01);
-      transition: transform 0.75s cubic-bezier(.22,1,.36,1), filter 0.5s ease;
+      transition: transform 0.75s cubic-bezier(.22, 1, .36, 1), filter 0.5s ease;
     }
 
     .heritage-card:hover .heritage-image {
@@ -2541,10 +2492,10 @@
       width: 38px;
       height: 38px;
       margin-bottom: 11px;
-      border: 1px solid rgba(205,168,108,0.40);
+      border: 1px solid rgba(205, 168, 108, 0.40);
       border-radius: 50%;
       color: var(--terracotta);
-      background: rgba(255,255,255,0.62);
+      background: rgba(255, 255, 255, 0.62);
       font-size: 0.78rem;
     }
 
@@ -2572,8 +2523,8 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 18% 20%, rgba(205,168,108,0.16), transparent 25rem),
-        radial-gradient(circle at 86% 80%, rgba(184,111,56,0.12), transparent 28rem),
+        radial-gradient(circle at 18% 20%, rgba(205, 168, 108, 0.16), transparent 25rem),
+        radial-gradient(circle at 86% 80%, rgba(184, 111, 56, 0.12), transparent 28rem),
         var(--wave-3);
     }
 
@@ -2600,9 +2551,9 @@
       left: -120px;
       width: 430px;
       height: 430px;
-      border: 1px solid rgba(101,69,47,0.09);
+      border: 1px solid rgba(101, 69, 47, 0.09);
       border-radius: 50%;
-      box-shadow: inset 0 0 0 35px rgba(255,255,255,0.04), inset 0 0 0 70px rgba(205,168,108,0.035);
+      box-shadow: inset 0 0 0 35px rgba(255, 255, 255, 0.04), inset 0 0 0 70px rgba(205, 168, 108, 0.035);
       pointer-events: none;
     }
 
@@ -2623,10 +2574,10 @@
       max-width: 1080px;
       margin: 0 auto;
       padding: 10px;
-      border: 1px solid rgba(255,255,255,0.58);
+      border: 1px solid rgba(255, 255, 255, 0.58);
       border-radius: 32px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.52), rgba(247,239,228,0.34));
-      box-shadow: 0 30px 80px rgba(64,43,29,0.20), 0 0 0 1px rgba(101,69,47,0.07);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.52), rgba(247, 239, 228, 0.34));
+      box-shadow: 0 30px 80px rgba(64, 43, 29, 0.20), 0 0 0 1px rgba(101, 69, 47, 0.07);
     }
 
     .video-frame {
@@ -2742,7 +2693,7 @@
         padding: 12px;
 
         background:
-          rgba(250,247,241,0.98);
+          rgba(250, 247, 241, 0.98);
 
         border-radius: 18px;
 
@@ -2775,14 +2726,14 @@
 
       .activities-grid {
         grid-template-columns:
-          repeat(2, minmax(0,1fr));
+          repeat(2, minmax(0, 1fr));
 
         max-width: 760px;
       }
 
       .gallery-grid {
         grid-template-columns:
-          repeat(6, minmax(0,1fr));
+          repeat(6, minmax(0, 1fr));
 
         grid-auto-rows:
           110px;
@@ -2867,8 +2818,7 @@
         height: 100%;
 
         transform:
-          translateZ(0)
-          scale(1.01);
+          translateZ(0) scale(1.01);
 
         will-change: transform;
       }
@@ -2882,14 +2832,12 @@
 
         from {
           transform:
-            translateZ(0)
-            scale(1.01);
+            translateZ(0) scale(1.01);
         }
 
         to {
           transform:
-            translateZ(0)
-            scale(1.07);
+            translateZ(0) scale(1.07);
         }
 
       }
@@ -2901,7 +2849,7 @@
 
       .hero-title {
         font-size:
-          clamp(3rem,15vw,4.5rem);
+          clamp(3rem, 15vw, 4.5rem);
       }
 
       .hero-description {
@@ -2929,8 +2877,7 @@
 
       .reveal:not(.revealed)[data-reveal="zoom"] {
         transform:
-          translateY(18px)
-          scale(0.98);
+          translateY(18px) scale(0.98);
       }
 
       .intro-image {
@@ -3027,11 +2974,9 @@
           translateX(-50%);
       }
 
-      .event-item:hover
-      .event-dot {
+      .event-item:hover .event-dot {
         transform:
-          translateX(-50%)
-          scale(1.2);
+          translateX(-50%) scale(1.2);
       }
 
       /*
@@ -3045,7 +2990,7 @@
 
       .gallery-grid {
         grid-template-columns:
-          repeat(2,minmax(0,1fr));
+          repeat(2, minmax(0, 1fr));
 
         grid-auto-rows:
           145px;
@@ -3180,12 +3125,12 @@
 
     /* Remove the previous cool/green heritage image treatment. */
     .heritage-card:nth-child(3) .heritage-image-wrap {
-      background: radial-gradient(circle at 50% 35%, rgba(250,247,241,0.98), rgba(223,201,170,0.70));
+      background: radial-gradient(circle at 50% 35%, rgba(250, 247, 241, 0.98), rgba(223, 201, 170, 0.70));
     }
 
     .heritage-image-wrap,
     .heritage-card:nth-child(2) .heritage-image-wrap {
-      background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.96), rgba(243,233,218,0.82));
+      background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.96), rgba(243, 233, 218, 0.82));
     }
 
     /* Harikrishna Maharaj is visually honoured as the central focal point. */
@@ -3217,7 +3162,7 @@
 
     .heritage-card:nth-child(1) .heritage-image-wrap {
       height: 455px;
-      background: radial-gradient(circle at 50% 30%, rgba(255,250,235,0.99), rgba(221,194,143,0.58));
+      background: radial-gradient(circle at 50% 30%, rgba(255, 250, 235, 0.99), rgba(221, 194, 143, 0.58));
     }
 
     .heritage-card:nth-child(1) .heritage-title {
@@ -3276,6 +3221,153 @@
       }
     }
 
+    /* =========================================================
+   HERITAGE – FINAL OVERRIDE (paste just above 
+  </style>)
+  ========================================================= */
+
+  .heritage-section {
+  --arch: 130px;
+  --gold-line: rgba(255, 236, 190, 0.85);
+  }
+
+  .heritage-grid { gap: 34px; }
+
+  .heritage-grid::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -60px;
+  left: 50%;
+  width: 640px;
+  height: 640px;
+  max-width: 100%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle,
+  rgba(255,233,170,0.55) 0%,
+  rgba(221,194,143,0.22) 40%,
+  transparent 70%);
+  filter: blur(8px);
+  animation: heritageAura 7s ease-in-out infinite;
+  pointer-events: none;
+  }
+
+  @keyframes heritageAura {
+  0%, 100% { opacity: 0.75; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.07); }
+  }
+
+  .heritage-card {
+  padding: 10px 10px 24px;
+  border: 1px solid rgba(205,168,108,0.45);
+  border-radius: calc(var(--arch) + 10px) calc(var(--arch) + 10px) 30px 30px;
+  background: linear-gradient(180deg, rgba(255,252,244,0.92), rgba(247,237,218,0.88));
+  box-shadow:
+  0 22px 55px rgba(77,52,33,0.14),
+  0 0 0 5px rgba(255,255,255,0.35),
+  0 0 55px rgba(221,194,143,0.40);
+  }
+
+  .heritage-card:nth-child(1) {
+  box-shadow:
+  0 28px 70px rgba(77,52,33,0.18),
+  0 0 0 5px rgba(255,255,255,0.4),
+  0 0 80px rgba(240,205,130,0.60);
+  }
+
+  /* THE FIX: image fills a true 4:5 frame */
+  .heritage-image-wrap,
+  .heritage-card:nth-child(1) .heritage-image-wrap,
+  .heritage-card:nth-child(2) .heritage-image-wrap,
+  .heritage-card:nth-child(3) .heritage-image-wrap {
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  display: block;
+  border-radius: var(--arch) var(--arch) 22px 22px;
+  background: var(--cream);
+  }
+
+  .heritage-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(1.02) contrast(1.02);
+  }
+
+  .heritage-image-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  inset: 8px;
+  border: 1px solid var(--gold-line);
+  border-radius: calc(var(--arch) - 6px) calc(var(--arch) - 6px) 16px 16px;
+  box-shadow: inset 0 0 22px rgba(255,226,150,0.25);
+  pointer-events: none;
+  }
+
+  .heritage-image-wrap::after {
+  z-index: 2;
+  background:
+  radial-gradient(circle at 50% 0%, rgba(255,236,180,0.28), transparent 55%),
+  linear-gradient(to bottom, transparent 70%, rgba(64,43,29,0.18));
+  }
+
+  .heritage-content {
+  position: relative;
+  padding: 0 16px 2px;
+  }
+
+  .heritage-symbol {
+  position: relative;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  margin: -24px 0 12px;
+  border: 1px solid rgba(205,168,108,0.7);
+  background: linear-gradient(145deg, #fffaf0, #f3e2bd);
+  color: var(--terracotta);
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(150,85,40,0.20), 0 0 0 4px rgba(255,255,255,0.6);
+  }
+
+  .heritage-title::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .heritage-caption { margin-top: 12px; }
+
+  @media (hover: hover) and (pointer: fine) {
+  .heritage-card:hover .heritage-image {
+  transform: scale(1.05);
+  filter: saturate(1.06) contrast(1.03);
+  }
+  }
+
+  @media (max-width: 991.98px) {
+  .heritage-section { --arch: 90px; }
+  .heritage-grid { gap: 20px; }
+  }
+
+  @media (max-width: 767.98px) {
+  .heritage-section { --arch: 110px; }
+  .heritage-grid { grid-template-columns: 1fr; max-width: 400px; gap: 34px; }
+  .heritage-image-wrap,
+  .heritage-card:nth-child(1) .heritage-image-wrap {
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  }
+  .heritage-grid::before { width: 420px; height: 420px; }
+  }
+
   </style>
 </head>
 
@@ -3283,498 +3375,396 @@
 <body>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      NAVBAR
 ========================================================= -->
 
-<nav
-  class="navbar navbar-expand-lg site-navbar"
-  id="siteNavbar"
->
-
-  <div class="container">
-
-    <a
-      class="navbar-brand"
-      href="#home"
-      aria-label="Vadtaldham Brisbane"
-    >
-
-      <img
-        src="images/logo.png"
-        alt="Vadtaldham Brisbane logo"
-      >
-
-    </a>
-
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNavigation"
-      aria-controls="mainNavigation"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-
-      <i class="fa-solid fa-bars-staggered"></i>
-
-    </button>
-
-
-    <div
-      class="collapse navbar-collapse justify-content-end"
-      id="mainNavigation"
-    >
-
-      <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            href="#home"
-          >
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#about"
-          >
-            About
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#activities"
-          >
-            Activities
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#events"
-          >
-            Events
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#calendar"
-          >
-            Calendar
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#gallery"
-          >
-            Gallery
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#footer"
-          >
-            Contact
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</nav>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section
-  id="home"
-  class="hero"
->
-
-  <div
-    id="heroCarousel"
-    class="carousel slide carousel-fade"
-    data-bs-ride="carousel"
-    data-bs-interval="6500"
-  >
-
-    <div class="carousel-inner">
-
-
-      <div class="carousel-item active">
-
-        <div class="hero-slide">
-
-          <img
-            class="hero-image"
-            src="images/temple1.jpeg"
-            alt="Vadtaldham Brisbane"
-          >
-
-          <div class="hero-overlay"></div>
-
-        </div>
-
-      </div>
-
-
-      <div class="carousel-item">
-
-        <div class="hero-slide">
-
-          <img
-            class="hero-image"
-            src="images/temple2.jpeg"
-            alt="Vadtaldham Brisbane temple"
-          >
-
-          <div class="hero-overlay"></div>
-
-        </div>
-
-      </div>
-
-
-      <div class="carousel-item">
-
-        <div class="hero-slide">
-
-          <img
-            class="hero-image"
-            src="images/temple3.jpeg"
-            alt="Vadtaldham Brisbane community"
-          >
-
-          <div class="hero-overlay"></div>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-content">
+  <nav class="navbar navbar-expand-lg site-navbar" id="siteNavbar">
 
     <div class="container">
 
-      <div class="hero-content-inner">
+      <a class="navbar-brand" href="#home" aria-label="Vadtaldham Brisbane">
 
-        <div class="hero-eyebrow">
-          Vadtaldham Brisbane
-        </div>
+        <img src="images/logo.png" alt="Vadtaldham Brisbane logo">
 
-        <h1 class="hero-title">
+      </a>
 
-          Faith.
 
-          <span>
-            Community.
-          </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
+        aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
 
-          Together.
+        <i class="fa-solid fa-bars-staggered"></i>
 
-        </h1>
+      </button>
 
-        <p class="hero-description">
-          A place where devotion, culture, values and community
-          come together to create meaningful connections for
-          generations to come.
-        </p>
 
-        <a
-          href="#about"
-          class="hero-button"
-        >
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavigation">
 
-          Discover More
+        <ul class="navbar-nav">
 
-          <i class="fa-solid fa-arrow-right"></i>
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              Home
+            </a>
+          </li>
 
-        </a>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#activities">
+              Activities
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#events">
+              Events
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#calendar">
+              Calendar
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">
+              Gallery
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">
+              Contact
+            </a>
+          </li>
+
+        </ul>
 
       </div>
 
     </div>
 
-  </div>
+  </nav>
 
 
-  <div class="hero-scroll">
-    Scroll to explore
-  </div>
+  <!-- =========================================================
+     HERO
+========================================================= -->
+
+  <section id="home" class="hero">
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6500">
+
+      <div class="carousel-inner">
 
 
-  <div class="hero-bottom-fade"></div>
+        <div class="carousel-item active">
 
-</section>
+          <div class="hero-slide">
+
+            <img class="hero-image" src="images/temple1.jpeg" alt="Vadtaldham Brisbane">
+
+            <div class="hero-overlay"></div>
+
+          </div>
+
+        </div>
 
 
-<!-- =========================================================
+        <div class="carousel-item">
+
+          <div class="hero-slide">
+
+            <img class="hero-image" src="images/temple2.jpeg" alt="Vadtaldham Brisbane temple">
+
+            <div class="hero-overlay"></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+          <div class="hero-slide">
+
+            <img class="hero-image" src="images/temple3.jpeg" alt="Vadtaldham Brisbane community">
+
+            <div class="hero-overlay"></div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+      <div class="container">
+
+        <div class="hero-content-inner">
+
+          <div class="hero-eyebrow">
+            Vadtaldham Brisbane
+          </div>
+
+          <h1 class="hero-title">
+
+            Faith.
+
+            <span>
+              Community.
+            </span>
+
+            Together.
+
+          </h1>
+
+          <p class="hero-description">
+            A place where devotion, culture, values and community
+            come together to create meaningful connections for
+            generations to come.
+          </p>
+
+          <a href="#about" class="hero-button">
+
+            Discover More
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-scroll">
+      Scroll to explore
+    </div>
+
+
+    <div class="hero-bottom-fade"></div>
+
+  </section>
+
+
+  <!-- =========================================================
      ABOUT
 ========================================================= -->
 
-<section
-  id="about"
-  class="intro-section section-space"
->
+  <section id="about" class="intro-section section-space">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="intro-layout">
+      <div class="intro-layout">
 
 
-      <div
-        class="intro-image-wrap reveal"
-        data-reveal="slide-left"
-      >
+        <div class="intro-image-wrap reveal" data-reveal="slide-left">
 
-        <img
-          class="intro-image"
-          src="images/About-Us.png"
-          alt="About Us"
-          loading="lazy"
-          decoding="async"
-        >
+          <img class="intro-image" src="images/About-Us.png" alt="About Us" loading="lazy" decoding="async">
 
-        <div class="intro-image-accent"></div>
+          <div class="intro-image-accent"></div>
 
-      </div>
-
-
-      <div
-        class="intro-copy reveal"
-        data-reveal="slide-right"
-      >
-
-        <div class="section-kicker">
-          About Us
         </div>
 
-        <h2 class="section-title">
 
-          A space for faith,
-          <br>
-          values & community
+        <div class="intro-copy reveal" data-reveal="slide-right">
 
-        </h2>
+          <div class="section-kicker">
+            About Us
+          </div>
 
-        <p>
-          Vadtaldham Brisbane is a welcoming community built
-          around devotion, spirituality, culture and togetherness.
-        </p>
+          <h2 class="section-title">
 
-        <p>
-          Through satsang, bal sabha, youth activities, community programs
-          and special events, we aim to provide a place where
-          individuals and families can connect, learn and grow
-          together.
-        </p>
+            A space for faith,
+            <br>
+            values & community
 
-        <a
-          href="#activities"
-          class="intro-link"
-        >
+          </h2>
 
-          Explore our activities
+          <p>
+            Vadtaldham Brisbane is a welcoming community built
+            around devotion, spirituality, culture and togetherness.
+          </p>
 
-          <i class="fa-solid fa-arrow-right"></i>
+          <p>
+            Through satsang, bal sabha, youth activities, community programs
+            and special events, we aim to provide a place where
+            individuals and families can connect, learn and grow
+            together.
+          </p>
 
-        </a>
+          <a href="#activities" class="intro-link">
+
+            Explore our activities
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
 
       </div>
-
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      OUR SPIRITUAL HERITAGE
 ========================================================= -->
 
-<section
-  id="heritage"
-  class="heritage-section section-space"
->
-  <div class="container">
+  <section id="heritage" class="heritage-section section-space">
+    <div class="container">
 
-    <div class="heritage-heading reveal" data-reveal="fade">
-      <div class="section-kicker">Faith</div>
-      <h2 class="section-title">
+      <div class="heritage-heading reveal" data-reveal="fade">
+        <div class="section-kicker">Faith</div>
+        <h2 class="section-title">
           The foundation of our devotion
-      </h2>
-      <p class="section-subtitle">
-        Honouring Lord Swaminarayan, the sacred ideals and our spiritual lineage that inspire our community at Vadtaldham Brisbane.
-      </p>
+        </h2>
+        <p class="section-subtitle">
+          Honouring Lord Swaminarayan, the sacred ideals and our spiritual lineage that inspire our community at
+          Vadtaldham Brisbane.
+        </p>
+      </div>
+
+      <div class="heritage-grid">
+
+        <article class="heritage-card reveal" data-reveal="fade">
+          <div class="heritage-image-wrap">
+            <img class="heritage-image" src="images/harikrishna-maharaj.png" alt="Harikrishna Maharaj" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="heritage-content">
+            <div class="heritage-symbol" aria-hidden="true">
+              <i class="fa-solid fa-dharmachakra"></i>
+            </div>
+            <h3 class="heritage-title">Harikrishna Maharaj</h3>
+            <p class="heritage-caption">
+              The supreme Lord, at the heart of our devotion, faith and spiritual life.
+            </p>
+          </div>
+        </article>
+
+        <article class="heritage-card reveal" data-reveal="slide-left" style="transition-delay:0.10s;">
+          <div class="heritage-image-wrap">
+            <img class="heritage-image" src="images/laxminarayan-dev.png" alt="Laxminarayan Dev" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="heritage-content">
+            <div class="heritage-symbol" aria-hidden="true">
+              <i class="fa-solid fa-om"></i>
+            </div>
+            <h3 class="heritage-title">Laxminarayan Dev</h3>
+            <p class="heritage-caption">
+              A divine presence cherished within our spiritual tradition and devotion.
+            </p>
+          </div>
+        </article>
+
+        <article class="heritage-card reveal" data-reveal="slide-right" style="transition-delay:0.20s;">
+          <div class="heritage-image-wrap">
+            <img class="heritage-image" src="images/aacharya.png" alt="Aacharya Maharaj" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="heritage-content">
+            <div class="heritage-symbol" aria-hidden="true">
+              <i class="fa-solid fa-hands-praying"></i>
+            </div>
+            <h3 class="heritage-title">Aacharya Maharaj</h3>
+            <p class="heritage-caption">
+              The spiritual lineage and guidance that continue to inspire our satsang and values.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </div>
+  </section>
 
-    <div class="heritage-grid">
-
-      <article class="heritage-card reveal" data-reveal="fade">
-        <div class="heritage-image-wrap">
-          <img class="heritage-image" src="images/harikrishna-maharaj.png"
-               alt="Harikrishna Maharaj" loading="lazy" decoding="async">
-        </div>
-        <div class="heritage-content">
-          <div class="heritage-symbol" aria-hidden="true">
-            <i class="fa-solid fa-dharmachakra"></i>
-          </div>
-          <h3 class="heritage-title">Harikrishna Maharaj</h3>
-          <p class="heritage-caption">
-            The supreme Lord, at the heart of our devotion, faith and spiritual life.
-          </p>
-        </div>
-      </article>
-
-      <article class="heritage-card reveal" data-reveal="slide-left" style="transition-delay:0.10s;">
-        <div class="heritage-image-wrap">
-          <img class="heritage-image" src="images/laxminarayan-dev.png"
-               alt="Laxminarayan Dev" loading="lazy" decoding="async">
-        </div>
-        <div class="heritage-content">
-          <div class="heritage-symbol" aria-hidden="true">
-            <i class="fa-solid fa-om"></i>
-          </div>
-          <h3 class="heritage-title">Laxminarayan Dev</h3>
-          <p class="heritage-caption">
-            A divine presence cherished within our spiritual tradition and devotion.
-          </p>
-        </div>
-      </article>
-
-      <article class="heritage-card reveal" data-reveal="slide-right" style="transition-delay:0.20s;">
-        <div class="heritage-image-wrap">
-          <img class="heritage-image" src="images/aacharya.png"
-               alt="Aacharya Maharaj" loading="lazy" decoding="async">
-        </div>
-        <div class="heritage-content">
-          <div class="heritage-symbol" aria-hidden="true">
-            <i class="fa-solid fa-hands-praying"></i>
-          </div>
-          <h3 class="heritage-title">Aacharya Maharaj</h3>
-          <p class="heritage-caption">
-            The spiritual lineage and guidance that continue to inspire our satsang and values.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
+  <!-- =========================================================
      DISCOVER VADTAL DHAM BRISBANE
 ========================================================= -->
 
-<section
-  id="discover"
-  class="discover-section section-space"
->
-  <div class="container">
+  <section id="discover" class="discover-section section-space">
+    <div class="container">
 
-    <div
-      class="discover-heading reveal"
-      data-reveal="fade"
-    >
-      <div class="section-kicker">
-        Experience the Temple
+      <div class="discover-heading reveal" data-reveal="fade">
+        <div class="section-kicker">
+          Experience the Temple
+        </div>
+
+        <h2 class="section-title">
+          Discover Vadtal Dham Brisbane
+        </h2>
+
+        <p class="section-subtitle">
+          Step inside, experience the atmosphere and discover the spirit of
+          our temple community through this glimpse of Vadtaldham Brisbane.
+        </p>
       </div>
 
-      <h2 class="section-title">
-        Discover Vadtal Dham Brisbane
-      </h2>
+      <div class="video-shell reveal" data-reveal="zoom">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/w-q_OtWY0LE?si=CsNkvvWzh5yIR3AT&origin=https%3A%2F%2Fabhishek67parmar.github.io"
+            title="Discover Vadtal Dham Brisbane" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
-      <p class="section-subtitle">
-        Step inside, experience the atmosphere and discover the spirit of
-        our temple community through this glimpse of Vadtaldham Brisbane.
-      </p>
+        <div class="video-caption">
+          <i class="fa-brands fa-youtube"></i>
+          <span>Vadtaldham Brisbane</span>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div
-      class="video-shell reveal"
-      data-reveal="zoom"
-    >
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/w-q_OtWY0LE?si=CsNkvvWzh5yIR3AT&origin=https%3A%2F%2Fabhishek67parmar.github.io"
-          title="Discover Vadtal Dham Brisbane"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <div class="video-caption">
-        <i class="fa-brands fa-youtube"></i>
-        <span>Vadtaldham Brisbane</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================================================
+  <!-- =========================================================
      ACTIVITIES
 ========================================================= -->
 
-<section
-  id="activities"
-  class="activities-section section-space"
->
+  <section id="activities" class="activities-section section-space">
 
-  <div class="container">
+    <div class="container">
 
 
-    <div
-      class="activities-heading reveal"
-      data-reveal="fade"
-    >
+      <div class="activities-heading reveal" data-reveal="fade">
 
-      <div class="section-kicker">
-        What We Do
+        <div class="section-kicker">
+          What We Do
+        </div>
+
+        <h2 class="section-title">
+          Our Activities
+        </h2>
+
+        <p class="section-subtitle">
+          Opportunities to connect, participate, learn and grow
+          together throughout the year.
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Our Activities
-      </h2>
 
-      <p class="section-subtitle">
-        Opportunities to connect, participate, learn and grow
-        together throughout the year.
-      </p>
-
-    </div>
-
-
-    <!--
+      <!--
       IMPORTANT:
       This is intentionally NOT a Bootstrap .row.
 
@@ -3782,103 +3772,80 @@
       activities-grid CSS.
     -->
 
-    <div class="activities-grid">
+      <div class="activities-grid">
 
 
-      <!-- Activity 1 -->
-      <article
-        class="activity-card reveal"
-        data-reveal="slide-left"
-        style="transition-delay:0.24s;"
-      >
+        <!-- Activity 1 -->
+        <article class="activity-card reveal" data-reveal="slide-left" style="transition-delay:0.24s;">
 
-        <div class="activity-media">
+          <div class="activity-media">
 
-          <img
-            src="images/Activity-Sabha.jpeg"
-            alt="Weekly Satsang"
-            loading="lazy"
-            decoding="async"
-          >
+            <img src="images/Activity-Sabha.jpeg" alt="Weekly Satsang" loading="lazy" decoding="async">
 
-        </div>
+          </div>
 
-        <div class="activity-content">
+          <div class="activity-content">
 
-          <h3 class="activity-title">
-            Weekly Satsang
-          </h3>
+            <h3 class="activity-title">
+              Weekly Satsang
+            </h3>
 
-          <p class="activity-text">
-            Join our weekly gathering for katha, kirtan and
-            community bonding open to everyone.
-          </p>
+            <p class="activity-text">
+              Join our weekly gathering for katha, kirtan and
+              community bonding open to everyone.
+            </p>
 
-          <a
-            href="#footer"
-            class="activity-link"
-          >
+            <a href="#footer" class="activity-link">
 
-            Learn More
+              Learn More
 
-            <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right"></i>
 
-          </a>
+            </a>
 
-        </div>
+          </div>
 
-      </article>
+        </article>
 
-      <!-- Activity 2 -->
-      <!-- <article
+        <!-- Activity 2 -->
+        <!-- <article
         class="activity-card reveal"
         data-reveal="fade"
         style="transition-delay:0.12s;"
       > -->
-      <article
-        class="activity-card reveal"
-        data-reveal="slide-right"
-        style="transition-delay:0.12s;"
-      >
-        <div class="activity-media">
+        <article class="activity-card reveal" data-reveal="slide-right" style="transition-delay:0.12s;">
+          <div class="activity-media">
 
-          <img
-            src="images/Activity-Bal-Sabha.jpeg"
-            alt="Bal Satsang Sabha"
-            loading="lazy"
-            decoding="async"
-          >
+            <img src="images/Activity-Bal-Sabha.jpeg" alt="Bal Satsang Sabha" loading="lazy" decoding="async">
 
-        </div>
+          </div>
 
-        <div class="activity-content">
+          <div class="activity-content">
 
-          <h3 class="activity-title">
-            Bal Satsang Sabha
-          </h3>
+            <h3 class="activity-title">
+              Bal Satsang Sabha
+            </h3>
 
-          <p class="activity-text">
-            Empowering the next generation with virtuous habits, cultural pride, and strong spiritual foundations for a brighter future.
-          </p>
+            <p class="activity-text">
+              Empowering the next generation with virtuous habits, cultural pride, and strong spiritual foundations for
+              a brighter future.
+            </p>
 
-          <a
-            href="#footer"
-            class="activity-link"
-          >
+            <a href="#footer" class="activity-link">
 
-            Learn More
+              Learn More
 
-            <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right"></i>
 
-          </a>
+            </a>
 
-        </div>
+          </div>
 
-      </article>
+        </article>
 
 
-      <!-- Activity 3 -->
-      <!-- <article
+        <!-- Activity 3 -->
+        <!-- <article
         class="activity-card reveal"
         data-reveal="slide-right"
       >
@@ -3921,622 +3888,437 @@
 
       </article> -->
 
+      </div>
+
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      EVENTS
 ========================================================= -->
 
-<section
-  id="events"
-  class="events-section section-space"
->
+  <section id="events" class="events-section section-space">
 
-  <div class="container">
+    <div class="container">
 
 
-    <div
-      class="events-heading reveal"
-      data-reveal="fade"
-    >
+      <div class="events-heading reveal" data-reveal="fade">
 
-      <div class="section-kicker">
-        Mark Your Calendar
+        <div class="section-kicker">
+          Mark Your Calendar
+        </div>
+
+        <h2 class="section-title">
+          Upcoming Events
+        </h2>
+
+        <p class="section-subtitle">
+          Come together and be part of our upcoming gatherings
+          and community celebrations.
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Upcoming Events
-      </h2>
 
-      <p class="section-subtitle">
-        Come together and be part of our upcoming gatherings
-        and community celebrations.
-      </p>
+      <div class="timeline">
+
+
+        <!-- Event 1 -->
+
+        <article class="event-item">
+
+          <div class="event-side">
+
+            <div class="event-content">
+
+              <div class="event-date">
+                03 October 2026
+              </div>
+
+              <h3 class="event-title">
+                Saturday Sabha
+              </h3>
+
+              <p class="event-description">
+                An evening of devotion, community connection
+                and celebration.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="event-side"></div>
+
+          <div class="event-dot"></div>
+
+        </article>
+
+
+        <!-- Event 2 -->
+
+        <article class="event-item">
+
+          <div class="event-side"></div>
+
+          <div class="event-side">
+
+            <div class="event-content">
+
+              <div class="event-date">
+                10 October 2026
+              </div>
+
+              <h3 class="event-title">
+                Saturday Sabha
+              </h3>
+
+              <p class="event-description">
+                An evening of devotion, community connection
+                and celebration.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="event-dot"></div>
+
+        </article>
+
+
+        <!-- Event 3 -->
+
+        <article class="event-item">
+
+          <div class="event-side">
+
+            <div class="event-content">
+
+              <div class="event-date">
+                17 October 2026
+              </div>
+
+              <h3 class="event-title">
+                Saturday Sabha
+              </h3>
+
+              <p class="event-description">
+                An evening of devotion, community connection
+                and celebration.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="event-side"></div>
+
+          <div class="event-dot"></div>
+
+        </article>
+
+
+        <!-- Event 4 -->
+
+        <article class="event-item">
+
+          <div class="event-side"></div>
+
+          <div class="event-side">
+
+            <div class="event-content">
+
+              <div class="event-date">
+                24 October 2026
+              </div>
+
+              <h3 class="event-title">
+                Saturday Sabha
+              </h3>
+
+              <p class="event-description">
+                An opportunity for families and devotees to
+                gather, reflect and connect.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="event-dot"></div>
+
+        </article>
+
+
+      </div>
 
     </div>
 
-
-    <div class="timeline">
-
-
-      <!-- Event 1 -->
-
-      <article class="event-item">
-
-        <div class="event-side">
-
-          <div class="event-content">
-
-            <div class="event-date">
-              03 October 2026
-            </div>
-
-            <h3 class="event-title">
-              Saturday Sabha
-            </h3>
-
-            <p class="event-description">
-              An evening of devotion, community connection
-              and celebration.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="event-side"></div>
-
-        <div class="event-dot"></div>
-
-      </article>
+  </section>
 
 
-      <!-- Event 2 -->
-
-      <article class="event-item">
-
-        <div class="event-side"></div>
-
-        <div class="event-side">
-
-          <div class="event-content">
-
-            <div class="event-date">
-              10 October 2026
-            </div>
-
-            <h3 class="event-title">
-              Saturday Sabha
-            </h3>
-
-            <p class="event-description">
-              An evening of devotion, community connection
-              and celebration.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="event-dot"></div>
-
-      </article>
-
-
-      <!-- Event 3 -->
-
-      <article class="event-item">
-
-        <div class="event-side">
-
-          <div class="event-content">
-
-            <div class="event-date">
-              17 October 2026
-            </div>
-
-            <h3 class="event-title">
-              Saturday Sabha
-            </h3>
-
-            <p class="event-description">
-              An evening of devotion, community connection
-              and celebration.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="event-side"></div>
-
-        <div class="event-dot"></div>
-
-      </article>
-
-
-      <!-- Event 4 -->
-
-      <article class="event-item">
-
-        <div class="event-side"></div>
-
-        <div class="event-side">
-
-          <div class="event-content">
-
-            <div class="event-date">
-              24 October 2026
-            </div>
-
-            <h3 class="event-title">
-              Saturday Sabha
-            </h3>
-
-            <p class="event-description">
-              An opportunity for families and devotees to
-              gather, reflect and connect.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="event-dot"></div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
+  <!-- =========================================================
      CALENDAR (FESTIVAL - NIRNAY)
 ========================================================= -->
 
-<section
-  id="calendar"
-  class="calendar-section"
->
+  <section id="calendar" class="calendar-section">
 
-  <div class="container">
+    <div class="container">
 
-    <div
-      class="calendar-heading reveal"
-      data-reveal="fade"
-    >
+      <div class="calendar-heading reveal" data-reveal="fade">
 
-      <div class="section-kicker">
-        Panchang &amp; Observances
+        <div class="section-kicker">
+          Panchang &amp; Observances
+        </div>
+
+        <h2 class="section-title">
+          Calendar
+          <span class="cal-title-sub">
+            Festival &ndash; Nirnay
+          </span>
+        </h2>
+
+        <p class="section-subtitle">
+          Festivals and auspicious dates observed at Vadtaldham
+          Brisbane, loaded from our events calendar.
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Calendar
-        <span class="cal-title-sub">
-          Festival &ndash; Nirnay
-        </span>
-      </h2>
+      <div class="calendar-panel reveal" data-reveal="zoom">
 
-      <p class="section-subtitle">
-        Festivals and auspicious dates observed at Vadtaldham
-        Brisbane, loaded from our events calendar.
-      </p>
+        <div class="calendar-status" id="calendarStatus" role="status" aria-live="polite">
+          <span class="calendar-spinner" aria-hidden="true"></span>
+          <span>Loading calendar&hellip;</span>
+        </div>
 
-    </div>
+        <div class="calendar-tabs-row" id="calendarTabsRow" hidden>
 
-    <div
-      class="calendar-panel reveal"
-      data-reveal="zoom"
-    >
+          <div class="calendar-tab-group" role="tablist">
 
-      <div
-        class="calendar-status"
-        id="calendarStatus"
-        role="status"
-        aria-live="polite"
-      >
-        <span class="calendar-spinner" aria-hidden="true"></span>
-        <span>Loading calendar&hellip;</span>
-      </div>
+            <button type="button" class="calendar-tab-btn active" data-cal-tab="list" role="tab" aria-selected="true">
+              List
+            </button>
 
-      <div class="calendar-tabs-row" id="calendarTabsRow" hidden>
+            <button type="button" class="calendar-tab-btn" data-cal-tab="grid" role="tab" aria-selected="false">
+              Calendar
+            </button>
 
-        <div class="calendar-tab-group" role="tablist">
-
-          <button
-            type="button"
-            class="calendar-tab-btn active"
-            data-cal-tab="list"
-            role="tab"
-            aria-selected="true"
-          >
-            List
-          </button>
-
-          <button
-            type="button"
-            class="calendar-tab-btn"
-            data-cal-tab="grid"
-            role="tab"
-            aria-selected="false"
-          >
-            Calendar
-          </button>
+          </div>
 
         </div>
 
-      </div>
+        <div class="calendar-tab-panel" data-cal-panel="list" hidden>
 
-      <div class="calendar-tab-panel" data-cal-panel="list" hidden>
-
-        <div
-          class="festival-list-scroll"
-          id="festivalListScroll"
-        ></div>
-
-      </div>
-
-      <div class="calendar-tab-panel" data-cal-panel="grid" hidden>
-
-        <div class="mini-cal-header">
-
-          <button
-            type="button"
-            class="mini-cal-nav-btn"
-            id="festivalPrevMonth"
-            aria-label="Previous month"
-          >
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-
-          <div class="mini-cal-title" id="festivalCalTitle"></div>
-
-          <button
-            type="button"
-            class="mini-cal-nav-btn"
-            id="festivalNextMonth"
-            aria-label="Next month"
-          >
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+          <div class="festival-list-scroll" id="festivalListScroll"></div>
 
         </div>
 
-        <div class="mini-cal-weekdays">
-          <span>Sun</span>
-          <span>Mon</span>
-          <span>Tue</span>
-          <span>Wed</span>
-          <span>Thu</span>
-          <span>Fri</span>
-          <span>Sat</span>
-        </div>
+        <div class="calendar-tab-panel" data-cal-panel="grid" hidden>
 
-        <div class="mini-cal-grid" id="festivalCalGrid"></div>
+          <div class="mini-cal-header">
+
+            <button type="button" class="mini-cal-nav-btn" id="festivalPrevMonth" aria-label="Previous month">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="mini-cal-title" id="festivalCalTitle"></div>
+
+            <button type="button" class="mini-cal-nav-btn" id="festivalNextMonth" aria-label="Next month">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+          </div>
+
+          <div class="mini-cal-weekdays">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+          </div>
+
+          <div class="mini-cal-grid" id="festivalCalGrid"></div>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<dialog id="calEventDialog" class="cal-event-dialog">
-  <div class="cal-dialog-content">
+  <dialog id="calEventDialog" class="cal-event-dialog">
+    <div class="cal-dialog-content">
 
-    <header class="cal-dialog-header">
-      <h2 id="calDialogTitle" class="cal-dialog-title"></h2>
+      <header class="cal-dialog-header">
+        <h2 id="calDialogTitle" class="cal-dialog-title"></h2>
 
-      <button
-        type="button"
-        id="calDialogClose"
-        class="cal-dialog-close"
-        aria-label="Close event details"
-      >
-        &times;
-      </button>
-    </header>
+        <button type="button" id="calDialogClose" class="cal-dialog-close" aria-label="Close event details">
+          &times;
+        </button>
+      </header>
 
-    <div id="calDialogBody"></div>
+      <div id="calDialogBody"></div>
 
-  </div>
-</dialog>
+    </div>
+  </dialog>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      GALLERY
 ========================================================= -->
 
-<section
-  id="gallery"
-  class="gallery-section"
->
+  <section id="gallery" class="gallery-section">
 
-  <div class="container">
+    <div class="container">
 
 
-    <div
-      class="gallery-heading reveal"
-      data-reveal="fade"
-    >
+      <div class="gallery-heading reveal" data-reveal="fade">
 
-      <div class="section-kicker">
-        Moments Together
+        <div class="section-kicker">
+          Moments Together
+        </div>
+
+        <h2 class="section-title">
+          Our Gallery
+        </h2>
+
+        <p class="section-subtitle">
+          A glimpse into our celebrations, gatherings and
+          moments shared together.
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Our Gallery
-      </h2>
 
-      <p class="section-subtitle">
-        A glimpse into our celebrations, gatherings and
-        moments shared together.
-      </p>
+      <div class="gallery-grid">
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img1.JPG">
+
+          <img src="images/gallery/img1.JPG" alt="Community moment" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img2.JPG">
+
+          <img src="images/gallery/img2.JPG" alt="Temple gathering" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img3.JPG">
+
+          <img src="images/gallery/img3.JPG" alt="Community event" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img4.JPG">
+
+          <img src="images/gallery/img4.JPG" alt="Celebration" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img5.JPG">
+
+          <img src="images/gallery/img5.JPG" alt="Community gathering" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img6.JPG">
+
+          <img src="images/gallery/img6.JPG" alt="Temple atmosphere" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img7.JPG">
+
+          <img src="images/gallery/img7.JPG" alt="Community activity" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img8.JPG">
+
+          <img src="images/gallery/img8.JPG" alt="Devotional gathering" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img9.JPG">
+
+          <img src="images/gallery/img9.JPG" alt="Community celebration" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img10.jpeg">
+
+          <img src="images/gallery/img10.jpeg" alt="Temple event" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="fade" data-full="images/gallery/img11.jpeg">
+
+          <img src="images/gallery/img11.jpeg" alt="Community gathering" loading="lazy" decoding="async">
+
+        </div>
+
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img12.jpeg">
+
+          <img src="images/gallery/img12.jpeg" alt="Celebration" loading="lazy" decoding="async">
+
+        </div>
+
+        <div class="gallery-item reveal" data-reveal="zoom" data-full="images/gallery/img13.jpeg">
+
+          <img src="images/gallery/img13.jpeg" alt="Celebration" loading="lazy" decoding="async">
+
+        </div>
+
+
+      </div>
 
     </div>
 
-
-    <div class="gallery-grid">
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img1.JPG"
-      >
-
-        <img
-          src="images/gallery/img1.JPG"
-          alt="Community moment"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
+  </section>
 
 
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img2.JPG"
-      >
-
-        <img
-          src="images/gallery/img2.JPG"
-          alt="Temple gathering"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img3.JPG"
-      >
-
-        <img
-          src="images/gallery/img3.JPG"
-          alt="Community event"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img4.JPG"
-      >
-
-        <img
-          src="images/gallery/img4.JPG"
-          alt="Celebration"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img5.JPG"
-      >
-
-        <img
-          src="images/gallery/img5.JPG"
-          alt="Community gathering"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img6.JPG"
-      >
-
-        <img
-          src="images/gallery/img6.JPG"
-          alt="Temple atmosphere"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img7.JPG"
-      >
-
-        <img
-          src="images/gallery/img7.JPG"
-          alt="Community activity"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img8.JPG"
-      >
-
-        <img
-          src="images/gallery/img8.JPG"
-          alt="Devotional gathering"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img9.JPG"
-      >
-
-        <img
-          src="images/gallery/img9.JPG"
-          alt="Community celebration"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img10.jpeg"
-      >
-
-        <img
-          src="images/gallery/img10.jpeg"
-          alt="Temple event"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="fade"
-        data-full="images/gallery/img11.jpeg"
-      >
-
-        <img
-          src="images/gallery/img11.jpeg"
-          alt="Community gathering"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img12.jpeg"
-      >
-
-        <img
-          src="images/gallery/img12.jpeg"
-          alt="Celebration"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-      <div
-        class="gallery-item reveal"
-        data-reveal="zoom"
-        data-full="images/gallery/img13.jpeg"
-      >
-
-        <img
-          src="images/gallery/img13.jpeg"
-          alt="Celebration"
-          loading="lazy"
-          decoding="async"
-        >
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
+  <!-- =========================================================
      GALLERY LIGHTBOX
 ========================================================= -->
 
-<div
-  class="modal fade gallery-modal"
-  id="galleryModal"
-  tabindex="-1"
-  aria-hidden="true"
->
+  <div class="modal fade gallery-modal" id="galleryModal" tabindex="-1" aria-hidden="true">
 
-  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered">
 
-    <div class="modal-content">
+      <div class="modal-content">
 
-      <div class="modal-body position-relative">
+        <div class="modal-body position-relative">
 
-        <button
-          type="button"
-          class="gallery-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        >
+          <button type="button" class="gallery-close" data-bs-dismiss="modal" aria-label="Close">
 
-          <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark"></i>
 
-        </button>
+          </button>
 
-        <img
-          id="galleryModalImg"
-          src=""
-          alt="Gallery image"
-        >
+          <img id="galleryModalImg" src="" alt="Gallery image">
+
+        </div>
 
       </div>
 
@@ -4544,1010 +4326,987 @@
 
   </div>
 
-</div>
 
-
-<!-- =========================================================
+  <!-- =========================================================
      FOOTER
 ========================================================= -->
 
-<footer
-  id="footer"
-  class="site-footer"
->
+  <footer id="footer" class="site-footer">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="footer-grid">
+      <div class="footer-grid">
 
 
-      <div class="footer-brand">
+        <div class="footer-brand">
 
-        <img
-          src="images/vadtaldham-brisbane-white-logo.png"
-          alt="Vadtaldham Brisbane"
-          class="footer-logo"
-        >
+          <img src="images/vadtaldham-brisbane-white-logo.png" alt="Vadtaldham Brisbane" class="footer-logo">
 
-        <h3>
-          Vadtaldham Brisbane
-        </h3>
+          <h3>
+            Vadtaldham Brisbane
+          </h3>
 
-        <p>
-          A welcoming community dedicated to devotion,
-          spiritual growth, cultural values and togetherness.
-        </p>
+          <p>
+            A welcoming community dedicated to devotion,
+            spiritual growth, cultural values and togetherness.
+          </p>
 
 
-        <div class="footer-socials">
+          <div class="footer-socials">
 
 
-          <a
-            href="https://www.facebook.com/ShreeSwaminarayanMandirVadtaldhamBrisbane"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-            aria-label="Facebook"
-          >
+            <a href="https://www.facebook.com/ShreeSwaminarayanMandirVadtaldhamBrisbane" class="footer-social"
+              target="_blank" rel="noopener" aria-label="Facebook">
 
-            <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-facebook-f"></i>
 
-          </a>
+            </a>
 
 
-          <a
-            href="https://www.instagram.com/swaminarayantemple_qld/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-            aria-label="Instagram"
-          >
+            <a href="https://www.instagram.com/swaminarayantemple_qld/" class="footer-social" target="_blank"
+              rel="noopener" aria-label="Instagram">
 
-            <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram"></i>
 
-          </a>
+            </a>
 
 
-          <a
-            href="https://www.youtube.com/@Vadtaldhambrisbaneaus"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-            aria-label="YouTube"
-          >
+            <a href="https://www.youtube.com/@Vadtaldhambrisbaneaus" class="footer-social" target="_blank"
+              rel="noopener" aria-label="YouTube">
 
-            <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-youtube"></i>
 
-          </a>
+            </a>
 
+
+          </div>
 
         </div>
+
+
+        <div>
+
+          <div class="footer-heading">
+            Explore
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#home">
+              Home
+            </a>
+
+            <a href="#about">
+              About Us
+            </a>
+
+            <a href="#activities">
+              Activities
+            </a>
+
+            <a href="#events">
+              Events
+            </a>
+
+            <a href="#calendar">
+              Calendar
+            </a>
+
+            <a href="#gallery">
+              Gallery
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-heading">
+            Contact
+          </div>
+
+          <div class="footer-contact">
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <span>
+                38 Clovedale Rd,<br>
+                Doolandella, QLD 4077
+              </span>
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-phone"></i>
+
+              <span>
+                +1 (234) 567-890
+              </span>
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                info@ourorganization.com
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
 
       </div>
 
 
-      <div>
+      <div class="footer-bottom">
 
-        <div class="footer-heading">
-          Explore
-        </div>
+        <span>
+          © 2026 Vadtaldham Brisbane. All rights reserved.
+        </span>
 
-        <div class="footer-links">
-
-          <a href="#home">
-            Home
-          </a>
-
-          <a href="#about">
-            About Us
-          </a>
-
-          <a href="#activities">
-            Activities
-          </a>
-
-          <a href="#events">
-            Events
-          </a>
-
-          <a href="#calendar">
-            Calendar
-          </a>
-
-          <a href="#gallery">
-            Gallery
-          </a>
-
-        </div>
+        <span>
+          Built with faith & community.
+        </span>
 
       </div>
-
-
-      <div>
-
-        <div class="footer-heading">
-          Contact
-        </div>
-
-        <div class="footer-contact">
-
-
-          <div class="footer-contact-item">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <span>
-              38 Clovedale Rd,<br>
-              Doolandella, QLD 4077
-            </span>
-
-          </div>
-
-
-          <div class="footer-contact-item">
-
-            <i class="fa-solid fa-phone"></i>
-
-            <span>
-              +1 (234) 567-890
-            </span>
-
-          </div>
-
-
-          <div class="footer-contact-item">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <span>
-              info@ourorganization.com
-            </span>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
 
     </div>
 
-
-    <div class="footer-bottom">
-
-      <span>
-        © 2026 Vadtaldham Brisbane. All rights reserved.
-      </span>
-
-      <span>
-        Built with faith & community.
-      </span>
-
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 
-<!-- =========================================================
+  <!-- =========================================================
      BOOTSTRAP JS
 ========================================================= -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
 
-<script>
+  <script>
 
-  /* =========================================================
-     NAVBAR
-  ========================================================= */
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
 
-  const navbar =
-    document.getElementById("siteNavbar");
+    const navbar =
+      document.getElementById("siteNavbar");
 
 
-  function updateNavbar() {
+    function updateNavbar() {
 
-    /*
-      At exactly the top:
-      transparent.
+      /*
+        At exactly the top:
+        transparent.
+  
+        As soon as the user scrolls:
+        solid.
+      */
 
-      As soon as the user scrolls:
-      solid.
-    */
+      if (window.scrollY > 20) {
 
-    if (window.scrollY > 20) {
+        navbar.classList.add("scrolled");
 
-      navbar.classList.add("scrolled");
+      } else {
 
-    } else {
+        navbar.classList.remove("scrolled");
 
-      navbar.classList.remove("scrolled");
+      }
 
     }
 
-  }
+
+    updateNavbar();
 
 
-  updateNavbar();
+    window.addEventListener(
+      "scroll",
+      updateNavbar,
+      { passive: true }
+    );
 
 
-  window.addEventListener(
-    "scroll",
-    updateNavbar,
-    { passive: true }
-  );
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
 
+    document
+      .querySelectorAll(
+        "#mainNavigation .nav-link"
+      )
+      .forEach(link => {
 
-  /* =========================================================
-     MOBILE NAV
-  ========================================================= */
+        link.addEventListener(
+          "click",
+          () => {
 
-  document
-    .querySelectorAll(
-      "#mainNavigation .nav-link"
-    )
-    .forEach(link => {
+            const navigation =
+              document.getElementById(
+                "mainNavigation"
+              );
 
-      link.addEventListener(
-        "click",
-        () => {
+            if (
+              navigation.classList.contains(
+                "show"
+              )
+            ) {
 
-          const navigation =
-            document.getElementById(
-              "mainNavigation"
-            );
+              const collapse =
+                bootstrap.Collapse
+                  .getInstance(
+                    navigation
+                  );
 
-          if (
-            navigation.classList.contains(
-              "show"
-            )
-          ) {
+              if (collapse) {
+                collapse.hide();
+              }
 
-            const collapse =
-              bootstrap.Collapse
-                .getInstance(
-                  navigation
-                );
-
-            if (collapse) {
-              collapse.hide();
             }
 
           }
+        );
 
-        }
-      );
-
-    });
+      });
 
 
-  /* =========================================================
-     REVEAL ANIMATIONS
-  ========================================================= */
+    /* =========================================================
+       REVEAL ANIMATIONS
+    ========================================================= */
 
-  const revealObserver =
-    new IntersectionObserver(
-      entries => {
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
 
-        entries.forEach(entry => {
-
-          if (
-            entry.isIntersecting
-          ) {
-
-            entry.target.classList.add(
-              "revealed"
-            );
-
-            revealObserver.unobserve(
-              entry.target
-            );
-
-          }
-
-        });
-
-      },
-      {
-        threshold: 0.12,
-
-        rootMargin:
-          "0px 0px -50px 0px"
-      }
-    );
-
-
-  document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
-
-      revealObserver.observe(
-        element
-      );
-
-    });
-
-
-  /* =========================================================
-     EVENT REVEAL
-  ========================================================= */
-
-  const eventObserver =
-    new IntersectionObserver(
-      entries => {
-
-        entries.forEach(entry => {
-
-          if (
-            entry.isIntersecting
-          ) {
-
-            entry.target.classList.add(
-              "revealed"
-            );
-
-            eventObserver.unobserve(
-              entry.target
-            );
-
-          }
-
-        });
-
-      },
-      {
-        threshold: 0.15,
-
-        rootMargin:
-          "0px 0px -50px 0px"
-      }
-    );
-
-
-  document
-    .querySelectorAll(".event-item")
-    .forEach(event => {
-
-      eventObserver.observe(
-        event
-      );
-
-    });
-
-
-  /* =========================================================
-     ACTIVE NAVIGATION
-  ========================================================= */
-
-  const sections =
-    document.querySelectorAll(
-      "section[id]"
-    );
-
-  const navLinks =
-    document.querySelectorAll(
-      ".navbar-nav .nav-link"
-    );
-
-
-  const navObserver =
-    new IntersectionObserver(
-      entries => {
-
-        entries.forEach(entry => {
-
-          if (
-            !entry.isIntersecting
-          ) {
-            return;
-          }
-
-          navLinks.forEach(link => {
-
-            link.classList.remove(
-              "active"
-            );
+          entries.forEach(entry => {
 
             if (
-              link.getAttribute(
-                "href"
-              ) ===
-              "#" + entry.target.id
+              entry.isIntersecting
             ) {
 
-              link.classList.add(
-                "active"
+              entry.target.classList.add(
+                "revealed"
+              );
+
+              revealObserver.unobserve(
+                entry.target
               );
 
             }
 
           });
 
-        });
+        },
+        {
+          threshold: 0.12,
 
-      },
-      {
-        rootMargin:
-          "-35% 0px -55% 0px",
-
-        threshold: 0
-      }
-    );
-
-
-  sections.forEach(section => {
-
-    navObserver.observe(
-      section
-    );
-
-  });
-
-
-  /* =========================================================
-     HERO PARALLAX
-  ========================================================= */
-
-  const hero =
-    document.querySelector(
-      ".hero"
-    );
-
-  const heroImages =
-    document.querySelectorAll(
-      ".hero-image"
-    );
-
-
-  function updateHeroParallax() {
-
-    if (
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
-      return;
-    }
-
-    const rect =
-      hero.getBoundingClientRect();
-
-    const offset =
-      Math.max(
-        -40,
-        Math.min(
-          40,
-          rect.top * -0.08
-        )
-      );
-
-
-    heroImages.forEach(image => {
-
-      image.style.setProperty(
-        "--parallax-y",
-        offset + "px"
-      );
-
-    });
-
-  }
-
-
-  window.addEventListener(
-    "scroll",
-    updateHeroParallax,
-    { passive: true }
-  );
-
-
-  updateHeroParallax();
-
-
-  /* =========================================================
-     GALLERY LIGHTBOX
-  ========================================================= */
-
-  const galleryModalElement =
-    document.getElementById(
-      "galleryModal"
-    );
-
-  const galleryModalImage =
-    document.getElementById(
-      "galleryModalImg"
-    );
-
-
-  const galleryModal =
-    new bootstrap.Modal(
-      galleryModalElement
-    );
-
-
-  document
-    .querySelectorAll(
-      ".gallery-item"
-    )
-    .forEach(item => {
-
-      item.addEventListener(
-        "click",
-        () => {
-
-          const fullImage =
-            item.getAttribute(
-              "data-full"
-            );
-
-          const thumbnail =
-            item.querySelector(
-              "img"
-            );
-
-
-          galleryModalImage.src =
-            fullImage ||
-            thumbnail.src;
-
-          galleryModalImage.alt =
-            thumbnail.alt;
-
-
-          galleryModal.show();
-
+          rootMargin:
+            "0px 0px -50px 0px"
         }
       );
 
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+
+        revealObserver.observe(
+          element
+        );
+
+      });
+
+
+    /* =========================================================
+       EVENT REVEAL
+    ========================================================= */
+
+    const eventObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (
+              entry.isIntersecting
+            ) {
+
+              entry.target.classList.add(
+                "revealed"
+              );
+
+              eventObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15,
+
+          rootMargin:
+            "0px 0px -50px 0px"
+        }
+      );
+
+
+    document
+      .querySelectorAll(".event-item")
+      .forEach(event => {
+
+        eventObserver.observe(
+          event
+        );
+
+      });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================= */
+
+    const sections =
+      document.querySelectorAll(
+        "section[id]"
+      );
+
+    const navLinks =
+      document.querySelectorAll(
+        ".navbar-nav .nav-link"
+      );
+
+
+    const navObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (
+              !entry.isIntersecting
+            ) {
+              return;
+            }
+
+            navLinks.forEach(link => {
+
+              link.classList.remove(
+                "active"
+              );
+
+              if (
+                link.getAttribute(
+                  "href"
+                ) ===
+                "#" + entry.target.id
+              ) {
+
+                link.classList.add(
+                  "active"
+                );
+
+              }
+
+            });
+
+          });
+
+        },
+        {
+          rootMargin:
+            "-35% 0px -55% 0px",
+
+          threshold: 0
+        }
+      );
+
+
+    sections.forEach(section => {
+
+      navObserver.observe(
+        section
+      );
+
     });
 
 
-  /* =========================================================
-     RESET LIGHTBOX
-  ========================================================= */
+    /* =========================================================
+       HERO PARALLAX
+    ========================================================= */
 
-  galleryModalElement.addEventListener(
-    "hidden.bs.modal",
-    () => {
-
-      galleryModalImage.src = "";
-
-    }
-  );
-
-
-</script>
-
-
-<!-- =========================================================
-     CALENDAR (FESTIVAL - NIRNAY) SCRIPT
-========================================================= -->
-
-<script>
-
-  (function () {
-
-    const EVENTS_FILE = "./events.json";
-
-    const MONTH_NAMES = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-
-    const els = {
-      status: document.getElementById("calendarStatus"),
-      tabsRow: document.getElementById("calendarTabsRow"),
-      tabButtons: document.querySelectorAll(".calendar-tab-btn"),
-      tabPanels: document.querySelectorAll(".calendar-tab-panel"),
-      listScroll: document.getElementById("festivalListScroll"),
-      calTitle: document.getElementById("festivalCalTitle"),
-      calGrid: document.getElementById("festivalCalGrid"),
-      prevBtn: document.getElementById("festivalPrevMonth"),
-      nextBtn: document.getElementById("festivalNextMonth"),
-      dialog: document.getElementById("calEventDialog"),
-      dialogTitle: document.getElementById("calDialogTitle"),
-      dialogBody: document.getElementById("calDialogBody"),
-      dialogClose: document.getElementById("calDialogClose")
-    };
-
-    if (!els.listScroll || !els.calGrid) {
-      return;
-    }
-
-    const MAX_CHIPS_PER_DAY = 2;
-
-    const state = {
-      allEvents: [],
-      calMonth: new Date()
-    };
-
-    const today = startOfDay(new Date());
-
-    /* ---------- date helpers (same shape as events.json) ---------- */
-
-    function startOfDay(value) {
-      const d = new Date(value);
-      d.setHours(0, 0, 0, 0);
-      return d;
-    }
-
-    function addDays(value, days) {
-      const d = new Date(value);
-      d.setDate(d.getDate() + days);
-      return d;
-    }
-
-    function toISODate(date) {
-      const y = date.getFullYear();
-      const m = String(date.getMonth() + 1).padStart(2, "0");
-      const d = String(date.getDate()).padStart(2, "0");
-      return y + "-" + m + "-" + d;
-    }
-
-    function parseLocalDate(dateStr) {
-      const parts = dateStr.split("-").map(Number);
-      return new Date(parts[0], parts[1] - 1, parts[2]);
-    }
-
-    function getEventStart(event) {
-      if (event.start && event.start.date_time) {
-        return new Date(event.start.date_time);
-      }
-      if (event.start && event.start.date) {
-        return parseLocalDate(event.start.date);
-      }
-      return null;
-    }
-
-    function getEventEnd(event) {
-      if (event.end && event.end.date_time) {
-        return new Date(event.end.date_time);
-      }
-      if (event.end && event.end.date) {
-        return parseLocalDate(event.end.date);
-      }
-
-      const start = getEventStart(event);
-      if (!start) return null;
-
-      if (isAllDay(event)) {
-        return addDays(start, 1);
-      }
-
-      return new Date(start.getTime() + 60 * 60 * 1000);
-    }
-
-    function isAllDay(event) {
-      return Boolean(
-        (event.start && event.start.all_day) ||
-        (event.start && event.start.date)
-      );
-    }
-
-    function isValidEvent(event) {
-      const start = getEventStart(event);
-      return Boolean(start && !Number.isNaN(start.getTime()));
-    }
-
-    function isSameDate(a, b) {
-      return toISODate(a) === toISODate(b);
-    }
-
-    function eventOccursOnDate(event, date) {
-      const dayStart = startOfDay(date);
-      const dayEnd = addDays(dayStart, 1);
-      const start = getEventStart(event);
-      const end = getEventEnd(event) || addDays(start, 1);
-      return start < dayEnd && end > dayStart;
-    }
-
-    function sortEvents(events) {
-      return events.slice().sort((a, b) => getEventStart(a) - getEventStart(b));
-    }
-
-    function formatEventTime(event) {
-      if (isAllDay(event)) {
-        return "All day";
-      }
-
-      const formatter = new Intl.DateTimeFormat(undefined, {
-        hour: "numeric",
-        minute: "2-digit"
-      });
-
-      const start = getEventStart(event);
-      const end = getEventEnd(event);
-
-      if (!end) {
-        return formatter.format(start);
-      }
-
-      return formatter.format(start) + " \u2013 " + formatter.format(end);
-    }
-
-    function formatLongDate(event) {
-      const start = getEventStart(event);
-      return start.toLocaleDateString(undefined, {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      });
-    }
-
-    /* ---------- list: next 15 days ---------- */
-
-    function renderFestivalList() {
-      const windowStart = today;
-      const windowEnd = addDays(today, 15);
-
-      const upcoming = sortEvents(
-        state.allEvents.filter(event => {
-          const start = getEventStart(event);
-          const end = getEventEnd(event) || addDays(start, 1);
-          return start < windowEnd && end > windowStart;
-        })
+    const hero =
+      document.querySelector(
+        ".hero"
       );
 
-      if (upcoming.length === 0) {
-        els.listScroll.innerHTML =
-          '<div class="calendar-status">No events in the next 15 days.</div>';
+    const heroImages =
+      document.querySelectorAll(
+        ".hero-image"
+      );
+
+
+    function updateHeroParallax() {
+
+      if (
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
         return;
       }
 
-      const frag = document.createDocumentFragment();
+      const rect =
+        hero.getBoundingClientRect();
 
-      upcoming.forEach(event => {
-        const startDate = getEventStart(event);
+      const offset =
+        Math.max(
+          -40,
+          Math.min(
+            40,
+            rect.top * -0.08
+          )
+        );
 
-        const card = document.createElement("div");
-        card.className = "festival-item";
-        card.setAttribute("role", "button");
-        card.setAttribute("tabindex", "0");
 
-        card.innerHTML =
-          '<div class="festival-date-badge">' +
-            '<span class="fd-day">' + startDate.getDate() + '</span>' +
-            '<span class="fd-month">' + MONTH_NAMES[startDate.getMonth()].slice(0, 3) + '</span>' +
-          '</div>' +
-          '<div class="festival-info">' +
-            '<h4>' + (event.summary || "Untitled event") + '</h4>' +
-            '<p>' + formatEventTime(event) +
-              (event.location ? ' &middot; ' + event.location : '') +
-            '</p>' +
-          '</div>';
+      heroImages.forEach(image => {
 
-        const openThis = () => openEventDialog([event]);
-        card.addEventListener("click", openThis);
-        card.addEventListener("keydown", e => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openThis();
-          }
-        });
+        image.style.setProperty(
+          "--parallax-y",
+          offset + "px"
+        );
 
-        frag.appendChild(card);
       });
 
-      els.listScroll.replaceChildren(frag);
     }
 
-    /* ---------- calendar: full month, all events ---------- */
 
-    function renderFestivalCalendar() {
-      const year = state.calMonth.getFullYear();
-      const month = state.calMonth.getMonth();
+    window.addEventListener(
+      "scroll",
+      updateHeroParallax,
+      { passive: true }
+    );
 
-      els.calTitle.textContent = MONTH_NAMES[month] + " " + year;
 
-      const firstOfMonth = new Date(year, month, 1);
-      const startOffset = firstOfMonth.getDay();
-      const gridStart = new Date(year, month, 1 - startOffset);
+    updateHeroParallax();
 
-      const frag = document.createDocumentFragment();
 
-      for (let i = 0; i < 42; i += 1) {
-        const cellDate = new Date(
-          gridStart.getFullYear(),
-          gridStart.getMonth(),
-          gridStart.getDate() + i
+    /* =========================================================
+       GALLERY LIGHTBOX
+    ========================================================= */
+
+    const galleryModalElement =
+      document.getElementById(
+        "galleryModal"
+      );
+
+    const galleryModalImage =
+      document.getElementById(
+        "galleryModalImg"
+      );
+
+
+    const galleryModal =
+      new bootstrap.Modal(
+        galleryModalElement
+      );
+
+
+    document
+      .querySelectorAll(
+        ".gallery-item"
+      )
+      .forEach(item => {
+
+        item.addEventListener(
+          "click",
+          () => {
+
+            const fullImage =
+              item.getAttribute(
+                "data-full"
+              );
+
+            const thumbnail =
+              item.querySelector(
+                "img"
+              );
+
+
+            galleryModalImage.src =
+              fullImage ||
+              thumbnail.src;
+
+            galleryModalImage.alt =
+              thumbnail.alt;
+
+
+            galleryModal.show();
+
+          }
         );
 
-        const dayEvents = sortEvents(
-          state.allEvents.filter(event => eventOccursOnDate(event, cellDate))
+      });
+
+
+    /* =========================================================
+       RESET LIGHTBOX
+    ========================================================= */
+
+    galleryModalElement.addEventListener(
+      "hidden.bs.modal",
+      () => {
+
+        galleryModalImage.src = "";
+
+      }
+    );
+
+
+  </script>
+
+
+  <!-- =========================================================
+     CALENDAR (FESTIVAL - NIRNAY) SCRIPT
+========================================================= -->
+
+  <script>
+
+    (function () {
+
+      const EVENTS_FILE = "./events.json";
+
+      const MONTH_NAMES = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const els = {
+        status: document.getElementById("calendarStatus"),
+        tabsRow: document.getElementById("calendarTabsRow"),
+        tabButtons: document.querySelectorAll(".calendar-tab-btn"),
+        tabPanels: document.querySelectorAll(".calendar-tab-panel"),
+        listScroll: document.getElementById("festivalListScroll"),
+        calTitle: document.getElementById("festivalCalTitle"),
+        calGrid: document.getElementById("festivalCalGrid"),
+        prevBtn: document.getElementById("festivalPrevMonth"),
+        nextBtn: document.getElementById("festivalNextMonth"),
+        dialog: document.getElementById("calEventDialog"),
+        dialogTitle: document.getElementById("calDialogTitle"),
+        dialogBody: document.getElementById("calDialogBody"),
+        dialogClose: document.getElementById("calDialogClose")
+      };
+
+      if (!els.listScroll || !els.calGrid) {
+        return;
+      }
+
+      const MAX_CHIPS_PER_DAY = 2;
+
+      const state = {
+        allEvents: [],
+        calMonth: new Date()
+      };
+
+      const today = startOfDay(new Date());
+
+      /* ---------- date helpers (same shape as events.json) ---------- */
+
+      function startOfDay(value) {
+        const d = new Date(value);
+        d.setHours(0, 0, 0, 0);
+        return d;
+      }
+
+      function addDays(value, days) {
+        const d = new Date(value);
+        d.setDate(d.getDate() + days);
+        return d;
+      }
+
+      function toISODate(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, "0");
+        const d = String(date.getDate()).padStart(2, "0");
+        return y + "-" + m + "-" + d;
+      }
+
+      function parseLocalDate(dateStr) {
+        const parts = dateStr.split("-").map(Number);
+        return new Date(parts[0], parts[1] - 1, parts[2]);
+      }
+
+      function getEventStart(event) {
+        if (event.start && event.start.date_time) {
+          return new Date(event.start.date_time);
+        }
+        if (event.start && event.start.date) {
+          return parseLocalDate(event.start.date);
+        }
+        return null;
+      }
+
+      function getEventEnd(event) {
+        if (event.end && event.end.date_time) {
+          return new Date(event.end.date_time);
+        }
+        if (event.end && event.end.date) {
+          return parseLocalDate(event.end.date);
+        }
+
+        const start = getEventStart(event);
+        if (!start) return null;
+
+        if (isAllDay(event)) {
+          return addDays(start, 1);
+        }
+
+        return new Date(start.getTime() + 60 * 60 * 1000);
+      }
+
+      function isAllDay(event) {
+        return Boolean(
+          (event.start && event.start.all_day) ||
+          (event.start && event.start.date)
+        );
+      }
+
+      function isValidEvent(event) {
+        const start = getEventStart(event);
+        return Boolean(start && !Number.isNaN(start.getTime()));
+      }
+
+      function isSameDate(a, b) {
+        return toISODate(a) === toISODate(b);
+      }
+
+      function eventOccursOnDate(event, date) {
+        const dayStart = startOfDay(date);
+        const dayEnd = addDays(dayStart, 1);
+        const start = getEventStart(event);
+        const end = getEventEnd(event) || addDays(start, 1);
+        return start < dayEnd && end > dayStart;
+      }
+
+      function sortEvents(events) {
+        return events.slice().sort((a, b) => getEventStart(a) - getEventStart(b));
+      }
+
+      function formatEventTime(event) {
+        if (isAllDay(event)) {
+          return "All day";
+        }
+
+        const formatter = new Intl.DateTimeFormat(undefined, {
+          hour: "numeric",
+          minute: "2-digit"
+        });
+
+        const start = getEventStart(event);
+        const end = getEventEnd(event);
+
+        if (!end) {
+          return formatter.format(start);
+        }
+
+        return formatter.format(start) + " \u2013 " + formatter.format(end);
+      }
+
+      function formatLongDate(event) {
+        const start = getEventStart(event);
+        return start.toLocaleDateString(undefined, {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+      }
+
+      /* ---------- list: next 15 days ---------- */
+
+      function renderFestivalList() {
+        const windowStart = today;
+        const windowEnd = addDays(today, 15);
+
+        const upcoming = sortEvents(
+          state.allEvents.filter(event => {
+            const start = getEventStart(event);
+            const end = getEventEnd(event) || addDays(start, 1);
+            return start < windowEnd && end > windowStart;
+          })
         );
 
-        const cell = document.createElement("div");
-        cell.className = "mini-cal-day";
-
-        if (cellDate.getMonth() !== month) {
-          cell.classList.add("outside");
+        if (upcoming.length === 0) {
+          els.listScroll.innerHTML =
+            '<div class="calendar-status">No events in the next 15 days.</div>';
+          return;
         }
 
-        if (isSameDate(cellDate, today)) {
-          cell.classList.add("today");
-        }
+        const frag = document.createDocumentFragment();
 
-        const num = document.createElement("div");
-        num.className = "day-num";
-        num.textContent = cellDate.getDate();
-        cell.appendChild(num);
+        upcoming.forEach(event => {
+          const startDate = getEventStart(event);
 
-        if (dayEvents.length > 0) {
-          cell.classList.add("has-events");
+          const card = document.createElement("div");
+          card.className = "festival-item";
+          card.setAttribute("role", "button");
+          card.setAttribute("tabindex", "0");
 
-          cell.setAttribute(
-            "aria-label",
-            cellDate.toDateString() + ": " +
-            dayEvents.map(e => e.summary || "Untitled event").join(", ")
-          );
+          card.innerHTML =
+            '<div class="festival-date-badge">' +
+            '<span class="fd-day">' + startDate.getDate() + '</span>' +
+            '<span class="fd-month">' + MONTH_NAMES[startDate.getMonth()].slice(0, 3) + '</span>' +
+            '</div>' +
+            '<div class="festival-info">' +
+            '<h4>' + (event.summary || "Untitled event") + '</h4>' +
+            '<p>' + formatEventTime(event) +
+            (event.location ? ' &middot; ' + event.location : '') +
+            '</p>' +
+            '</div>';
 
-          const chipsWrap = document.createElement("div");
-          chipsWrap.className = "mini-cal-day-events";
-
-          dayEvents.slice(0, MAX_CHIPS_PER_DAY).forEach(event => {
-            const chip = document.createElement("span");
-            chip.className = "mini-cal-chip";
-            chip.textContent = event.summary || "Untitled event";
-            chipsWrap.appendChild(chip);
+          const openThis = () => openEventDialog([event]);
+          card.addEventListener("click", openThis);
+          card.addEventListener("keydown", e => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openThis();
+            }
           });
 
-          if (dayEvents.length > MAX_CHIPS_PER_DAY) {
-            const more = document.createElement("span");
-            more.className = "mini-cal-more";
-            more.textContent = "+" + (dayEvents.length - MAX_CHIPS_PER_DAY) + " more";
-            chipsWrap.appendChild(more);
+          frag.appendChild(card);
+        });
+
+        els.listScroll.replaceChildren(frag);
+      }
+
+      /* ---------- calendar: full month, all events ---------- */
+
+      function renderFestivalCalendar() {
+        const year = state.calMonth.getFullYear();
+        const month = state.calMonth.getMonth();
+
+        els.calTitle.textContent = MONTH_NAMES[month] + " " + year;
+
+        const firstOfMonth = new Date(year, month, 1);
+        const startOffset = firstOfMonth.getDay();
+        const gridStart = new Date(year, month, 1 - startOffset);
+
+        const frag = document.createDocumentFragment();
+
+        for (let i = 0; i < 42; i += 1) {
+          const cellDate = new Date(
+            gridStart.getFullYear(),
+            gridStart.getMonth(),
+            gridStart.getDate() + i
+          );
+
+          const dayEvents = sortEvents(
+            state.allEvents.filter(event => eventOccursOnDate(event, cellDate))
+          );
+
+          const cell = document.createElement("div");
+          cell.className = "mini-cal-day";
+
+          if (cellDate.getMonth() !== month) {
+            cell.classList.add("outside");
           }
 
-          cell.appendChild(chipsWrap);
+          if (isSameDate(cellDate, today)) {
+            cell.classList.add("today");
+          }
 
-          cell.addEventListener("click", () => openEventDialog(dayEvents));
+          const num = document.createElement("div");
+          num.className = "day-num";
+          num.textContent = cellDate.getDate();
+          cell.appendChild(num);
+
+          if (dayEvents.length > 0) {
+            cell.classList.add("has-events");
+
+            cell.setAttribute(
+              "aria-label",
+              cellDate.toDateString() + ": " +
+              dayEvents.map(e => e.summary || "Untitled event").join(", ")
+            );
+
+            const chipsWrap = document.createElement("div");
+            chipsWrap.className = "mini-cal-day-events";
+
+            dayEvents.slice(0, MAX_CHIPS_PER_DAY).forEach(event => {
+              const chip = document.createElement("span");
+              chip.className = "mini-cal-chip";
+              chip.textContent = event.summary || "Untitled event";
+              chipsWrap.appendChild(chip);
+            });
+
+            if (dayEvents.length > MAX_CHIPS_PER_DAY) {
+              const more = document.createElement("span");
+              more.className = "mini-cal-more";
+              more.textContent = "+" + (dayEvents.length - MAX_CHIPS_PER_DAY) + " more";
+              chipsWrap.appendChild(more);
+            }
+
+            cell.appendChild(chipsWrap);
+
+            cell.addEventListener("click", () => openEventDialog(dayEvents));
+          }
+
+          frag.appendChild(cell);
         }
 
-        frag.appendChild(cell);
+        els.calGrid.replaceChildren(frag);
       }
 
-      els.calGrid.replaceChildren(frag);
-    }
+      /* ---------- popup ---------- */
 
-    /* ---------- popup ---------- */
+      function openEventDialog(events) {
+        if (!els.dialog) return;
 
-    function openEventDialog(events) {
-      if (!els.dialog) return;
-
-      if (events.length === 1) {
-        els.dialogTitle.textContent = events[0].summary || "Untitled event";
-      } else {
-        els.dialogTitle.textContent = events.length + " events";
-      }
-
-      els.dialogBody.innerHTML = events.map(event => {
-        let meta =
-          '<div>' + formatLongDate(event) + '</div>' +
-          '<div>' + formatEventTime(event) + '</div>';
-
-        if (event.location) {
-          meta += '<div>\u2316 ' + event.location + '</div>';
+        if (events.length === 1) {
+          els.dialogTitle.textContent = events[0].summary || "Untitled event";
+        } else {
+          els.dialogTitle.textContent = events.length + " events";
         }
 
-        const description = event.description
-          ? '<div class="cal-dialog-description">' + event.description + '</div>'
-          : '';
+        els.dialogBody.innerHTML = events.map(event => {
+          let meta =
+            '<div>' + formatLongDate(event) + '</div>' +
+            '<div>' + formatEventTime(event) + '</div>';
 
-        const heading = events.length > 1
-          ? '<h3>' + (event.summary || "Untitled event") + '</h3>'
-          : '';
+          if (event.location) {
+            meta += '<div>\u2316 ' + event.location + '</div>';
+          }
 
-        return (
-          '<div class="cal-dialog-event">' +
+          const description = event.description
+            ? '<div class="cal-dialog-description">' + event.description + '</div>'
+            : '';
+
+          const heading = events.length > 1
+            ? '<h3>' + (event.summary || "Untitled event") + '</h3>'
+            : '';
+
+          return (
+            '<div class="cal-dialog-event">' +
             heading +
             '<div class="cal-dialog-meta">' + meta + '</div>' +
             description +
-          '</div>'
-        );
-      }).join("");
+            '</div>'
+          );
+        }).join("");
 
-      if (typeof els.dialog.showModal === "function") {
-        els.dialog.showModal();
-      } else {
-        els.dialog.setAttribute("open", "");
+        if (typeof els.dialog.showModal === "function") {
+          els.dialog.showModal();
+        } else {
+          els.dialog.setAttribute("open", "");
+        }
       }
-    }
 
-    if (els.dialogClose) {
-      els.dialogClose.addEventListener("click", () => els.dialog.close());
-    }
+      if (els.dialogClose) {
+        els.dialogClose.addEventListener("click", () => els.dialog.close());
+      }
 
-    if (els.dialog) {
-      els.dialog.addEventListener("click", event => {
-        if (event.target === els.dialog) {
-          els.dialog.close();
-        }
+      if (els.dialog) {
+        els.dialog.addEventListener("click", event => {
+          if (event.target === els.dialog) {
+            els.dialog.close();
+          }
+        });
+      }
+
+      /* ---------- tabs + navigation ---------- */
+
+      els.tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-cal-tab");
+
+          els.tabButtons.forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle("active", isActive);
+            b.setAttribute("aria-selected", String(isActive));
+          });
+
+          els.tabPanels.forEach(panel => {
+            panel.hidden = panel.getAttribute("data-cal-panel") !== target;
+          });
+        });
       });
-    }
 
-    /* ---------- tabs + navigation ---------- */
+      if (els.prevBtn) {
+        els.prevBtn.addEventListener("click", () => {
+          state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() - 1, 1);
+          renderFestivalCalendar();
+        });
+      }
 
-    els.tabButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const target = btn.getAttribute("data-cal-tab");
+      if (els.nextBtn) {
+        els.nextBtn.addEventListener("click", () => {
+          state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() + 1, 1);
+          renderFestivalCalendar();
+        });
+      }
 
-        els.tabButtons.forEach(b => {
-          const isActive = b === btn;
-          b.classList.toggle("active", isActive);
-          b.setAttribute("aria-selected", String(isActive));
+      /* ---------- load events.json ---------- */
+
+      function showError(message) {
+        els.status.classList.add("error");
+        els.status.innerHTML = "<span>" + message + "</span>";
+        els.status.hidden = false;
+        els.tabsRow.hidden = true;
+        els.tabPanels.forEach(panel => { panel.hidden = true; });
+      }
+
+      fetch(EVENTS_FILE, { cache: "no-store" })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("events.json returned HTTP " + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (!Array.isArray(data.events)) {
+            throw new Error("events.json does not contain an events array");
+          }
+
+          state.allEvents = data.events.filter(isValidEvent);
+          state.calMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+          els.status.hidden = true;
+          els.tabsRow.hidden = false;
+
+          els.tabPanels.forEach(panel => {
+            panel.hidden = panel.getAttribute("data-cal-panel") !== "list";
+          });
+
+          renderFestivalList();
+          renderFestivalCalendar();
+        })
+        .catch(error => {
+          console.error(error);
+          showError(
+            "Calendar could not be loaded. Make sure events.json is in the " +
+            "same folder as index.html and the site is served over http(s) " +
+            "rather than opened directly as a file."
+          );
         });
 
-        els.tabPanels.forEach(panel => {
-          panel.hidden = panel.getAttribute("data-cal-panel") !== target;
-        });
-      });
-    });
+    })();
 
-    if (els.prevBtn) {
-      els.prevBtn.addEventListener("click", () => {
-        state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() - 1, 1);
-        renderFestivalCalendar();
-      });
-    }
-
-    if (els.nextBtn) {
-      els.nextBtn.addEventListener("click", () => {
-        state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth() + 1, 1);
-        renderFestivalCalendar();
-      });
-    }
-
-    /* ---------- load events.json ---------- */
-
-    function showError(message) {
-      els.status.classList.add("error");
-      els.status.innerHTML = "<span>" + message + "</span>";
-      els.status.hidden = false;
-      els.tabsRow.hidden = true;
-      els.tabPanels.forEach(panel => { panel.hidden = true; });
-    }
-
-    fetch(EVENTS_FILE, { cache: "no-store" })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("events.json returned HTTP " + response.status);
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (!Array.isArray(data.events)) {
-          throw new Error("events.json does not contain an events array");
-        }
-
-        state.allEvents = data.events.filter(isValidEvent);
-        state.calMonth = new Date(today.getFullYear(), today.getMonth(), 1);
-
-        els.status.hidden = true;
-        els.tabsRow.hidden = false;
-
-        els.tabPanels.forEach(panel => {
-          panel.hidden = panel.getAttribute("data-cal-panel") !== "list";
-        });
-
-        renderFestivalList();
-        renderFestivalCalendar();
-      })
-      .catch(error => {
-        console.error(error);
-        showError(
-          "Calendar could not be loaded. Make sure events.json is in the " +
-          "same folder as index.html and the site is served over http(s) " +
-          "rather than opened directly as a file."
-        );
-      });
-
-  })();
-
-</script>
+  </script>
 
 </body>
+
 </html>
