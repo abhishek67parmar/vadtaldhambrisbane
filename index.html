@@ -3467,6 +3467,48 @@
       .arti-card { padding: 24px 22px; gap: 18px; }
     }
 
+  
+    /* =========================================================
+       GALLERY - masonry: photos keep their own orientation
+       (portrait stays portrait, landscape stays landscape)
+    ========================================================= */
+
+    .gallery-grid {
+      display: block;
+      column-count: 3;
+      column-gap: 14px;
+      grid-auto-rows: auto;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(n) {
+      display: block;
+      width: 100%;
+      margin: 0 0 14px;
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;       /* natural aspect ratio, no cropping */
+      object-fit: contain;
+    }
+
+    @media (max-width: 767.98px) {
+      .gallery-grid {
+        column-count: 2;
+        column-gap: 9px;
+      }
+
+      .gallery-item,
+      .gallery-item:nth-child(n) {
+        margin-bottom: 9px;
+      }
+    }
+
   </style>
 </head>
 
