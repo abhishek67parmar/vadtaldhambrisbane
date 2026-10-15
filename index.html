@@ -3364,6 +3364,109 @@
   .heritage-grid::before { width: 420px; height: 420px; }
   }
 
+  
+    /* =========================================================
+       EVENTS - weekly schedule + daily arti
+    ========================================================= */
+
+    .events-block { position: relative; z-index: 6; max-width: 1080px; margin: 0 auto; }
+    .events-block + .events-block { margin-top: 72px; }
+
+    .events-subheading { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+
+    .events-subheading-icon {
+      display: grid; place-items: center; flex: 0 0 auto;
+      width: 46px; height: 46px;
+      color: var(--terracotta);
+      background: linear-gradient(145deg, #fffaf0, #f3e2bd);
+      border: 1px solid rgba(205, 168, 108, 0.7);
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(150, 85, 40, 0.16), 0 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+
+    .events-subheading h3 {
+      margin: 0; color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem; font-weight: 600; letter-spacing: -0.01em;
+    }
+
+    .events-subheading::after {
+      content: ""; flex: 1; height: 1px;
+      background: linear-gradient(90deg, rgba(184, 111, 56, 0.4), transparent);
+    }
+
+    .schedule-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .schedule-grid.is-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .schedule-card {
+      position: relative; overflow: hidden;
+      padding: 34px 28px 30px; text-align: center;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(247, 239, 228, 0.88));
+      border: 1px solid rgba(101, 69, 47, 0.10);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.5s cubic-bezier(.22, 1, .36, 1), box-shadow 0.5s ease, border-color 0.4s ease;
+    }
+
+    .schedule-card::before {
+      content: ""; position: absolute; top: 0; left: 14%; right: 14%; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .schedule-day {
+      margin-bottom: 10px; color: var(--terracotta);
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+
+    .schedule-name {
+      margin: 0 0 20px; color: var(--brown-dark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem; font-weight: 600; line-height: 1.25;
+    }
+
+    .schedule-time {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 9px 18px; color: var(--brown);
+      background: rgba(243, 233, 218, 0.95);
+      border: 1px solid rgba(184, 111, 56, 0.2);
+      border-radius: 999px; font-size: 0.9rem; font-weight: 700;
+    }
+
+    .schedule-time i { color: var(--terracotta); font-size: 0.82rem; }
+
+    .arti-card { display: flex; align-items: center; gap: 22px; padding: 28px 30px; text-align: left; }
+
+    .arti-icon {
+      display: grid; place-items: center; flex: 0 0 auto;
+      width: 62px; height: 62px; color: var(--white); font-size: 1.35rem;
+      background: linear-gradient(160deg, var(--gold-soft), var(--terracotta));
+      border-radius: 50%; box-shadow: 0 10px 24px rgba(150, 85, 40, 0.25);
+    }
+
+    .arti-card .schedule-name { margin-bottom: 12px; }
+
+    @media (hover:hover) and (pointer:fine) {
+      .schedule-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(184, 111, 56, 0.24);
+        box-shadow: 0 28px 60px rgba(77, 52, 33, 0.16);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .schedule-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 767.98px) {
+      .events-block + .events-block { margin-top: 56px; }
+      .events-subheading h3 { font-size: 1.4rem; }
+      .schedule-grid, .schedule-grid.is-two {
+        grid-template-columns: 1fr; gap: 18px; max-width: 470px; margin: 0 auto;
+      }
+      .schedule-card { padding: 28px 22px 26px; }
+      .arti-card { padding: 24px 22px; gap: 18px; }
+    }
+
   </style>
 </head>
 
@@ -3899,156 +4002,69 @@
 
     <div class="container">
 
-
       <div class="events-heading reveal" data-reveal="fade">
-
-        <div class="section-kicker">
-          Mark Your Calendar
-        </div>
-
-        <h2 class="section-title">
-          Upcoming Events
-        </h2>
-
+        <div class="section-kicker">Join Us</div>
+        <h2 class="section-title">Events</h2>
         <p class="section-subtitle">
-          Come together and be part of our upcoming gatherings
-          and community celebrations.
+          Our regular weekly gatherings and daily arti. Everyone is
+          welcome to come together in devotion and community.
         </p>
-
       </div>
 
+      <!-- Section 1: Weekly Sabhas -->
+      <div class="events-block">
+        <div class="events-subheading reveal" data-reveal="fade">
+          <span class="events-subheading-icon" aria-hidden="true"><i class="fa-solid fa-hands-praying"></i></span>
+          <h3>Weekly Sabhas</h3>
+        </div>
+        <div class="schedule-grid">
 
-      <div class="timeline">
+          <article class="schedule-card reveal" data-reveal="fade">
+            <div class="schedule-day">Saturday</div>
+            <h4 class="schedule-name">Satsang Sabha</h4>
+            <div class="schedule-time"><i class="fa-regular fa-clock"></i> 6:00 PM &ndash; 8:00 PM</div>
+          </article>
 
+          <article class="schedule-card reveal" data-reveal="fade" style="transition-delay:0.1s;">
+            <div class="schedule-day">Sunday</div>
+            <h4 class="schedule-name">Bal Sabha &amp; Dhun</h4>
+            <div class="schedule-time"><i class="fa-regular fa-clock"></i> 5:00 PM &ndash; 7:00 PM</div>
+          </article>
 
-        <!-- Event 1 -->
+          <article class="schedule-card reveal" data-reveal="fade" style="transition-delay:0.2s;">
+            <div class="schedule-day">Wednesday</div>
+            <h4 class="schedule-name">Dhun</h4>
+            <div class="schedule-time"><i class="fa-regular fa-clock"></i> 6:30 PM &ndash; 7:30 PM</div>
+          </article>
+        </div>
+      </div>
 
-        <article class="event-item">
+      <!-- Section 2: Daily Arti -->
+      <div class="events-block">
+        <div class="events-subheading reveal" data-reveal="fade">
+          <span class="events-subheading-icon" aria-hidden="true"><i class="fa-solid fa-om"></i></span>
+          <h3>Daily Arti</h3>
+        </div>
+        <div class="schedule-grid is-two">
 
-          <div class="event-side">
-
-            <div class="event-content">
-
-              <div class="event-date">
-                03 October 2026
-              </div>
-
-              <h3 class="event-title">
-                Saturday Sabha
-              </h3>
-
-              <p class="event-description">
-                An evening of devotion, community connection
-                and celebration.
-              </p>
-
+          <article class="schedule-card arti-card reveal" data-reveal="fade">
+            <span class="arti-icon" aria-hidden="true"><i class="fa-solid fa-sun"></i></span>
+            <div>
+              <div class="schedule-day">Every Day</div>
+              <h4 class="schedule-name">Morning Arti</h4>
+              <div class="schedule-time"><i class="fa-regular fa-clock"></i> 7:00 AM</div>
             </div>
+          </article>
 
-          </div>
-
-          <div class="event-side"></div>
-
-          <div class="event-dot"></div>
-
-        </article>
-
-
-        <!-- Event 2 -->
-
-        <article class="event-item">
-
-          <div class="event-side"></div>
-
-          <div class="event-side">
-
-            <div class="event-content">
-
-              <div class="event-date">
-                10 October 2026
-              </div>
-
-              <h3 class="event-title">
-                Saturday Sabha
-              </h3>
-
-              <p class="event-description">
-                An evening of devotion, community connection
-                and celebration.
-              </p>
-
+          <article class="schedule-card arti-card reveal" data-reveal="fade" style="transition-delay:0.1s;">
+            <span class="arti-icon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+            <div>
+              <div class="schedule-day">Every Day</div>
+              <h4 class="schedule-name">Evening Arti</h4>
+              <div class="schedule-time"><i class="fa-regular fa-clock"></i> 7:00 PM</div>
             </div>
-
-          </div>
-
-          <div class="event-dot"></div>
-
-        </article>
-
-
-        <!-- Event 3 -->
-
-        <article class="event-item">
-
-          <div class="event-side">
-
-            <div class="event-content">
-
-              <div class="event-date">
-                17 October 2026
-              </div>
-
-              <h3 class="event-title">
-                Saturday Sabha
-              </h3>
-
-              <p class="event-description">
-                An evening of devotion, community connection
-                and celebration.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="event-side"></div>
-
-          <div class="event-dot"></div>
-
-        </article>
-
-
-        <!-- Event 4 -->
-
-        <article class="event-item">
-
-          <div class="event-side"></div>
-
-          <div class="event-side">
-
-            <div class="event-content">
-
-              <div class="event-date">
-                24 October 2026
-              </div>
-
-              <h3 class="event-title">
-                Saturday Sabha
-              </h3>
-
-              <p class="event-description">
-                An opportunity for families and devotees to
-                gather, reflect and connect.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="event-dot"></div>
-
-        </article>
-
-
+          </article>
+        </div>
       </div>
 
     </div>
